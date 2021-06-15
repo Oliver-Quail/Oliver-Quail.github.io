@@ -64,7 +64,7 @@ nav #UpdateButton {
   display: grid;
   -ms-grid-columns: auto 90% auto;
       grid-template-columns: auto 90% auto;
-  -ms-grid-rows: 70vh 10vh 20vh;
+  -ms-grid-rows: 70vh 14vh 16vh;
       grid-template-rows: 70vh 14vh 16vh;
 }
 
