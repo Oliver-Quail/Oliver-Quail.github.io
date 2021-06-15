@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.3.2/dist/chart.min.js"></script>
+    <script src="Javascript/Charts.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link type="text/css" rel="stylesheet" href="CSS/LiveData.css"/>
+    
+
+</head>
+<body>
+    <nav><p>Time to next update: <span id="Timer">30</span></p> <p id="UpdateButton">Update Now!</p></nav>
+    <div id="ParallaxBackground">
+        <div id="GraphHolder" data-aos="fade-down" data-aos-duration="1000">
+            <div id="Chart1Holder">
+                <canvas id="Chart1"></canvas>
+
+            </div>
+            <div id="Chart2Holder">
+                <canvas id="Chart2"></canvas>
+
+            </div>
+            <div id="Chart3Holder">
+                <canvas id="Chart3"></canvas>
+
+            </div>
+        </div>
+
+        <article id="KeyStats">
+            <section id="Stat1" class="Stat">
+                <h2>Estimated waste produced by <span class="RedText">contamination</span></h2>
+                <p><span id="Stat1Data">455</span>kg</p>
+            </section>
+
+            <section id="Stat2" class="Stat">
+                <h2>Total Mass of <span class="RedText">waste</span></h2>
+                <p><span id="Stat2Data">455</span>kg</p>
+            </section>
+
+            <section id="Stat3" class="Stat">
+                <h2>Total <span class="RedText">red</span> bin waste</h2>
+                <p><span id="Stat3Data">455</span>kg</p>
+            </section>
+           
+
+        </article>
+
+
+    </div>
+    
+</body>
+</html>

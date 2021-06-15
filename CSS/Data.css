@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+:root {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  --OffBlack: rgba(24,24,26, .7);
+  --MainBlack: #181818;
+  --Green: hsl(145, 82%, 67%);
+  --Red: #f07167;
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: var(--OffBlack);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 25px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--Green);
+}
+
+#ParallaxBackground {
+  background: url("../Assets/5th.webp");
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  -webkit-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 90% auto;
+      grid-template-columns: auto 90% auto;
+  -ms-grid-rows: 80vh 20vh 80vh 80vh 80vh;
+      grid-template-rows: 80vh 20vh 80vh 80vh 80vh;
+  row-gap: 20vh;
+}
+
+#ParallaxBackground * {
+  -ms-grid-column: 2;
+  grid-column: 2;
+}
+
+#ParallaxBackground #Intro {
+  -ms-grid-row: 1;
+  grid-row: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 39px;
+}
+
+#ParallaxBackground #Intro h1 {
+  text-align: center;
+}
+
+#ParallaxBackground #Intro #DownArrow {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  font-size: 100px;
+  font-weight: bold;
+}
+
+#ParallaxBackground #StatHolder {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-grid-row: 2;
+  grid-row: 2;
+  -webkit-transition: 400ms ease-in-out;
+  transition: 400ms ease-in-out;
+}
+
+#ParallaxBackground #StatHolder h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+#ParallaxBackground #StatHolder #Holder {
+  width: 30%;
+  background-color: var(--OffBlack);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#ParallaxBackground #StatHolder #Holder .Satistic {
+  border-right: 1px solid white;
+  text-align: center;
+  font-size: 100%;
+  margin-right: 5%;
+  padding-right: 5%;
+}
+
+#ParallaxBackground #StatHolder #Holder .Satistic p {
+  font-size: 1.3rem;
+}
+
+#ParallaxBackground #StatHolder #Holder .Satistic sub {
+  font-style: italic;
+}
+
+#ParallaxBackground #StatHolder #Holder .Satistic .StatTitle {
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+#ParallaxBackground #StatHolder #Holder #FinalStat {
+  border-right: 0px solid white;
+  margin-right: 0;
+  padding-right: 0;
+}
+
+#ParallaxBackground #a3rd {
+  -ms-grid-row: 3;
+  grid-row: 3;
+}
+
+#ParallaxBackground .ContentHolder2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+#ParallaxBackground .ContentHolder2 .Content {
+  width: 100%;
+  height: 100%;
+  background-color: var(--OffBlack);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+}
+
+#ParallaxBackground .ContentHolder2 .Content :nth-child(1) {
+  -ms-grid-column: 1;
+  grid-column: 1;
+}
+
+#ParallaxBackground .ContentHolder2 .Content :nth-child(2) {
+  -ms-grid-column: 2;
+  grid-column: 2;
+}
+
+#ParallaxBackground .ContentHolder2 .Content .Text {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+#ParallaxBackground .ContentHolder2 .Content .Text div {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#ParallaxBackground .ContentHolder2 .Content .Text div p {
+  text-align: center;
+  width: 40ch;
+}
+
+#ParallaxBackground .ContentHolder2 .Content .Text div h1 {
+  font-weight: bold;
+  font-size: 1.9rem;
+}
+
+#ParallaxBackground .ContentHolder2 .Content .Image {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#ParallaxBackground .ContentHolder2 .Content .Image div {
+  height: 80%;
+  width: 80%;
+}
+
+#ParallaxBackground #a4rd {
+  -ms-grid-row: 4;
+  grid-row: 4;
+}
+
+#ParallaxBackground #ViewData {
+  -ms-grid-row: 5;
+  grid-row: 5;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#ParallaxBackground #ViewData a {
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bold;
+  background-color: var(--OffBlack);
+  padding: 2%;
+  border-radius: 25px;
+  color: white;
+}
+
+footer {
+  width: 100%;
+  height: 100%;
+  background-color: var(--MainBlack);
+}
+
+span {
+  color: var(--Green);
+}
+
+.ContentImage {
+  width: 80%;
+  height: 80%;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
+.GreenText {
+  color: var(--Green);
+}
+
+.RedText {
+  color: var(--Red);
+}
+/*# sourceMappingURL=Data.css.map */
