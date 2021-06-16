@@ -67,6 +67,7 @@ nav {
     #GraphHolder {
         grid-row: 1;
         display: grid;
+        width: 100%;
         grid-template-columns: 30% 30% 30%;
         column-gap: 4.5%;
 

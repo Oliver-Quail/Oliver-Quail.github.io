@@ -27,10 +27,10 @@ window.onload = function() {
         datasets: [{
             data: [12, 19, 3, 5],
             backgroundColor: [
-                '#f07167',
-                '#118AB2',
-                '#ffd166',
-                '#06d6a0',
+                'hsl(4, 82%, 67%)',
+                '#4EDAFF',
+                'hsl(42, 100%, 80%)',
+                'hsl(145, 82%, 67%)',
                 
             ],
             borderColor: [
@@ -74,6 +74,9 @@ window.onload = function() {
                 align: "center",
                 color: "white",
                 text: "Break down of waste by mass",
+                font : {
+                    size: 20
+                }
               
             },
             legend: {
@@ -140,6 +143,9 @@ window.onload = function() {
                 align: "center",
                 color: "white",
                 text: "Contaminated vs non-contaminated",
+                font : {
+                    size: 18
+                }
               
             },
             legend: {
@@ -174,7 +180,7 @@ window.onload = function() {
                 'rgba(240,113,103, .6)',
                 'rgba(17,138,178, .8)',
                 'rgba(255,209,102, .8)',
-                'rgba(6,214,160, .6)',
+                'hsl(145, 82%, 67%)',
                 
             ],
             borderColor: [

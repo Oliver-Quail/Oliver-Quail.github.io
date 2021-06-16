@@ -78,6 +78,7 @@ nav #UpdateButton {
   grid-row: 1;
   display: -ms-grid;
   display: grid;
+  width: 100%;
   -ms-grid-columns: 30% 30% 30%;
       grid-template-columns: 30% 30% 30%;
   -webkit-column-gap: 4.5%;
