@@ -76,7 +76,7 @@ nav #UpdateButton {
 
 #ParallaxBackground {
   background: url("../Assets/5th.webp");
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   background-repeat: no-repeat;
   background-size: cover;
@@ -229,6 +229,8 @@ nav #UpdateButton {
     height: 20%;
   }
   #ParallaxBackground {
+    height: 100%;
+    width: 100vw;
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
     -ms-grid-rows: auto auto;

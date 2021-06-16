@@ -37,7 +37,7 @@ nav {
 #ParallaxBackground {
     
     background: url("../Assets/5th.webp");
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     background-repeat:no-repeat;
     background-size:cover; 
@@ -173,6 +173,8 @@ nav {
         height: 20%;
     }
 #ParallaxBackground {
+    height: 100%;
+    width: 100vw;
     grid-template-columns: 100%;
     grid-template-rows: auto auto;
     row-gap: 20vh;
