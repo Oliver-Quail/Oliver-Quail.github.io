@@ -87,8 +87,9 @@ window.onload = function() {
                     color: "white",
                     //family: "'Roboto', sans-serif",
                     font: {
-                        size: "20"
-                    }
+                        size: "16"
+                    },
+                    boxWidth: 20
                     
 
                 }
@@ -153,6 +154,8 @@ window.onload = function() {
                 position: "bottom",
 
                 labels: {
+
+                    
                     
 
                 }
