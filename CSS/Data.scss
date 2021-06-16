@@ -1,6 +1,8 @@
 @import "Assets.scss";
 
-
+#bgPhone {
+    display: none;
+}
 
 
 
@@ -249,9 +251,24 @@ span {
 
 
 @media screen and (max-width: 600px) {
+
+    #bgPhone {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        display: inline;
+        z-index: -1;
+        min-height: 100%;
+        min-width: 100%;
+        background-image: url("../Assets/5th.webp");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+    }
+
     #ParallaxBackground {
     
-        background: url("../Assets/5th.webp");
+        background: transparent;
         height: max-content;
         width: 100%;
         background-attachment: scroll;
