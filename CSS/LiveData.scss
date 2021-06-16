@@ -1,20 +1,7 @@
+@import "Assets.scss";
 
-:root {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    color: white;
-    --OffBlack: rgba(24,24,26, .5);
-    --MainBlack: #181818;
-    --Green: hsl(145, 82%, 67%);
 
-    font-size: 16px;
-}
 
-* { 
-    margin: 0px;
-    padding: 0px;
-}
 
 nav {
     display: flex;
@@ -33,6 +20,7 @@ nav {
         span {
             font-size: inherit;
             font-weight: inherit;
+            color: white;
         }
 
     }

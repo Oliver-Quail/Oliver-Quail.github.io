@@ -1,46 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import "Assets.scss";
 
-
-:root {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto', sans-serif;
-    color: white;
-    --OffBlack: rgba(24,24,26, .7);
-    --MainBlack: #181818;
-    --Green: #66f09f;
-    /*--Green: hsl(42, 100%, 80%);
-    --Green: hsl(195, 83%, 57%);
-    --Green: hsl(4, 82%, 77%)*/
-    --Red: #f07167;
-    
-    font-size: 16px;
-}
-* {
-    margin: 0;
-    padding: 0;
-}
-
-
-::-webkit-scrollbar {
-    width: 10px;
-  } 
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background-color: var(--OffBlack);
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background-color: white;
-    border-radius: 25px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: var(--Green);
-  }
 
 
 
@@ -60,6 +19,7 @@
     grid-template-columns: auto 90% auto;
     grid-template-rows: 80vh 20vh 80vh 80vh 80vh;
     row-gap: 20vh;
+
 
     * {
         grid-column: 2;
@@ -301,7 +261,7 @@ span {
         transition:.4s ease-in-out;
         display: grid;
         grid-template-columns: 100%;
-        grid-template-rows: 80vh 20vh 100vh 100vh 80vh;
+        grid-template-rows: 80vh 20vh auto auto 80vh;
         row-gap: 20vh;
     
         * {

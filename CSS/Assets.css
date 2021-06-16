@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+:root {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  --OffBlack: rgba(24, 24, 24, .5);
+  --MainBlack: rgb(24, 24, 24);
+  --Green: #66f09f;
+  /*--Green: hsl(42, 100%, 80%);
+    --Green: hsl(195, 83%, 57%);
+    --Green: hsl(4, 82%, 77%)*/
+  --Red: #f07167;
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: var(--OffBlack);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 25px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--Green);
+}
+/*# sourceMappingURL=Assets.css.map */

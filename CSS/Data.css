@@ -4,8 +4,8 @@
   padding: 0;
   font-family: 'Roboto', sans-serif;
   color: white;
-  --OffBlack: rgba(24,24,26, .7);
-  --MainBlack: #181818;
+  --OffBlack: rgba(24, 24, 24, .5);
+  --MainBlack: rgb(24, 24, 24);
   --Green: #66f09f;
   /*--Green: hsl(42, 100%, 80%);
     --Green: hsl(195, 83%, 57%);
@@ -335,8 +335,8 @@ span {
     display: grid;
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
-    -ms-grid-rows: 80vh 20vh 100vh 100vh 80vh;
-        grid-template-rows: 80vh 20vh 100vh 100vh 80vh;
+    -ms-grid-rows: 80vh 20vh auto auto 80vh;
+        grid-template-rows: 80vh 20vh auto auto 80vh;
     row-gap: 20vh;
   }
   #ParallaxBackground * {
