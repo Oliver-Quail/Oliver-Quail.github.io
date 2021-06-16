@@ -254,10 +254,11 @@ span {
         background: url("../Assets/5th.webp");
         height: max-content;
         width: 100%;
-        background-repeat:no-repeat;
-        background-size:cover; 
         background-attachment: fixed;
-        transition:.4s ease-in-out;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: scroll;
         display: grid;
         grid-template-columns: 100%;
         grid-template-rows: 80vh 20vh auto auto 80vh;

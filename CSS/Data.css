@@ -325,11 +325,11 @@ span {
     height: -moz-max-content;
     height: max-content;
     width: 100%;
+    background-attachment: fixed;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-attachment: fixed;
-    -webkit-transition: .4s ease-in-out;
-    transition: .4s ease-in-out;
+    background-attachment: scroll;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 100%;
