@@ -251,8 +251,8 @@ nav #UpdateButton {
     background: transparent;
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
-    -ms-grid-rows: auto auto;
-        grid-template-rows: auto auto;
+    -ms-grid-rows: auto 55vh;
+        grid-template-rows: auto 55vh;
     row-gap: 20vh;
   }
   #ParallaxBackground * {

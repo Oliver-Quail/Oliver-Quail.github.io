@@ -180,9 +180,9 @@ window.onload = function() {
         datasets: [{
             data: [12, 19, 3, 5],
             backgroundColor: [
-                'rgba(240,113,103, .6)',
-                'rgba(17,138,178, .8)',
-                'rgba(255,209,102, .8)',
+                'hsl(4, 82%, 67%)',
+                '#4EDAFF',
+                'hsl(42, 100%, 80%)',
                 'hsl(145, 82%, 67%)',
                 
             ],
