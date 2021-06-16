@@ -42,10 +42,10 @@ nav p span {
 }
 
 nav #UpdateButton {
-  background-color: #66f09f;
   border-radius: 25px;
   font-size: 1.2rem;
   padding: 0px 1%;
+  color: #66f09f;
 }
 
 #ParallaxBackground {
@@ -198,5 +198,150 @@ nav #UpdateButton {
 
 #ParallaxBackground .RedText {
   color: #f07167;
+}
+
+@media screen and (max-width: 600px) {
+  canvas {
+    height: 20%;
+  }
+  #ParallaxBackground {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
+    row-gap: 20vh;
+  }
+  #ParallaxBackground * {
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+  #ParallaxBackground #GraphHolder {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 30% 30% 30%;
+        grid-template-rows: 30% 30% 30%;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    row-gap: 10vh;
+  }
+  #ParallaxBackground #GraphHolder * {
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+  #ParallaxBackground #GraphHolder #Chart1Holder {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 1;
+    grid-column: 1;
+    width: 100%;
+    height: 100%;
+    background-color: var(--OffBlack);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #ParallaxBackground #GraphHolder #Chart1Holder #Chart1 {
+    height: 80%;
+    background-color: transparent;
+  }
+  #ParallaxBackground #GraphHolder #Chart2Holder {
+    -ms-grid-row: 2;
+    grid-row: 2;
+    -ms-grid-column: 1;
+    grid-column: 1;
+    width: 100%;
+    height: 100%;
+    background-color: var(--OffBlack);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #ParallaxBackground #GraphHolder #Chart2Holder #Chart2 {
+    height: 80%;
+    background-color: transparent;
+  }
+  #ParallaxBackground #GraphHolder #Chart3Holder {
+    -ms-grid-row: 3;
+    grid-row: 3;
+    -ms-grid-column: 1;
+    grid-column: 1;
+    width: 100%;
+    height: 100%;
+    background-color: var(--OffBlack);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  #ParallaxBackground #GraphHolder #Chart3Holder #Chart3 {
+    height: 80%;
+    background-color: transparent;
+  }
+  #ParallaxBackground #KeyStats {
+    -ms-grid-row: 2;
+    grid-row: 2;
+    width: 100%;
+    height: 100%;
+    background-color: var(--OffBlack);
+    /* display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-wrap: nowrap;*/
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: 30% 30% 30%;
+        grid-template-rows: 30% 30% 30%;
+    row-gap: 4vh;
+  }
+  #ParallaxBackground #KeyStats .Stat {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    width: 100%;
+  }
+  #ParallaxBackground #KeyStats #Stat1 {
+    -ms-grid-row: 1;
+    grid-row: 1;
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+  #ParallaxBackground #KeyStats #Stat2 {
+    -ms-grid-row: 2;
+    grid-row: 2;
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+  #ParallaxBackground #KeyStats #Stat3 {
+    -ms-grid-row: 3;
+    grid-row: 3;
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+}
+
+footer {
+  width: 100%;
+  height: 100%;
+  background-color: var(--MainBlack);
 }
 /*# sourceMappingURL=LiveData.css.map */
