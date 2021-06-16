@@ -76,9 +76,7 @@ nav #UpdateButton {
 
 #ParallaxBackground {
   background: url("../Assets/5th.webp");
-  height: -webkit-max-content;
-  height: -moz-max-content;
-  height: max-content;
+  height: 100%;
   width: 100%;
   height: auto;
   background-repeat: no-repeat;
