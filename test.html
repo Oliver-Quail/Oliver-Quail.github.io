@@ -3,28 +3,74 @@
 	<head>
 	<style>
 	@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-
-
-body {
 	
-}
 :root {
 	--White: #FFF;
 	font-family: 'Open Sans', sans-serif;
 	 --Black: rgba(24,24,24, .7);
 	 --DarkBlack: #181818;
 }
-
-
+	#Background {
+	background: url("https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=ivana-cajina-HDd-NQ_AMNQ-unsplash.jpg");
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	display: grid;
+	grid-template-rows: 100vh 20vh 200vh;
+}
 * {
 	padding: 0px;
 	margin: 0px;
 	color: var(--White);
 }
 
+#Opening {
+	grid-row: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	
+	height: 100%;
+	
+}
+
+#Opening h1 {
+	background-color: var(--Black);
+}
+
+
+#Background:nth-child(2) {
+	grid-row: 2;
+}
+
+.Block {
+	background-color: var(--DarkBlack);
+	width: 100%;
+	height: 100%;
+}
+
+
+#Second {
+	 grid-row: 3;
+	width: 100%;
+	height: 100%;
+}
+
+
+
+@media screen and (max-width:600px) {
+	
+
+
+
+
+
 #Background {
 	background: url("https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=ivana-cajina-HDd-NQ_AMNQ-unsplash.jpg");
-	width: 100vw;
+	width: 100%;
 	height: 140vh;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -65,6 +111,8 @@ body {
 	width: 100%;
 	height: 100%;
 }
+
+}
 	</style>
 		<title>Page Title</title>
 	</head>
@@ -74,13 +122,7 @@ body {
 			<h1>Parallax Example <br/>By <br /> Ollie Q</h1>
 			</section>
 			
-			<section class="Block">
 			
-			</section>
-			
-		<!--	<section id="Second">
-			
-			</section>-->
 			
 	
 		</div>
