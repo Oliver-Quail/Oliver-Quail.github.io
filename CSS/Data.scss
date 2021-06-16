@@ -99,19 +99,20 @@
 
 
         #Holder {
-            width: 30%;
+            width: 40%;
             background-color: var(--OffBlack);
             display: flex;
             flex-direction: row;
             align-items: center;
-            justify-content: center;
+            justify-content: space-around;
+            
 
             .Satistic {
-                border-right: 1px solid white;
+               /* border-right: 1px solid white;*/
                 text-align: center;
                 font-size: 100%;
-                margin-right: 5%;
-                padding-right: 5%;
+               /* margin-right: 5%;
+                padding-right: 5%;*/
 
                 p {
                     font-size: 1.3rem;
@@ -159,20 +160,21 @@
             width: 100%;
             height: 100%;
             background-color: var(--OffBlack);
-            display: grid;
-            grid-template-columns: 50% 50%;
+           /* display: grid;
+            grid-template-columns: 50% 50%;*/
+            display: flex;
 
-            :nth-child(1) {
+           /* :nth-child(1) {
                 grid-column: 1;
 
             }
             :nth-child(2) {
                 grid-column: 2;
-            }
+            }*/
             
 
             .Text {
-                width: 100%;
+                width: 50%;
                 height: 100%;
                 display: flex;
                 justify-content: center;
@@ -204,7 +206,7 @@
             }
 
             .Image {
-                width: 100%;
+                width: 50%;
                 height: 100%;
                 display: flex;
                 justify-content: center;
@@ -278,6 +280,121 @@ span {
 
 .RedText {
     color: var(--Red);
+}
+
+
+
+@media screen and (max-width: 600px) {
+    #ParallaxBackground {
+    
+        background: url("../Assets/5th.webp");
+        height: max-content;
+        width: 100%;
+        height: auto;
+        background-repeat:no-repeat;
+        background-size:cover; 
+        background-attachment: fixed;
+        transition:.4s ease-in-out;
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 80vh 20vh 100vh 100vh 80vh;
+        row-gap: 20vh;
+    
+        * {
+            grid-column: 1;
+        }
+
+        #StatHolder {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            grid-row: 2;
+            transition: 400ms ease-in-out;
+    
+            h2 {
+                font-size: 2rem;
+                font-weight: bold;
+    
+            }
+    
+    
+            #Holder {
+                width: 100%;
+                background-color: var(--OffBlack);
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+                
+    
+                .Satistic {
+                   /* border-right: 1px solid white;*/
+                    text-align: center;
+                    font-size: 100%;
+                   /* margin-right: 5%;
+                    padding-right: 5%;*/
+    
+                    p {
+                        font-size: 1.3rem;
+                    }
+    
+                    sub {
+                        font-style: italic;
+                    }
+    
+    
+                    .StatTitle {
+                        font-weight: bold;
+                        font-size: 1.5rem;
+                    }
+    
+                    
+                   
+                }
+    
+                #FinalStat {
+                    /*border-right: 0px solid white;*/
+                    margin-right: 0;
+                    padding-right: 0;
+    
+                }
+                
+    
+            }
+    
+            
+        }
+
+
+
+
+
+        .ContentHolder2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+
+            .Content {
+                flex-direction: column-reverse;
+
+                .Text {
+                    width: 100%;
+                }
+                .Image {
+                    width: 100%;
+                }
+                
+            }
+
+        }
+
+
+
+    }
+    
 }
 
 
