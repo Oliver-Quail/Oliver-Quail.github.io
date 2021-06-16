@@ -248,16 +248,12 @@ span {
 
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-device-width: 600px) {
     #ParallaxBackground {
     
         background: url("../Assets/5th.webp");
         height: max-content;
         width: 100%;
-        background-attachment: fixed;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
         background-attachment: scroll;
         display: grid;
         grid-template-columns: 100%;

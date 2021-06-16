@@ -318,17 +318,13 @@ span {
   color: var(--Red);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-device-width: 600px) {
   #ParallaxBackground {
     background: url("../Assets/5th.webp");
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
     width: 100%;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     background-attachment: scroll;
     display: -ms-grid;
     display: grid;
