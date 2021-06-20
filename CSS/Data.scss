@@ -239,10 +239,12 @@ span {
 
 .GreenText {
     color: var(--Green);
+    font-weight: bold;
 }
 
 .RedText {
     color: var(--Red);
+    font-weight: bold;
 }
 
 
@@ -350,6 +352,10 @@ span {
                 }
                 
             }
+
+        }
+        #a4rd {
+            flex-direction: column-reverse;
 
         }
 

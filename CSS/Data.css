@@ -39,6 +39,10 @@
   background: var(--Green);
 }
 
+#bgPhone {
+  display: none;
+}
+
 @media screen and (max-width: 600px) {
   #bgPhone {
     position: fixed;
@@ -327,10 +331,12 @@ span {
 
 .GreenText {
   color: var(--Green);
+  font-weight: bold;
 }
 
 .RedText {
   color: var(--Red);
+  font-weight: bold;
 }
 
 @media screen and (max-width: 600px) {
@@ -438,6 +444,12 @@ span {
   }
   #ParallaxBackground .ContentHolder2 .Content .Image {
     width: 100%;
+  }
+  #ParallaxBackground #a4rd {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
 }
 /*# sourceMappingURL=Data.css.map */
