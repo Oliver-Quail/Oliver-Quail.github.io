@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="CSS/AddUser.css"/>
+    <link type="text/css" rel="stylesheet" href="CSS/FormStyling.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="JavaScript/AddUsers.js"></script>
+
+</head>
+<body>
+    <div id="Content">
+        <article id="LeftContent">
+        
+            <div id="AddUsers"> 
+                <h2>Add user:</h2>
+                <br/>
+                <h4>Email:</h4>
+                <input type="text" placeholder="example@gmail.com"/>
+
+                <p>Add User</p>
+
+            </div>
+         
+            <div id="EmailSend">
+                <b>To</b> <input type="text" required id="EmailTo" name="Email" list="EmailList"/>
+                <datalist id="EmailList">
+                    <option value="oliver.quail3@gmail.com">Oliver</option>
+                    <option>Ezmerlda</option>
+
+
+                </datalist>
+                <div id="Emails"></div>
+                <br/>
+                <b>Subject</b><input type="text"/>
+                
+                <b>Message:</b>
+                <textarea placeholder="Message Content"></textarea>
+                <p class="Line"></p>
+                <section class="EmailButtonHolder">
+                    <h3>Email to</h3>
+                    <section>
+                        <p>All</p>
+                        <p>Unresponed</p>
+                        <p>At stall</p>
+                    </section>
+                    <h3>Formating</h3>
+                    <section>
+                        <p>Name</p>
+                        <p>Assigned stalls</p>
+                    </section>
+                    
+                </section>
+            </div>
+           
+
+            
+
+           
+        </article>
+        <div id="ButtonBox">
+
+                
+            <p class="Line"></p>
+
+            <div class="ButtonHolder">
+                <p id="EmailPeople">Email people</p>
+                <p id="AddUsersPage">Add users</p>
+                <p id="ClosePane">Close</p>
+            </div>
+            
+        </div>
+
+        <article id="CurrentUsers">
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Times Avaliable</th>
+                    <th>Contact</th>
+                </tr>
+                <tr>
+                    <td>Oliver</td>
+                    <td>email</td>
+                    <td>0900-1000,1100-1200</td>
+                    <td>Contact</td>
+                </tr>
+                <tr>
+                    <td>Oliver</td>
+                    <td>email</td>
+                    <td>0900-1000,1100-1200</td>
+                    <td>Contact</td>
+                </tr>
+                <tr>
+                    <td>Oliver</td>
+                    <td>email</td>
+                    <td>0900-1000,1100-1200</td>
+                    <td>Contact</td>
+                </tr>
+            </table>
+        </article>
+
+    </div>
+</body>
+</html>
