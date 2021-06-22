@@ -1,49 +1,24 @@
 $(document).ready(function () {
     var Emails = ["oliver.quail3@gmail.com", "ezmerlda@gmail.com", "lara@gmail.com"];
 
-    $("#EmailPeople").click(function(){
-        if(window.innerWidth < 600) {
-            $("#LeftContent").css("display", "block");
-        }
 
-        $("#EmailSend").css("display", "block");
-        $("#AddUsers").css("display", "none");
+    //For laptop ect 
+    $("#EmailPeople").click(ToggleEmailPage());
+    $("#AddUsersPage").click(ToggleUsersPage());
 
-    });
+
+    //For mobile :)
+    $("#EmailPeople").on("tap", ToggleEmailPage());
+    $("#AddUsersPage").on("tap", ToggleUsersPage());
+
 
     
-    $("#AddUsersPage").click(function(){
-
-        if(window.innerWidth < 600) {
-            $("#LeftContent").css("display", "block");
-        }
-        $("#EmailSend").css("display", "none");
-        $("#AddUsers").css("display", "block");
-
-    });
-
-    //Double click for if screen size is small enough
-    $("#EmailPeople").dblclick(function(){
-        if(window.innerWidth < 600) {
-            $("#LeftContent").css("display", "none");
-        }
-
-        $("#EmailSend").css("display", "block");
-        $("#AddUsers").css("display", "none");
-
-    });
-
-    $("#AddUsersPage").dblclick(function(){
-        if(window.innerWidth < 600) {
-            $("#LeftContent").css("display", "none");
-        }
-
-        $("#EmailSend").css("display", "block");
-        $("#AddUsers").css("display", "none");
-
-    });
 
     $("#ClosePane").click(function(){
+        $("#LeftContent").css("display", "none");
+    });
+
+    $("#ClosePane").on("tap", function(){
         $("#LeftContent").css("display", "none");
     });
 
@@ -56,6 +31,28 @@ $(document).ready(function () {
 
         }
     });
+
+
+
+
+    //functions used above
+
+    function ToggleUsersPage() {
+        if(window.innerWidth < 600) {
+            $("#LeftContent").css("display", "block");
+        }
+        $("#EmailSend").css("display", "none");
+        $("#AddUsers").css("display", "block");
+    }
+
+    function ToggleEmailPage() {
+        if(window.innerWidth < 600) {
+            $("#LeftContent").css("display", "block");
+        }
+
+        $("#EmailSend").css("display", "block");
+        $("#AddUsers").css("display", "none");
+    }
 
 
 
