@@ -1,0 +1,187 @@
+@import "Universal_Assets";
+
+
+#Content {
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--BackgroundColour);
+    display: grid;
+    grid-template-columns: 10% 40% 40% 10%;
+    grid-template-rows: max-content auto;
+
+    #LeftContent {
+        grid-column: 2;
+        width: 100%;
+        height: 90vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        #AddUsers {
+            text-align: center;
+            div {
+                * {
+                    display: inline-block;
+                }
+                h4 {
+                    font-size: 1.2rem;
+                }
+                
+               
+                
+               
+            }
+            p {
+                font-size: 1.2rem;
+                border: 2px solid var(--TextColour);
+                padding: 0 1%;
+                margin-top: 2%;
+            }
+        }
+       
+
+        #EmailSend {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            display: none;
+
+            input {
+                display: block;
+                width: 95%;
+            }
+            textarea {
+                width: 100%;
+                height: 60%; 
+            }
+
+            .EmailButtonHolder {
+                
+                width: 100%;
+                section {
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-evenly;
+                }
+            }
+        }
+
+       
+    
+       
+
+
+
+    }
+    #ButtonBox {
+        grid-column: 2;
+        grid-row: 2;
+        width: 100%;
+        height: 10vh;
+        
+        
+        
+       
+
+        .ButtonHolder {
+            display: flex;
+            width: 100%;
+            justify-content: space-evenly;
+        }
+    }
+
+
+    #CurrentUsers {
+        grid-column: 3;
+        grid-row: 1/3;
+        color: var(--TextColour);
+        width: 100%;
+
+        table {
+            width: 100%;
+
+            tr, td, th {
+                text-align: center;
+
+            }
+            tr, td {
+                border-bottom-style: solid ;
+            }
+        }
+
+        
+    }
+
+
+
+}
+
+/* MISC styling  */
+
+.Line {
+    border-bottom: 1px solid var(--TextColour);
+    width: 99%;
+}
+
+
+#ClosePane {
+    display: none;
+}
+
+
+@media (max-width: 600px) {
+
+    #Content {
+        width: 100%;
+        height: 100vh;
+        background-color: var(--BackgroundColour);
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 90% 10%;
+
+      
+
+        #LeftContent {
+            grid-column: 1;
+            grid-row: 1;
+            display: none;
+            z-index: 2;
+            height: 100%;
+            background-color: var(--BackgroundColour);
+        }
+
+
+        #ButtonBox {
+            grid-column: 1;
+            background-color: var(--BackgroundColour);
+            grid-row: 2;
+            position: fixed;
+            z-index: 3;
+            bottom: 0px;
+        }
+
+
+        #CurrentUsers {
+            grid-column: 1;
+            width: 100%;
+            height: 100%;
+
+            grid-row: 1;
+        }
+
+
+    }
+
+    #ClosePane {
+        display: block;
+    }
+
+    .BoxButton {
+        padding: 0px 2%;
+        border: 1px solid var(--TextColour);
+    }
+
+
+    
+}

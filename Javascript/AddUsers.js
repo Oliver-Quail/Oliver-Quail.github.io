@@ -3,13 +3,28 @@ $(document).ready(function () {
 
 
     //For laptop ect 
-    $("#EmailPeople").click(ToggleEmailPage());
-    $("#AddUsersPage").click(ToggleUsersPage());
+    $("#EmailPeople").click(   function() {
+        if(window.innerWidth < 600) {
+            $("#LeftContent").css("display", "block");
+        }
+
+        $("#EmailSend").css("display", "block");
+        $("#AddUsers").css("display", "none");
+
+    });
 
 
-    //For mobile :)
-    $("#EmailPeople").on("tap", ToggleEmailPage());
-    $("#AddUsersPage").on("tap", ToggleUsersPage());
+    $("#AddUsersPage").click(function() {
+        if(window.innerWidth < 600) {
+            $("#LeftContent").css("display", "block");
+        }
+        $("#EmailSend").css("display", "none");
+        $("#AddUsers").css("display", "block");
+    }
+);
+
+
+   
 
 
     
@@ -37,22 +52,8 @@ $(document).ready(function () {
 
     //functions used above
 
-    function ToggleUsersPage() {
-        if(window.innerWidth < 600) {
-            $("#LeftContent").css("display", "block");
-        }
-        $("#EmailSend").css("display", "none");
-        $("#AddUsers").css("display", "block");
-    }
-
-    function ToggleEmailPage() {
-        if(window.innerWidth < 600) {
-            $("#LeftContent").css("display", "block");
-        }
-
-        $("#EmailSend").css("display", "block");
-        $("#AddUsers").css("display", "none");
-    }
+    
+ 
 
 
 

@@ -210,5 +210,9 @@ $LightOrange: #FA6A00;*/
   #ClosePane {
     display: block;
   }
+  .BoxButton {
+    padding: 0px 2%;
+    border: 1px solid var(--TextColour);
+  }
 }
 /*# sourceMappingURL=AddUser.css.map */
