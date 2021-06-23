@@ -1,51 +1,70 @@
-$(document).ready(function () {
+window.onload = function () {
     var Emails = ["oliver.quail3@gmail.com", "ezmerlda@gmail.com", "lara@gmail.com"];
 
+    //Get references to required compents
+    var EmailButton = document.getElementById("EmailPeople");
+    var AddUserPageButton = document.getElementById("AddUsersPage"); 
+    var CloseButton = document.getElementById("ClosePane");
 
-    //For laptop ect 
-    $("#EmailPeople").click(   function() {
+
+
+    //Reference to left hand side content
+    var LeftContent = document.getElementById("LeftContent");
+
+    //References to content
+    var AddUserPane = document.getElementById("AddUsers");
+    var EmailPane = document.getElementById("EmailSend");
+
+
+    EmailButton.addEventListener("click", function(){
         if(window.innerWidth < 600) {
-            $("#LeftContent").css("display", "block");
+            LeftContent.style.display = "block";
         }
-
-        $("#EmailSend").css("display", "block");
-        $("#AddUsers").css("display", "none");
-
+        EmailPane.style.display = "block";
+        AddUserPane.style.display = "none";
+       
     });
 
 
-    $("#AddUsersPage").click(function() {
+
+    AddUserPageButton.addEventListener("click", function(){
         if(window.innerWidth < 600) {
-            $("#LeftContent").css("display", "block");
+            LeftContent.style.display = "block";
         }
-        $("#EmailSend").css("display", "none");
-        $("#AddUsers").css("display", "block");
-    }
-);
-
-
-   
+        EmailPane.style.display = "none";
+        AddUserPane.style.display = "block";
+    });
 
 
     
 
-    $("#ClosePane").click(function(){
-        $("#LeftContent").css("display", "none");
+
+
+
+   
+    CloseButton.addEventListener("click", function(){
+        LeftContent.style.display = "none";
     });
 
-    $("#ClosePane").on("tap", function(){
-        $("#LeftContent").css("display", "none");
-    });
+    
 
-    $(window).resize(function(){
+  
+
+    
+    window.onresize = function(){
+        console.log("work");
         if(window.innerWidth > 600) {
-            $("#LeftContent").css("display", "block");
+            LeftContent.style.display = "block";
         }
         else {
-            $("#LeftContent").css("display", "none");
+            LeftContent.style.display = "none";
 
         }
-    });
+
+        if(EmailPane.style.display == "none" && AddUserPane.style.display == "none") {
+            EmailPane.style.display = "block";
+        }
+    };
 
 
 
@@ -57,4 +76,4 @@ $(document).ready(function () {
 
 
 
-});
+};
