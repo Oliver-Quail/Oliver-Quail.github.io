@@ -252,10 +252,11 @@ main .ContentHolder2 .Content2 ul li {
     height: 10vw;
     top: -5vw;
     margin-left: 45%;
+    margin-bottom: -100px;
     position: relative;
     margin-bottom: 25%;
   }
-  #ImgWrap img {
+  #ImgWrap #Img1 {
     width: 100%;
     height: 100%;
     border-radius: 100%;
