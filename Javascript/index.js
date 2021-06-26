@@ -24,11 +24,11 @@ window.onload = function() {
         if(CurrentLetter < Roles[CurrentRole].length && Deleting == false) {
             TextToShow += Roles[CurrentRole].charAt(CurrentLetter);
             CurrentLetter++;
-            //console.log(CurrentLetter);
             
         }
         else if(CurrentLetter == Roles[CurrentRole].length && Deleting == false) {
             Deleting = true;
+            setTimeout(function(){}, 5000);
 
         }
         else if (Deleting == true && CurrentLetter >= 1) {
@@ -38,8 +38,9 @@ window.onload = function() {
         else {
             Deleting = false;
             CurrentRole++;
-            console.log(CurrentRole);
-            console.log("Fired");
+            setTimeout(function(){}, 5000);
+
+            
         }
         TextOutput.textContent = TextToShow;
 
