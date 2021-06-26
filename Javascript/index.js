@@ -34,7 +34,6 @@ window.onload = function() {
         else if (Deleting == true && CurrentLetter >= 1) {
             TextToShow =TextToShow.substring(0, TextToShow.length-1);
             CurrentLetter--;
-            console.log(CurrentLetter);
         }
         else {
             Deleting = false;

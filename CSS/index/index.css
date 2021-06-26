@@ -160,7 +160,65 @@ main .ContentHolder2 .Content2 ul li {
   text-align: left;
 }
 
-/* Misc Thing */
+@media screen and (max-width: 600px) {
+  #MainImage {
+    width: 100%;
+  }
+  main {
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+  main * {
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+  .ContentHolder2 {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .ContentHolder2 .Content2 {
+    width: 100%;
+    display: inline-block;
+  }
+  .ContentHolder2 .Content2 h2 {
+    text-align: center;
+    margin: auto;
+  }
+  .ContentHolder2 .Content2 ul li {
+    text-align: left;
+  }
+  #MySkills ul {
+    list-style-type: none;
+  }
+  #MySkills ul li {
+    display: inline-block;
+    border: 2px solid var(--TextColour);
+    padding: 4px;
+    margin: 3% 0;
+  }
+  #MySkills ul li:nth-child(1), #MySkills ul li:nth-child(2) {
+    margin: 0 2%;
+  }
+  #MySkills ul li:last-child {
+    margin: 5% 0px;
+  }
+  #MySkills ul li:hover {
+    background-color: var(--SecondBackgroundColour);
+    -webkit-transition: 400ms;
+    transition: 400ms;
+  }
+}
+
+/* Misc Styling */
 #Typer {
   width: 3px;
   height: 24px;
@@ -178,5 +236,19 @@ main .ContentHolder2 .Content2 ul li {
 
 a {
   color: var(--HighlightColour);
+}
+
+/* Scroll bar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--SecondBackgroundColour);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--HighlightColour);
+  border-radius: 25px;
 }
 /*# sourceMappingURL=index.css.map */

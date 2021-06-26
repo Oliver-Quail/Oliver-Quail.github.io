@@ -156,7 +156,74 @@ main {
 
 
 
-/* Misc Thing */
+
+
+@media screen and (max-width: 600px) {
+    
+    #MainImage {
+        width: 100%;
+    }
+    main {
+        grid-template-columns: 100%;
+
+        * {
+            grid-column: 1;
+        }
+    }
+
+    .ContentHolder2 {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        .Content2 {
+            width:100%;
+            display: inline-block;
+
+            h2 {
+                text-align: center;
+                margin: auto;
+            }
+
+            ul {
+                li {
+                    text-align: left;
+                }
+            }
+        }
+
+    }
+
+    
+    #MySkills {
+        ul {
+            list-style-type: none;
+            li {
+                display: inline-block;
+                border: 2px solid var(--TextColour);
+                padding: 4px;
+                margin: 3% 0;
+            }
+            li:nth-child(1), li:nth-child(2) {
+                margin: 0 2%;
+
+            }
+            li:last-child {
+                margin: 5% 0px;
+            }
+
+            li:hover {
+                background-color: var(--SecondBackgroundColour);
+                transition: 400ms;
+            }
+        }   
+    }
+}
+
+
+/* Misc Styling */
 #Typer {
     width: 3px;
     height: 24px;
@@ -174,4 +241,18 @@ main {
 
 a {
     color: var(--HighlightColour);
+}
+
+/* Scroll bar styling */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--SecondBackgroundColour);
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--HighlightColour);
+    border-radius: 25px;
 }
