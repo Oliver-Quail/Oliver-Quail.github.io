@@ -1,38 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Jura:wght@500&family=Maven+Pro&family=Varta&display=swap");
-/*$Main_Font: 'Space Grotesk', sans-serif;*/
-* {
-  font-family: 'Varta', sans-serif;
-}
-
-/* Updated colours */
-/*$MainWhite: #fefefe;*/
-/*$DarkestBlue: #009CAD;
-$SecondBlue: #19E8FF;
-$MiddleBlue: #00E1FA;
-$DarkOrgane: #AD4A00;
-$LightOrange: #FA6A00;*/
-/* THEME TWO */
-:root {
-  --LighestColour: #29f2c6;
-  --DarkestColour: #03a682;
-  --MiddleColour: #15caa2;
-  --TextColour: white;
-  --BackgroundColour: #181818;
-  --SecondBackgroundColour: #212121;
-  --MainGrey: #606060;
-  font-size: 16px;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  color: var(--TextColour);
-}
-
-:export {
-  --value1: #606060;
-}
-
+@import url(c:\Users\quailo\OneDrive - Kardinia International College\Documents\GitHub\Ollie-Q.github.io\CSS\Universal_Assets.css);
 #Content {
   width: 100vw;
   height: 100vh;
