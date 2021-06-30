@@ -206,6 +206,7 @@ footer {
     
     #MainImage {
         width: 100%;
+        background-position: 50% 0%;
     }
     main {
         grid-template-columns: 100%;
@@ -266,18 +267,18 @@ footer {
     }
 
     #ImgWrap {
-        width: 20vw;
-        height: 20vw;
-        top: -10vw;
-        margin-left: 40vw;
-        margin-bottom: -400px;
+        width: 50vw;
+        height: 50vw;
+        top: -25vw;
+        margin: 0px auto;
+        margin-bottom: none;
         position: relative;
+        margin-bottom: -80px;
         #Img1 {
             width: 100%;
             height: 100%;
             border-radius: 100%;
         }
-        margin-bottom: 25%;
         
         
     

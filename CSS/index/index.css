@@ -198,6 +198,7 @@ footer * {
 @media screen and (max-width: 600px) {
   #MainImage {
     width: 100%;
+    background-position: 50% 0%;
   }
   main {
     -ms-grid-columns: 100%;
@@ -252,13 +253,13 @@ footer * {
     transition: 400ms;
   }
   #ImgWrap {
-    width: 20vw;
-    height: 20vw;
-    top: -10vw;
-    margin-left: 40vw;
-    margin-bottom: -400px;
+    width: 50vw;
+    height: 50vw;
+    top: -25vw;
+    margin: 0px auto;
+    margin-bottom: none;
     position: relative;
-    margin-bottom: 25%;
+    margin-bottom: -80px;
   }
   #ImgWrap #Img1 {
     width: 100%;

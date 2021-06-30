@@ -262,8 +262,8 @@ nav #UpdateButton {
     background: transparent;
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
-    -ms-grid-rows: auto 55vh;
-        grid-template-rows: auto 55vh;
+    -ms-grid-rows: auto auto;
+        grid-template-rows: auto auto;
     row-gap: 20vh;
   }
   #ParallaxBackground * {
@@ -355,7 +355,9 @@ nav #UpdateButton {
     -ms-grid-row: 2;
     grid-row: 2;
     width: 100%;
-    height: 100%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     background-color: var(--OffBlack);
     /* display: flex;
         align-items: center;
@@ -365,9 +367,9 @@ nav #UpdateButton {
     display: grid;
     -ms-grid-columns: 100%;
         grid-template-columns: 100%;
-    -ms-grid-rows: 30% 30% 30%;
-        grid-template-rows: 30% 30% 30%;
-    row-gap: 4vh;
+    -ms-grid-rows: auto auto auto;
+        grid-template-rows: auto auto auto;
+    row-gap: 2vh;
   }
   #ParallaxBackground #KeyStats .Stat {
     -ms-grid-column: 1;
@@ -396,7 +398,7 @@ nav #UpdateButton {
 
 footer {
   width: 100%;
-  height: 100%;
+  height: auto;
   background-color: var(--MainBlack);
 }
 /*# sourceMappingURL=LiveData.css.map */
