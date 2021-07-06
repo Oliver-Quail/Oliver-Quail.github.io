@@ -8,7 +8,7 @@ window.onload = function() {
 
 
     //spectific default settings
-    Chart.defaults.plugins.legend.labels.color = "White";
+    Chart.defaults.plugins.legend.labels.color = "#181818";
     Chart.defaults.plugins.title.font.size = 24;
 
 
@@ -27,10 +27,10 @@ window.onload = function() {
         datasets: [{
             data: [12, 19, 3, 5],
             backgroundColor: [
-                'hsl(4, 82%, 67%)',
-                '#4EDAFF',
-                'hsl(42, 100%, 80%)',
-                'hsl(145, 82%, 67%)',
+                '#FFADAD',
+                '#9BF6FF',
+                '#FDFFB6',
+                '#CAFFBF',
                 
             ],
             borderColor: [
@@ -45,7 +45,7 @@ window.onload = function() {
                 
             ],
             color: [
-                "#FFF"
+                "#181818"
             ],
             borderWidth: 0
         }]
@@ -72,7 +72,7 @@ window.onload = function() {
             title: {
                 display: true,
                 align: "center",
-                color: "white",
+                color: "181818",
                 text: "Break down of waste by mass",
                 font : {
                     size: 20
@@ -84,7 +84,6 @@ window.onload = function() {
                 position: "bottom",
 
                 labels: {
-                    color: "white",
                     //family: "'Roboto', sans-serif",
                     font: {
                         size: "16"
@@ -142,7 +141,7 @@ window.onload = function() {
             title: {
                 display: true,
                 align: "center",
-                color: "white",
+                color: "#181818",
                 text: "Contaminated vs non-contaminated",
                 font : {
                     size: 18
@@ -225,7 +224,7 @@ window.onload = function() {
             title: {
                 display: true,
                 align: "center",
-                color: "white",
+                color: "#181818",
                 text: "placeholder",
               
             },
@@ -234,7 +233,6 @@ window.onload = function() {
                 position: "bottom",
 
                 labels: {
-                    color: "white",
                     //family: "'Roboto', sans-serif",
                     font: {
                         size: "20"
