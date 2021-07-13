@@ -3,9 +3,10 @@
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
-  --OffBlack: hsl(210, 18%, 92%);
+  --OffBlack: rgba(249, 250, 251, 0.5);
+  height: 100%;
   --MainBlack: hsl(0, 60%, 2%);
-  --Green: #66f09f;
+  --Green: #CAFFBF;
   /*--Green: hsl(42, 100%, 80%);
     --Green: hsl(195, 83%, 57%);
     --Green: hsl(4, 82%, 77%)*/
@@ -95,12 +96,13 @@ nav #UpdateButton {
   border-radius: 25px;
   font-size: 1.2rem;
   padding: 0px 1%;
-  color: #66f09f;
+  color: #a6ff93;
+  text-shadow: 1px 1px #b79aa8;
 }
 
 #ParallaxBackground {
   margin: 8vh 0px;
-  background-color: #F8F9FA;
+  background-color: #f9fafb;
   height: 100%;
   width: 100%;
   background-repeat: no-repeat;
@@ -408,5 +410,19 @@ footer {
   width: 100%;
   height: auto;
   background-color: var(--MainBlack);
+}
+
+footer p {
+  color: #FAF8F9;
+}
+
+footer a {
+  color: #FAF8F9;
+}
+
+footer a:hover {
+  color: #ff9500;
+  -webkit-transition: 200ms;
+  transition: 200ms;
 }
 /*# sourceMappingURL=LiveData2.css.map */

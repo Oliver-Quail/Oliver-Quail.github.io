@@ -3,9 +3,10 @@
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
-  --OffBlack: hsl(210, 18%, 92%);
+  --OffBlack: rgba(249, 250, 251, 0.5);
+  height: 100%;
   --MainBlack: hsl(0, 60%, 2%);
-  --Green: #66f09f;
+  --Green: #CAFFBF;
   /*--Green: hsl(42, 100%, 80%);
     --Green: hsl(195, 83%, 57%);
     --Green: hsl(4, 82%, 77%)*/

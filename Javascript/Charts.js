@@ -111,8 +111,8 @@ window.onload = function() {
         datasets: [{
             data: [12, 19],
             backgroundColor: [
-                '#f07167',
-                'hsl(145, 82%, 67%)',
+                '#FFADAD',
+                '#CAFFBF',
                 
             ],
             borderColor: [
