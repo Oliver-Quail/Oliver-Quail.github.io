@@ -155,6 +155,7 @@ main {
 
     #MySkills {
         ul {
+            list-style-type: none;
             li {
                 display: inline-block;
                 border: 2px solid var(--TextColour);
@@ -166,12 +167,7 @@ main {
                 background-color: var(--SecondBackgroundColour);
                 transition: 400ms;
             }
-
-            li::marker {
-                color: var(--HighlightColour);
-            }
-        } 
-        
+        }   
     }
 
     .ContentHolder2 {
@@ -208,7 +204,7 @@ footer {
 
 @media screen and (max-width: 600px) {
     
-    #MainImage { 
+    #MainImage {
         width: 100%;
         background-position: 50% 0%;
     }

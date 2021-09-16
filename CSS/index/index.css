@@ -154,6 +154,10 @@ main #LinkHolder a:hover {
   color: var(--SecondTextColour);
 }
 
+main #MySkills ul {
+  list-style-type: none;
+}
+
 main #MySkills ul li {
   display: inline-block;
   border: 2px solid var(--TextColour);
@@ -165,10 +169,6 @@ main #MySkills ul li:hover {
   background-color: var(--SecondBackgroundColour);
   -webkit-transition: 400ms;
   transition: 400ms;
-}
-
-main #MySkills ul li::marker {
-  color: var(--HighlightColour);
 }
 
 main .ContentHolder2 {
