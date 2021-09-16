@@ -98,6 +98,7 @@ nav {
                 grid-row: 1;
                 grid-column: 1/5;
                 text-align: center;
+                font-weight: bold;
             }
 
             @for $i from 1 through 14 {
@@ -117,6 +118,13 @@ nav {
                     }
                 }
             }
+
+            p:nth-child(3), p:nth-child(2)  {
+                font-weight: bold;
+                
+
+            }
+
             
 
             

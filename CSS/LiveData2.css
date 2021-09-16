@@ -183,6 +183,7 @@ nav #UpdateButton {
   -ms-grid-column-span: 4;
   grid-column: 1/5;
   text-align: center;
+  font-weight: bold;
 }
 
 #ParallaxBackground #GraphHolder #Chart2Holder p:nth-child(1) {
@@ -295,6 +296,10 @@ nav #UpdateButton {
   grid-row: 9;
   -ms-grid-column: 2;
   grid-column: 2;
+}
+
+#ParallaxBackground #GraphHolder #Chart2Holder p:nth-child(3), #ParallaxBackground #GraphHolder #Chart2Holder p:nth-child(2) {
+  font-weight: bold;
 }
 
 #ParallaxBackground #GraphHolder #Chart3Holder {
