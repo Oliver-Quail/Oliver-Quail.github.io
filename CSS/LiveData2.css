@@ -297,6 +297,14 @@ nav #UpdateButton {
   grid-column: 2;
 }
 
+#ParallaxBackground #GraphHolder #Chart2Holder p:nth-child(2), #ParallaxBackground #GraphHolder #Chart2Holder p:nth-child(3) {
+  font-weight: bold;
+}
+
+#ParallaxBackground #GraphHolder #Chart2Holder p:nth-child(5) {
+  color: blue;
+}
+
 #ParallaxBackground #GraphHolder #Chart3Holder {
   -ms-grid-column: 3;
   grid-column: 3;
