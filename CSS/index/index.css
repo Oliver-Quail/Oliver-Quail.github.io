@@ -92,6 +92,11 @@ nav a:last-child {
   width: 100%;
 }
 
+<<<<<<< HEAD
+#ImageHolder {
+  height: 12vh;
+}
+
 #ImgWrap {
   width: 10vw;
   height: 10vw;
@@ -99,9 +104,15 @@ nav a:last-child {
   margin-left: 45%;
   position: relative;
   margin-bottom: -100px;
+=======
+#Intro #ImgWrap {
+  z-index: 3;
+  width: 15vw;
+  margin: 0px auto;
+>>>>>>> 91d43acea7aaab6ab42a98b372476c75a9ae02c2
 }
 
-#ImgWrap #Img1 {
+#Intro #ImgWrap #Img1 {
   width: 100%;
   height: 100%;
   border-radius: 100%;
@@ -154,10 +165,6 @@ main #LinkHolder a:hover {
   color: var(--SecondTextColour);
 }
 
-main #MySkills ul {
-  list-style-type: none;
-}
-
 main #MySkills ul li {
   display: inline-block;
   border: 2px solid var(--TextColour);
@@ -169,6 +176,10 @@ main #MySkills ul li:hover {
   background-color: var(--SecondBackgroundColour);
   -webkit-transition: 400ms;
   transition: 400ms;
+}
+
+main #MySkills ul li::marker {
+  color: var(--HighlightColour);
 }
 
 main .ContentHolder2 {
@@ -252,15 +263,6 @@ footer * {
     -webkit-transition: 400ms;
     transition: 400ms;
   }
-  #ImgWrap {
-    width: 50vw;
-    height: 50vw;
-    top: -25vw;
-    margin: 0px auto;
-    margin-bottom: none;
-    position: relative;
-    margin-bottom: -80px;
-  }
   #ImgWrap #Img1 {
     width: 100%;
     height: 100%;
@@ -289,8 +291,9 @@ a {
 }
 
 #Line {
-  border: 3px solid var(--HighlightColour);
-  width: auto;
+  border-top: 3px solid var(--HighlightColour);
+  margin: 0px;
+  padding: 0px;
 }
 
 /* Scroll bar styling */
