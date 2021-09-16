@@ -90,28 +90,28 @@ nav {
     width: 100%;
 
 
-
-   
-    #ImgWrap {
-        z-index: 3;
-        width: 15vw;
-        margin: 0px auto;
-
-        #Img1 {
-            width: 100%;
-            height: 100%;
-            border-radius: 100%;
-        }
-    }
-
-
    
 
     
 }
 
 
+#ImgWrap {
+    width: 10vw;
+    height: 10vw;
+    top: -5vw;
+    margin-left: 45%;
+    position: relative;
+    margin-bottom: -100px;
+    #Img1 {
+        width: 100%;
+        height: 100%;
+        border-radius: 100%;
+    }
+    
+    
 
+}
 
 #JobTitle {
     text-align: center;
@@ -267,14 +267,17 @@ footer {
     }
 
     #ImgWrap {
-    
-       
-        
+        width: 50vw;
+        height: 50vw;
+        top: -25vw;
+        margin: 0px auto;
+        margin-bottom: none;
+        position: relative;
+        margin-bottom: -80px;
         #Img1 {
             width: 100%;
             height: 100%;
             border-radius: 100%;
-
         }
         
         
@@ -305,10 +308,8 @@ a {
 }
 
 #Line {
-    border-top: 3px solid var(--HighlightColour);
-    margin: 0px;
-    padding: 0px;
-
+    border: 3px solid var(--HighlightColour);
+    width: auto;
 }
 
 /* Scroll bar styling */
