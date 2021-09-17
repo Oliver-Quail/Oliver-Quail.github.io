@@ -6,12 +6,15 @@
   --OffBlack: rgba(249, 250, 251, 0.5);
   height: 100%;
   --MainBlack: hsl(0, 60%, 2%);
-  --Green: #CAFFBF;
   /*--Green: hsl(42, 100%, 80%);
     --Green: hsl(195, 83%, 57%);
     --Green: hsl(4, 82%, 77%)*/
-  --Red: #f07167;
   color: var(--MainBlack);
+  --Red: #f07167;
+  --Green: #CAFFBF;
+  --Blue: #4EDAFF;
+  --Yellow: #FDFFB6;
+  --Purple: #9d4edd;
   font-size: 16px;
 }
 
@@ -75,7 +78,7 @@ nav {
           justify-content: space-evenly;
   height: 5vh;
   width: 100%;
-  background-color: var(--OffBlack);
+  background-color: #f9fafb;
   position: fixed;
   top: 0px;
   z-index: 2;
@@ -174,6 +177,7 @@ nav #UpdateButton {
       grid-template-columns: auto 40% 40% auto;
   -ms-grid-rows: auto auto auto auto auto auto;
       grid-template-rows: auto auto auto auto auto auto;
+  background-color: rgba(249, 250, 251, 0.1);
 }
 
 #ParallaxBackground #GraphHolder #Chart2Holder h1 {
@@ -191,6 +195,7 @@ nav #UpdateButton {
   grid-row: 2;
   -ms-grid-column: 3;
   grid-column: 3;
+  font-weight: bold;
 }
 
 #ParallaxBackground #GraphHolder #Chart2Holder p:nth-child(2) {
@@ -207,6 +212,7 @@ nav #UpdateButton {
   grid-row: 3;
   -ms-grid-column: 3;
   grid-column: 3;
+  font-weight: bold;
 }
 
 #ParallaxBackground #GraphHolder #Chart2Holder p:nth-child(4) {
@@ -223,6 +229,7 @@ nav #UpdateButton {
   grid-row: 4;
   -ms-grid-column: 3;
   grid-column: 3;
+  font-weight: bold;
 }
 
 #ParallaxBackground #GraphHolder #Chart2Holder p:nth-child(6) {
@@ -239,6 +246,7 @@ nav #UpdateButton {
   grid-row: 5;
   -ms-grid-column: 3;
   grid-column: 3;
+  font-weight: bold;
 }
 
 #ParallaxBackground #GraphHolder #Chart2Holder p:nth-child(8) {
@@ -255,6 +263,7 @@ nav #UpdateButton {
   grid-row: 6;
   -ms-grid-column: 3;
   grid-column: 3;
+  font-weight: bold;
 }
 
 #ParallaxBackground #GraphHolder #Chart2Holder p:nth-child(10) {
@@ -271,6 +280,7 @@ nav #UpdateButton {
   grid-row: 7;
   -ms-grid-column: 3;
   grid-column: 3;
+  font-weight: bold;
 }
 
 #ParallaxBackground #GraphHolder #Chart2Holder p:nth-child(12) {
@@ -287,6 +297,7 @@ nav #UpdateButton {
   grid-row: 8;
   -ms-grid-column: 3;
   grid-column: 3;
+  font-weight: bold;
 }
 
 #ParallaxBackground #GraphHolder #Chart2Holder p:nth-child(14) {
@@ -302,23 +313,23 @@ nav #UpdateButton {
 }
 
 #ParallaxBackground #GraphHolder #Chart2Holder p:nth-child(5) {
-  color: blue;
+  color: var(--Blue);
 }
 
 #ParallaxBackground #GraphHolder #Chart2Holder p:nth-child(7) {
-  color: Green;
+  color: var(--Green);
 }
 
 #ParallaxBackground #GraphHolder #Chart2Holder p:nth-child(9) {
-  color: Red;
+  color: var(--Red);
 }
 
 #ParallaxBackground #GraphHolder #Chart2Holder p:nth-child(11) {
-  color: Yellow;
+  color: var(--Yellow);
 }
 
 #ParallaxBackground #GraphHolder #Chart2Holder p:nth-child(13) {
-  color: purple;
+  color: var(--Purple);
 }
 
 #ParallaxBackground #GraphHolder #Chart3Holder {

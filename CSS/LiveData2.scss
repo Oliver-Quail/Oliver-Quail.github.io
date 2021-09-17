@@ -13,7 +13,7 @@ nav {
     justify-content: space-evenly;
     height: 5vh;
     width: 100%;
-    background-color: var(--OffBlack);
+    background-color: rgb(249, 250, 251);
     position: fixed;
     top: 0px;
     z-index: 2;
@@ -91,7 +91,11 @@ nav {
             margin-top: 10%;
             display: grid;
             grid-template-columns: auto 40% 40% auto;
-            grid-template-rows: auto auto auto auto auto auto ;
+            grid-template-rows: auto auto auto auto auto auto;
+            background-color: rgba(249, 250, 251, 0.1);
+                        
+
+
             
             $RowVar: 2;
             h1 {
@@ -113,6 +117,8 @@ nav {
                     @else {
                         grid-column: 3;
                         $RowVar: $RowVar +  1;
+                        font-weight: bold;
+
 
                     }
                 }
@@ -127,23 +133,24 @@ nav {
             }
 
             p:nth-child(5) {
-                color: blue;
+                color: var(--Blue);
 
             }
             p:nth-child(7) {
-                color: Green;
+                color: var(--Green);
                 
             }
             p:nth-child(9) {
-                color: Red;
+                color: var(--Red);
                 
             }
             p:nth-child(11) {
-                color: Yellow;
+                color: var(--Yellow);
                 
             }
             p:nth-child(13) {
-                color: purple;
+                color: var(--Purple);
+
                 
                 
             }
