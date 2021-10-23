@@ -32,6 +32,29 @@
 
 }
 
+ion-icon {
+    color: var(--HighlightColour);
+    margin: 0px;
+    padding: 0px;
+    font-size: clamp(12px, 24px, 64px);
+
+
+
+
+    
+}
+
+#NavPhone {
+    display: none;
+}
+
+.NavPhoneActive {
+    display: block;
+    display: flex;
+
+}
+
+
 nav {
     width: 100%;
     
@@ -40,29 +63,37 @@ nav {
     display: flex;
     position: fixed;
     z-index: 2;
+    justify-content: space-between;
+
+    #DownArrow {
+        display: none;
+
+    }
+
+
+
     
     align-items: center;
 
     a {
         font-weight: bold;
         text-decoration: none;
+        margin-left: 10%;
+
 
     }
 
-    .EndLink {
-        margin: 0 2%;
+    #LinkHolder {
+        
+
+        display: flex;
+        width: 20vw;
+        justify-content: space-evenly;
+     
+
     }
+
     
-    a:first-child {
-        margin-left: 5%;
-    }
-    a:nth-child(2) {
-        margin-left: auto;
-    }
-    
-    a:last-child {
-        margin-right: 10%;
-    }
 }
 
 
@@ -204,6 +235,8 @@ footer {
 
 @media screen and (max-width: 600px) {
     
+
+
     #MainImage {
         width: 100%;
         background-position: 50% 0%;
@@ -213,6 +246,45 @@ footer {
 
         * {
             grid-column: 1;
+        }
+    }
+
+    #NavPhone {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--BackgroundColour);
+
+
+        padding-top: 5vh;
+        position: fixed;
+        width: 100vw;
+        height: 95vh;
+        z-index: 2;
+        bottom: 0;
+        right: 0;
+
+        
+    }
+    
+
+    nav {
+        display: flex;
+        justify-content: center;
+
+        #LinkHolder, a {
+            display: none;
+
+        }
+       
+        #DownArrow {
+            display: block;
+
+
+
+        }
+        #DownArrowActive {
+            transform: rotateX(180deg);
         }
     }
 

@@ -59,5 +59,39 @@ window.onload = function() {
 
     }, 500);
 
+    var DownArrow = document.getElementById("DownArrow");
+    var NavPhone = document.getElementById("NavPhone");
+
+    NavPhone.setAttribute("display", "none");
+
+
+    DownArrow.addEventListener("click", ToggleNavMenu);
+
+
+
+
+    function ToggleNavMenu() {
+
+        if(DownArrow.classList.contains("DownArrowInActive")) {
+            DownArrow.classList.remove("DownArrowInActive");
+            DownArrow.classList.add("DownArrowActive");
+            NavPhone.classList.add("NavPhoneActive");
+            NavPhone.style.display = "flex";
+            
+        }
+        else {
+            DownArrow.classList.add("DownArrowInActive");
+            DownArrow.classList.remove("DownArrowActive");
+            NavPhone.classList.remove("NavPhoneActive");
+            NavPhone.style.display = "none";
+            
+
+
+        }
+    }
+
+
+
+
 
 }
