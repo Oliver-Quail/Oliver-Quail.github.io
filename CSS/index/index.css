@@ -18,7 +18,7 @@
   --BackgroundColour: #F8F9FA;
   --TextColour: #212529;
   --SecondBackgroundColour: #CED4DA;
-  --SecondTextColour: #6C757D;
+  --SecondTextColour: #E9ECEF;
   --HighlightColour: #ff9500;
   font-family: 'Roboto', sans-serif;
 }
@@ -66,6 +66,11 @@ nav {
 
 nav #DownArrow {
   display: none;
+}
+
+nav #NameText {
+  font-family: 'Cookie', cursive;
+  font-size: 24px;
 }
 
 nav a {
@@ -123,6 +128,7 @@ nav #LinkHolder {
   width: 100%;
   height: 100%;
   border-radius: 100%;
+  border: 3px solid var(--HighlightColour);
 }
 
 #JobTitle {
@@ -203,6 +209,32 @@ main .ContentHolder2 .Content2 {
 
 main .ContentHolder2 .Content2 ul li {
   text-align: left;
+}
+
+.Carsol {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: auto;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.Carsol .CarsolObject {
+  height: 100%;
+  width: 25%;
+  border-radius: 15%;
+  border: 2px solid var(--HighlightColour);
+  opacity: 75%;
+  background-color: var(--SecondTextColour);
+}
+
+.Carsol .CarsolObject h3 {
+  font-family: 'Cookie', cursive;
+  font-size: 24px;
+  color: var(--HighlightColour);
 }
 
 footer {
