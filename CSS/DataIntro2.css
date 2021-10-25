@@ -64,6 +64,7 @@
 
 .ArticleParaBackground {
   min-width: 100%;
+  background-attachment: fixed;
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -94,7 +95,6 @@
 
 #ParaBackground1 {
   background-image: url(Images/BgImage1.jpg);
-  background-position: fixed;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -118,7 +118,6 @@
 #ParaBackground2 {
   font-family: 'Bebas Neue', cursive;
   background-image: url(Images/BgImage3.jpg);
-  background-attachment: fixed;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -135,7 +134,6 @@
 #ParaBackground3 {
   font-family: 'Bebas Neue', cursive;
   background-image: url(Images/BgImage2.jpg);
-  background-attachment: fixed;
 }
 
 #ParaBackground3 * span {
@@ -144,7 +142,6 @@
 
 #ParaBackground4 {
   background-image: url(Images/BgImage4.jpg);
-  background-position: fixed;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
