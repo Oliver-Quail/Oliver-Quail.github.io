@@ -164,4 +164,27 @@
   font-family: 'Bebas Neue', cursive;
   font-weight: bold;
 }
+
+@media screen and (max-width: 600px) {
+  #ParaBackground1 {
+    background-image: url(Images/BgImage5.jpg);
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+  }
+  #ParaBackground2 {
+    background-image: url(Images/BgImage6.jpg);
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+  }
+  #ParaBackground3 {
+    background-image: url(Images/BgImage7.jpg);
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+  }
+  #ParaBackground4 {
+    background-image: url(Images/BgImage8.jpg);
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+  }
+}
 /*# sourceMappingURL=DataIntro2.css.map */
