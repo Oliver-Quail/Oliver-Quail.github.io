@@ -1,0 +1,129 @@
+@import "Assets2";
+
+
+.ArticleParaBackground {
+
+    min-width: 100%;
+    background-attachment: fixed;
+
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-size: 100%;
+
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+    background-size: cover;
+
+
+
+    h1 {
+        font-size: clamp(24px, 54px, 64px);
+        
+        
+    }
+    p {
+        font-family: 'Noto Sans', sans-serif;        
+        width: 50%;
+
+
+    }
+    
+
+
+     
+    
+
+
+
+}
+
+#ParaBackground1 {
+    background-image: url(Images/BgImage1.jpg);
+
+    justify-content: center;
+    align-items: center;
+
+    ion-icon {
+        color: var(--Red);
+        font-size: 64px;
+
+
+    }
+    p {
+        text-align: center;
+
+        color: var(--Red);
+        font-size: 30px;
+
+        font-weight: bold;
+    }
+
+
+}
+
+#ParaBackground2 {
+    font-family: 'Bebas Neue', cursive;
+    background-image: url(Images/BgImage3.jpg);
+
+    justify-content: center;
+    align-items: flex-start;
+    color: white;
+
+    * {
+        span {
+            color: var(--Green);
+
+    
+        }
+
+    }
+    
+
+    
+    
+}
+
+#ParaBackground3 {
+    font-family: 'Bebas Neue', cursive;
+    background-image: url(Images/BgImage2.jpg);
+
+
+    * {
+        span {
+            color: var(--Red);
+
+
+    
+        }
+
+    }
+
+}
+
+#ParaBackground4 {
+
+    background-image: url(Images/BgImage4.jpg);
+
+    justify-content: center;
+    align-items: center;
+
+    ion-icon {
+        color: var(--Red);
+        font-size: 64px;
+
+
+    }
+    a {
+        color: var(--Green);
+        text-decoration: none;
+        font-size: 64px;
+
+
+    
+        font-weight: bold;
+    }
+
+
+}
