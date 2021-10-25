@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans&display=swap");
 :root {
   margin: 0;
   padding: 0;
@@ -73,6 +72,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  background-size: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -80,10 +80,11 @@
       -ms-flex-align: start;
           align-items: flex-start;
   color: white;
+  background-size: cover;
 }
 
 .ArticleParaBackground h1 {
-  font-size: 64px;
+  font-size: clamp(24px, 54px, 64px);
 }
 
 .ArticleParaBackground p {
@@ -93,7 +94,6 @@
 
 #ParaBackground1 {
   background-image: url(Images/BgImage1.jpg);
-  background-size: cover;
   background-position: fixed;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -118,7 +118,6 @@
 #ParaBackground2 {
   font-family: 'Bebas Neue', cursive;
   background-image: url(Images/BgImage3.jpg);
-  background-size: cover;
   background-attachment: fixed;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -136,7 +135,6 @@
 #ParaBackground3 {
   font-family: 'Bebas Neue', cursive;
   background-image: url(Images/BgImage2.jpg);
-  background-size: cover;
   background-attachment: fixed;
 }
 
@@ -146,7 +144,6 @@
 
 #ParaBackground4 {
   background-image: url(Images/BgImage4.jpg);
-  background-size: cover;
   background-position: fixed;
   -webkit-box-pack: center;
       -ms-flex-pack: center;

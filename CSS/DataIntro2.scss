@@ -8,13 +8,18 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-size: 100%;
 
     justify-content: center;
     align-items: flex-start;
     color: white;
+    background-size: cover;
+
+
 
     h1 {
-        font-size: 64px;
+        font-size: clamp(24px, 54px, 64px);
+        
         
     }
     p {
@@ -35,7 +40,6 @@
 
 #ParaBackground1 {
     background-image: url(Images/BgImage1.jpg);
-    background-size: cover;
     background-position: fixed;
 
     justify-content: center;
@@ -49,7 +53,7 @@
     }
     p {
         text-align: center;
-        
+
         color: var(--Red);
         font-size: 30px;
 
@@ -62,7 +66,6 @@
 #ParaBackground2 {
     font-family: 'Bebas Neue', cursive;
     background-image: url(Images/BgImage3.jpg);
-    background-size: cover;
     background-attachment: fixed;
 
     justify-content: center;
@@ -87,7 +90,6 @@
     font-family: 'Bebas Neue', cursive;
     background-image: url(Images/BgImage2.jpg);
 
-    background-size: cover;
     background-attachment: fixed;
 
     * {
@@ -105,7 +107,6 @@
 #ParaBackground4 {
 
     background-image: url(Images/BgImage4.jpg);
-    background-size: cover;
     background-position: fixed;
 
     justify-content: center;
