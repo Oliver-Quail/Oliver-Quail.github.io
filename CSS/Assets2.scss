@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
+//Servers as place for all our  assets e.g. any defaults definition of variables ect that can be reused all over
+//note that this file when imported is appenend to the top of the file that is referencing it
+//this makes it really easy to reuse styles or add nav styles ect
 :root {
     margin: 0;
     padding: 0;
