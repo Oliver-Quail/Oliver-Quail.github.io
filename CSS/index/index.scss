@@ -226,32 +226,70 @@ main {
 
     }
 }
-
-.Carsol {
-    display: flex;
+#ProjectsHolder {
+    background-color: var(--TextColour);
+    padding-bottom: 25px;
+    text-align: center;
     width: 100%;
-    height: auto;
-    justify-content: space-evenly;
 
-    .CarsolObject {
-        height: 100%;
+    
 
+
+
+
+    #MyProjectHeading {
+        background-color: var(--TextColour);
+        color: var(--HighlightColour);
+    }
+    
+    .Carsol {
+        padding-right: 10%;
+        padding-left: 10%;
         
-        width: 25%;
-        border-radius: 15%;
-        border: 2px solid var(--HighlightColour);
-        opacity: 75%;
-
-        background-color: var(--SecondTextColour);
-
-        h3 {
-            font-family: 'Cookie', cursive;
-            font-size: 24px;
-            color: var(--HighlightColour);
+        background-color: var(--TextColour);
+    
+    
+        display: flex;
+        width: 100%;
+        height: auto;
+        justify-content: space-evenly;
+    
+        .CarsolObject {
+            height: 100%;
             
+            
+            width: 30%;
+
+            border-radius: 5px;
+    
+            border: 2px solid var(--HighlightColour);
+    
+            background-color: var(--TextColour);
+            
+    
+    
+            h3 {
+                font-family: 'Cookie', cursive;
+                font-size: 24px;
+                color: var(--HighlightColour);
+                
+            }
+            p {
+                color: var(--BackgroundColour);
+    
+    
+            }
+    
+            img {
+                width: 100%;
+                height: auto;
+    
+                
+            }
         }
     }
 }
+
 
 
 
