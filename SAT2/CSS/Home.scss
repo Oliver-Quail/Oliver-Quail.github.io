@@ -1,0 +1,69 @@
+@import "Defaults.scss";
+
+body {
+    overflow-x: hidden;
+}
+
+#ContentHolder {
+
+    .AdminPost {
+        width: 100%;
+        border: 1px solid var(--MainBlack);
+
+        #AdminData {
+            display: grid;
+            grid-template-columns: 20% auto;
+
+            #AdminImage {
+                grid-column: 1;
+                width: 100%;
+                border-radius: 100%;
+            }
+            div {
+                padding-left: 10px;
+
+                #AdminName {
+                    grid-column: 2;
+                    color: var(--MainBlue);
+                    font-size: 20px;
+                    font-weight: bold;
+                }
+    
+                #AdminTitle {
+                    grid-column: 2;
+                    font-style: italic;
+                    color: var(--MainRed);
+                    font-size: 15px;
+
+
+                }
+            }
+        }
+
+        h1 {
+            text-align: center;
+
+        }
+        p {
+            font-size: 15px;
+            
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .LikeCounter {
+            .Liked, ion-icon {
+                color: var(--MainBlue);
+            }
+            
+            p {
+                display: inline-block;
+                color: var(--MainBlue);
+            }
+        }
+
+        
+    }  
+}

@@ -1,0 +1,93 @@
+@import "Defaults.scss";
+
+body {
+    display: flex;
+    flex-direction: column;
+
+    #MenuBox {
+        display: flex;
+        flex-direction: column;
+        height: 90vh;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        z-index: 2;
+
+        * {
+            background-color: transparent;
+        }
+
+        #LinkHolder {
+            background-color: transparent;
+            
+
+            .MenuLink {
+                padding-top: 20px;
+                
+
+                p {
+                    color: var(--MainBlue);
+                    font-weight: bold;
+                    font-size: 32px;
+                    display: inline-block;
+                }
+
+                span {
+                    display: inline-block;
+                    ion-icon {
+                        color: var(--MainBlue);
+                        font-size: 32px;
+        
+                    }
+
+                }
+            }
+            
+        }
+    }
+
+    #ImageHolder {
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 90vh;
+
+
+        #LogoFaded {
+            z-index: -1;
+            opacity: .15;
+
+        }
+    }
+
+
+
+
+
+    #BackingLogoutButton {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        height: 10vh;
+        background-color: var(--MainRed);
+
+
+        #LogoutButton {
+            text-align: center;
+            background-color: var(--MainRed);
+            color: var(--MainWhite);
+            width: 100%;
+            font-weight: bold;
+
+
+            
+
+        }
+    }
+
+}
