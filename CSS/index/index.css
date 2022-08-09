@@ -211,7 +211,22 @@ main .ContentHolder2 .Content2 ul li {
   text-align: left;
 }
 
-.Carsol {
+#ProjectsHolder {
+  background-color: var(--TextColour);
+  padding-bottom: 25px;
+  text-align: center;
+  width: 100%;
+}
+
+#ProjectsHolder #MyProjectHeading {
+  background-color: var(--TextColour);
+  color: var(--HighlightColour);
+}
+
+#ProjectsHolder .Carsol {
+  padding-right: 10%;
+  padding-left: 10%;
+  background-color: var(--TextColour);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -222,19 +237,27 @@ main .ContentHolder2 .Content2 ul li {
           justify-content: space-evenly;
 }
 
-.Carsol .CarsolObject {
+#ProjectsHolder .Carsol .CarsolObject {
   height: 100%;
-  width: 25%;
-  border-radius: 15%;
+  width: 30%;
+  border-radius: 5px;
   border: 2px solid var(--HighlightColour);
-  opacity: 75%;
-  background-color: var(--SecondTextColour);
+  background-color: var(--TextColour);
 }
 
-.Carsol .CarsolObject h3 {
+#ProjectsHolder .Carsol .CarsolObject h3 {
   font-family: 'Cookie', cursive;
   font-size: 24px;
   color: var(--HighlightColour);
+}
+
+#ProjectsHolder .Carsol .CarsolObject p {
+  color: var(--BackgroundColour);
+}
+
+#ProjectsHolder .Carsol .CarsolObject img {
+  width: 100%;
+  height: auto;
 }
 
 footer {

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        div {
+            width: 100%;
+            height: 100%;
+        }
+        #Holder {
+            display: grid;
+            width: 100vw;
+            height: 100vh;
+            grid-template-columns: 20% 80%;
+        }
+        #SideBar {
+            grid-column: 1;
+            background-color: black;
+        }
+        #MainContent {
+            grid-column: 2;
+            background-color: cadetblue;
+        }
+    </style>
+    <main id="Holder">
+        <div id="SideBar">
+
+        </div>
+        <div id="MainContent">
+
+        </div>
+    </main>
+</body>
+</html>

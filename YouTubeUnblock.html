@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 100%;
+            text-align: center;
+        }
+        article {
+            display: flex;
+            align-items: center;
+            width: 100vw;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Youtube Unblocker</h1>
+        <p>By pass those pesky safe mode restrictions</p>
+    </div>
+    <article>
+        <div>
+        <iframe id="YTVideo" width="642" height="361" src="https://www.youtube.com/embed/PoJatn0P8II" title="Ukraine War: What's on the agenda at the NATO summit in Madrid" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+    </article>
+    <div>
+        <input type="Text" placeholder="Enter Link" id="Link"  />
+        <br/>
+        <button id="LinkButton">Unblock</button>
+    </div>
+
+    <script>
+        window.onload = function()  {
+            var VideoPlayer = document.getElementById("YTVideo");
+        var Link = document.getElementById("Link");
+        var LinkButton = document.getElementById("LinkButton");
+        LinkButton.addEventListener("click", function(){
+            var LinkBase = " https://www.youtube.com/embed/";
+            var LinkValue = Link.value;
+            var LinkData  = LinkValue.split('?');
+            var Index = 2;
+            var YouTubeAddress = "";
+            while(Index < LinkData[1].length) {
+                if(LinkData[1][Index] == "&") {
+                    break;
+                }
+                YouTubeAddress += LinkData[1][Index];
+                Index++;
+            }
+            VideoPlayer.src = LinkBase + YouTubeAddress;
+        });
+        }
+    </script>
+   
+</body>
+</html>

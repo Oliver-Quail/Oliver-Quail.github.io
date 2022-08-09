@@ -65,7 +65,6 @@
 
 .ArticleParaBackground {
   min-width: 100%;
-  background-attachment: fixed;
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -74,7 +73,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-size: 100%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -110,10 +108,9 @@
   font-size: 64px;
 }
 
-#ParaBackground1 p {
+#ParaBackground1 h1 {
   text-align: center;
   color: var(--Red);
-  font-size: 30px;
   font-weight: bold;
 }
 
@@ -166,6 +163,10 @@
 }
 
 @media screen and (max-width: 600px) {
+  .ArticleParaBackground * {
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
+  }
   #ParaBackground1 {
     background-image: url(Images/BgImage5.jpg);
     -webkit-filter: grayscale(100%);

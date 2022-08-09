@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        
+        function SetTime() {
+            var CurrentDay = new Date();
+            
+            var ExamTimes = {"French Oral": "2022/10/19"};
+            var ExamDate  = new Date("2022/10/19");
+            var Days = Math.abs(Math.abs(ExamDate - CurrentDay)/(1000*60*60*24));
+            var Hours = Math.abs(Days - Math.ceil(Days))*24;
+            var Minutes = Math.abs(Hours - Math.ceil(Hours))*60;
+            var Seconds = 60 -Math.abs(Minutes - Math.ceil(Minutes))*60;
+            if(Seconds == 60)  {
+                Seconds = 59;
+            }
+            var Output = document.getElementById("Days");
+            Output.textContent = Math.ceil(Days) + ":" + Math.ceil(Hours) +  ":" + Math.ceil(Minutes) + ":" + Math.ceil(Seconds);
+
+        }
+
+        window.onload = function() {
+            const Interval = setInterval(SetTime, 1000);
+
+        } 
+
+
+      
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+        * {
+            font-family: 'Open Sans', sans-serif;
+            padding: 0px;
+            margin: 0px;
+
+
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background-image: url("Flag_of_France.png");
+            background-size: 100vw 100vh;
+            background-repeat: no-repeat;
+        }
+
+
+        section {
+            background-color: #FAF8F9;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            width: 100%;
+            box-shadow: 1px 1px hsl(0, 0%, 75%);
+            margin: 0px auto;
+            padding: 0px auto;
+
+        }
+        section p {
+            font-family: 'Dancing Script', cursive;
+            font-weight: bold;
+            padding-left: 10px;
+            font-size: 25px;
+            margin: 1vh 0px;
+
+        }
+
+        #Days {
+            color: #ed2839;
+            font-weight: bold;
+        }
+
+        body > p {
+            font-size: 20px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <section>
+        <p>Oliver Quail</p>
+    </section>
+    <h1>Welcome to Iraq</h1>
+    <p id="Days"></p>
+    <p>Until French Orals Exam</p>
+</body>
+</html>
