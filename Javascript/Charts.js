@@ -16,8 +16,7 @@ window.onload = function() {
 
     var Chart1 = document.getElementById("Chart1");
     Chart1.width = 0;
-    //Chart.defaults.global.legend.display = false;
-    //Chart.defaults.global.plugins.color = "white";
+    
 
     var ctx = document.getElementById('Chart1').getContext('2d');
     var myChart = new Chart(ctx, {
