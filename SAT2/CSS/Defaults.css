@@ -3,12 +3,13 @@
   font-family: "CustomFont";
   src: url("Fonts/Inter-Black") format("opentype");
 }
+
 :root {
   --MainRed: #732F41;
   --MainBlue: #476BAF;
   --MainBlack: #000000;
   --MainWhite: #FFFFFF;
-  --MainFont: "Open Sans", sans-serif;
+  --MainFont: 'Open Sans', sans-serif;
 }
 
 * {
@@ -30,11 +31,15 @@ body {
   border: none;
 }
 
-.Input::-moz-placeholder {
+.Input::-webkit-input-placeholder {
   font-weight: bold;
 }
 
 .Input:-ms-input-placeholder {
+  font-weight: bold;
+}
+
+.Input::-ms-input-placeholder {
   font-weight: bold;
 }
 
@@ -47,16 +52,23 @@ body {
   top: 0px;
   width: 100%;
   height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: #F6F6F6;
   z-index: 2;
 }
+
 #MenuBar span #ProfilePicture, #MenuBar span #MenuLogo {
   width: 10vw;
   height: 10vh;
   background-color: transparent;
 }
+
 #MenuBar span #ProfilePicture {
   border-radius: 50px;
-}/*# sourceMappingURL=Defaults.css.map */
+}
+/*# sourceMappingURL=Defaults.css.map */

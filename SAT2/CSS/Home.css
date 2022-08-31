@@ -3,12 +3,13 @@
   font-family: "CustomFont";
   src: url("Fonts/Inter-Black") format("opentype");
 }
+
 :root {
   --MainRed: #732F41;
   --MainBlue: #476BAF;
   --MainBlack: #000000;
   --MainWhite: #FFFFFF;
-  --MainFont: "Open Sans", sans-serif;
+  --MainFont: 'Open Sans', sans-serif;
 }
 
 * {
@@ -30,11 +31,15 @@ body {
   border: none;
 }
 
-.Input::-moz-placeholder {
+.Input::-webkit-input-placeholder {
   font-weight: bold;
 }
 
 .Input:-ms-input-placeholder {
+  font-weight: bold;
+}
+
+.Input::-ms-input-placeholder {
   font-weight: bold;
 }
 
@@ -47,16 +52,22 @@ body {
   top: 0px;
   width: 100%;
   height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: #F6F6F6;
   z-index: 2;
 }
+
 #MenuBar span #ProfilePicture, #MenuBar span #MenuLogo {
   width: 10vw;
   height: 10vh;
   background-color: transparent;
 }
+
 #MenuBar span #ProfilePicture {
   border-radius: 50px;
 }
@@ -69,43 +80,59 @@ body {
   width: 100%;
   border: 1px solid var(--MainBlack);
 }
+
 #ContentHolder .AdminPost #AdminData {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 20% auto;
+  -ms-grid-columns: 20% auto;
+      grid-template-columns: 20% auto;
 }
+
 #ContentHolder .AdminPost #AdminData #AdminImage {
+  -ms-grid-column: 1;
   grid-column: 1;
   width: 100%;
   border-radius: 100%;
 }
+
 #ContentHolder .AdminPost #AdminData div {
   padding-left: 10px;
 }
+
 #ContentHolder .AdminPost #AdminData div #AdminName {
+  -ms-grid-column: 2;
   grid-column: 2;
   color: var(--MainBlue);
   font-size: 20px;
   font-weight: bold;
 }
+
 #ContentHolder .AdminPost #AdminData div #AdminTitle {
+  -ms-grid-column: 2;
   grid-column: 2;
   font-style: italic;
   color: var(--MainRed);
   font-size: 15px;
 }
+
 #ContentHolder .AdminPost h1 {
   text-align: center;
 }
+
 #ContentHolder .AdminPost p {
   font-size: 15px;
 }
+
 #ContentHolder .AdminPost img {
   width: 100%;
 }
+
 #ContentHolder .AdminPost .LikeCounter .Liked, #ContentHolder .AdminPost .LikeCounter ion-icon {
   color: var(--MainBlue);
 }
+
 #ContentHolder .AdminPost .LikeCounter p {
   display: inline-block;
   color: var(--MainBlue);
-}/*# sourceMappingURL=Home.css.map */
+}
+/*# sourceMappingURL=Home.css.map */

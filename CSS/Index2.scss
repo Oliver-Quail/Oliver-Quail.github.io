@@ -8,7 +8,8 @@
     --MainWhite: #FAF8F9;
     --BackgroundColour: #212529;
     --ShadowColour: #394047;
-    --LightShadow: hsl(210, 11%, 30%);
+    --LightShadow: hsl(210, 11%, 35%);
+
 }
 
 
@@ -24,15 +25,51 @@
 
 @mixin AddShadow {
     text-shadow: var(--ShadowColour) 5px 0px;
-
-
-
 }
 
+@mixin Slider {
+    section {
+        width: 40%;
+        margin-left: auto;
+
+        h2 {
+            text-align: center;
+
+        }
 
 
+    }
 
+    aside {
+        display: flex;
+        flex-direction: column;
 
+        width: 40%;
+        margin-right: auto;
+        img {
+            width: 100%;
+        }
+
+        #ImagePicker {
+            width: 100%;
+            display: flex;
+            margin-top: 30px;
+            margin-bottom: 30px;
+
+            img {
+                width: 20%;
+                margin: 0px auto;
+                border: 3px solid transparent;
+            }
+
+            .Selected {
+                border: 3px solid var(--HighlightColour);
+            }
+
+        }
+
+    }
+}
 
 p {
     font-size: 14px;
@@ -75,7 +112,7 @@ body {
 
 #IntroSlide {
     width: 100%;
-    height: 85vh;
+    height: calc(100vh - 60px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -115,7 +152,8 @@ nav {
     width: 100%;
     display: flex;    
     background-color: var(--ShadowColour);
-    height: 15vh;
+    height: 60px;
+
 
 
 
@@ -143,8 +181,7 @@ article  {
         text-shadow: var(--ShadowColour) 5px 0px;
         text-align: center;
         font-size: var(--DefaultTilite);
-
-
+        text-transform: uppercase;
     }
 }
 
@@ -168,10 +205,8 @@ article  {
             border: 5px solid transparent;
             background-color: var(--ShadowColour);
             border-radius: 25px;
-            display: grid;
-            grid-template-rows: 15% auto 70%;
-
-
+            display: flex;
+            flex-direction: column;
 
             section:nth-child(1) {
                 margin-left: 0px;
@@ -188,10 +223,16 @@ article  {
 
             .Image {
                 width: 100%;
+                height: 100%;
+                height: fit-content;
                 grid-row: 2;
+                background-color: transparent;
+                margin: auto 0;
+
 
                 img {
                     width: 100%;
+                    max-height: 30vh;
                 }
                 
             }
@@ -199,6 +240,7 @@ article  {
                 grid-row: 3;
                 background-color: transparent;
                 text-transform: lowercase;
+                margin: auto 0;
             }
 
         }
@@ -208,14 +250,55 @@ article  {
             background-color: var(--LightShadow);
         }
     }
-
 }
 
 #S_Experience {
 
     #ContentHolder {
         display: flex;
-        
+        width: 100%;
+        @include Slider;        
+    }
+}
+
+
+#Quote {
+    width: 100%;
+    font-style: italic;
+    background-color: var(--ShadowColour);
+    height: 15vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    * {
+        background-color: var(--ShadowColour);
+        color: var(--HighlightColour);
+        font-family: "TitleFont";
+    }
+    h2:nth-child(1) {
+        font-style: normal;
+        text-transform: uppercase;
+        text-shadow: var(--BackgroundColour) 3px 0px;
+
+    }
+    h2:nth-child(2) {
+        color: var(--MainWhite);
+    }
+
+}
+
+
+@media screen and (max-width: 400px) {
+
+    #CardHolder {
+        flex-direction: column;
+
+        .Card {
+            width: 80%;
+        }
+
     }
 }
 

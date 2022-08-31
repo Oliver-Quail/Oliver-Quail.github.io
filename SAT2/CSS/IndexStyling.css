@@ -3,12 +3,13 @@
   font-family: "CustomFont";
   src: url("Fonts/Inter-Black") format("opentype");
 }
+
 :root {
   --MainRed: #732F41;
   --MainBlue: #476BAF;
   --MainBlack: #000000;
   --MainWhite: #FFFFFF;
-  --MainFont: "Open Sans", sans-serif;
+  --MainFont: 'Open Sans', sans-serif;
 }
 
 * {
@@ -30,11 +31,15 @@ body {
   border: none;
 }
 
-.Input::-moz-placeholder {
+.Input::-webkit-input-placeholder {
   font-weight: bold;
 }
 
 .Input:-ms-input-placeholder {
+  font-weight: bold;
+}
+
+.Input::-ms-input-placeholder {
   font-weight: bold;
 }
 
@@ -47,16 +52,22 @@ body {
   top: 0px;
   width: 100%;
   height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: #F6F6F6;
   z-index: 2;
 }
+
 #MenuBar span #ProfilePicture, #MenuBar span #MenuLogo {
   width: 10vw;
   height: 10vh;
   background-color: transparent;
 }
+
 #MenuBar span #ProfilePicture {
   border-radius: 50px;
 }
@@ -64,10 +75,19 @@ body {
 body {
   width: 100vw;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 img {
@@ -94,12 +114,17 @@ img {
   font-weight: bold;
 }
 
-.Input::-moz-placeholder {
+.Input::-webkit-input-placeholder {
   color: var(--MainWhite);
   margin-left: 10px;
 }
 
 .Input:-ms-input-placeholder {
+  color: var(--MainWhite);
+  margin-left: 10px;
+}
+
+.Input::-ms-input-placeholder {
   color: var(--MainWhite);
   margin-left: 10px;
 }
@@ -121,8 +146,16 @@ img {
 }
 
 #LoginHolder {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: 25vh;
-  justify-content: space-evenly;
-}/*# sourceMappingURL=IndexStyling.css.map */
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+/*# sourceMappingURL=IndexStyling.css.map */

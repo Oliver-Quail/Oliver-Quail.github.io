@@ -3,12 +3,13 @@
   font-family: "CustomFont";
   src: url("Fonts/Inter-Black") format("opentype");
 }
+
 :root {
   --MainRed: #732F41;
   --MainBlue: #476BAF;
   --MainBlack: #000000;
   --MainWhite: #FFFFFF;
-  --MainFont: "Open Sans", sans-serif;
+  --MainFont: 'Open Sans', sans-serif;
 }
 
 * {
@@ -30,11 +31,15 @@ body {
   border: none;
 }
 
-.Input::-moz-placeholder {
+.Input::-webkit-input-placeholder {
   font-weight: bold;
 }
 
 .Input:-ms-input-placeholder {
+  font-weight: bold;
+}
+
+.Input::-ms-input-placeholder {
   font-weight: bold;
 }
 
@@ -47,16 +52,22 @@ body {
   top: 0px;
   width: 100%;
   height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: #F6F6F6;
   z-index: 2;
 }
+
 #MenuBar span #ProfilePicture, #MenuBar span #MenuLogo {
   width: 10vw;
   height: 10vh;
   background-color: transparent;
 }
+
 #MenuBar span #ProfilePicture {
   border-radius: 50px;
 }
@@ -67,22 +78,30 @@ ion-icon {
 }
 
 #MainBody #BasicData {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
+
 #MainBody #BasicData #ProfileImage {
   border-radius: 100%;
   height: 60px;
   width: auto;
 }
+
 #MainBody #BasicData span {
   margin-left: 10px;
   font-weight: bold;
   color: var(--MainRed);
 }
+
 #MainBody #ImageForm {
   text-align: center;
 }
+
 #MainBody #ImageForm #PFPLabel {
   background-color: var(--MainBlue);
   text-align: center;
@@ -91,10 +110,12 @@ ion-icon {
   width: 40%;
   padding: 0px 20px;
 }
+
 #MainBody #ImageForm #PFPLabel #PFP {
   border: none;
   display: none;
 }
+
 #MainBody #ImageForm input[type=submit] {
   background-color: var(--MainRed);
   outline: none;
@@ -106,13 +127,22 @@ ion-icon {
   font-weight: bold;
   display: none;
 }
+
 #MainBody .DataEdit {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 80vw;
   margin: 0px auto;
 }
+
 #MainBody .DataEdit p {
   background-color: var(--MainBlue);
   color: var(--MainWhite);
@@ -122,17 +152,21 @@ ion-icon {
   padding-left: 10px;
   margin-right: auto;
 }
+
 #MainBody .DataEdit .Input {
   background-color: #E5E5E5;
   width: 80vw;
   display: none;
 }
+
 #MainBody .DataEdit #ConfirmEmail, #MainBody .DataEdit #ConfirmName {
   display: none;
 }
+
 #MainBody #TextData input[type=range] {
   background-color: var(--MainBlue);
 }
+
 #MainBody #TextData input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none;
   border: 1px solid #000000;
@@ -141,19 +175,25 @@ ion-icon {
   border-radius: 3px;
   background: #ffffff;
   cursor: pointer;
-  margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+  margin-top: -14px;
+  /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  -webkit-box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+          box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  /* Add cool effects to your sliders! */
   color: var(--MainBlue);
   background-color: var(--MainBlue);
 }
+
 #MainBody #TextData #TextPreview {
   background-color: #F1F1F2;
   color: red;
 }
+
 #MainBody #DeleteAccount {
   width: 100%;
   text-align: center;
   font-weight: bold;
   background-color: var(--MainRed);
   color: var(--MainWhite);
-}/*# sourceMappingURL=Profile.css.map */
+}
+/*# sourceMappingURL=Profile.css.map */

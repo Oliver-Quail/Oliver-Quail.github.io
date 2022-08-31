@@ -3,13 +3,13 @@
 :root {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   --OffBlack: rgba(249, 250, 251, 0.5);
   height: 100%;
   --MainBlack: hsl(0, 60%, 2%);
   /*--Green: hsl(42, 100%, 80%);
-  --Green: hsl(195, 83%, 57%);
-  --Green: hsl(4, 82%, 77%)*/
+    --Green: hsl(195, 83%, 57%);
+    --Green: hsl(4, 82%, 77%)*/
   color: var(--MainBlack);
   --Red: #f07167;
   --Green: #CAFFBF;
@@ -62,34 +62,52 @@
     background-position: 50% 0%;
   }
 }
+
 .ArticleParaBackground {
   min-width: 100%;
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   color: white;
   background-size: cover;
 }
+
 .ArticleParaBackground h1 {
-  font-family: "Bebas Neue", cursive;
-  font-size: 54px;
+  font-family: 'Bebas Neue', cursive;
+  font-size: clamp(24px, 54px, 64px);
 }
+
 .ArticleParaBackground p {
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Noto Sans', sans-serif;
   width: 50%;
 }
 
 #ParaBackground1 {
   background-image: url(Images/BgImage1.jpg);
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 #ParaBackground1 ion-icon {
   color: var(--Red);
   font-size: 64px;
 }
+
 #ParaBackground1 h1 {
   text-align: center;
   color: var(--Red);
@@ -97,59 +115,77 @@
 }
 
 #ParaBackground2 {
-  font-family: "Bebas Neue", cursive;
+  font-family: 'Bebas Neue', cursive;
   background-image: url(Images/BgImage3.jpg);
-  justify-content: center;
-  align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   color: white;
 }
+
 #ParaBackground2 * span {
   color: var(--Green);
 }
 
 #ParaBackground3 {
-  font-family: "Bebas Neue", cursive;
+  font-family: 'Bebas Neue', cursive;
   background-image: url(Images/BgImage2.jpg);
 }
+
 #ParaBackground3 * span {
   color: var(--Red);
 }
 
 #ParaBackground4 {
   background-image: url(Images/BgImage4.jpg);
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 #ParaBackground4 ion-icon {
   color: var(--Red);
   font-size: 64px;
 }
+
 #ParaBackground4 a {
   color: var(--Green);
   text-decoration: none;
   font-size: 64px;
-  font-family: "Bebas Neue", cursive;
+  font-family: 'Bebas Neue', cursive;
   font-weight: bold;
 }
 
 @media screen and (max-width: 600px) {
   .ArticleParaBackground * {
-    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+            filter: grayscale(0%);
   }
   #ParaBackground1 {
     background-image: url(Images/BgImage5.jpg);
-    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
   }
   #ParaBackground2 {
     background-image: url(Images/BgImage6.jpg);
-    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
   }
   #ParaBackground3 {
     background-image: url(Images/BgImage7.jpg);
-    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
   }
   #ParaBackground4 {
     background-image: url(Images/BgImage8.jpg);
-    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
   }
-}/*# sourceMappingURL=DataIntro2.css.map */
+}
+/*# sourceMappingURL=DataIntro2.css.map */

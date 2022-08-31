@@ -6,19 +6,21 @@
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Roboto";
   src: url("fonts/Roboto-Black.ttf") format("truetype");
   font-weight: bold;
   font-style: normal;
 }
+
 :root {
   --BackgroundColour: #F8F9FA;
   --TextColour: #212529;
   --SecondBackgroundColour: #CED4DA;
   --SecondTextColour: #E9ECEF;
   --HighlightColour: #ff9500;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 * {
@@ -31,7 +33,7 @@ ion-icon {
   color: var(--HighlightColour);
   margin: 0px;
   padding: 0px;
-  font-size: 24px;
+  font-size: clamp(12px, 24px, 64px);
 }
 
 #NavPhone {
@@ -40,6 +42,8 @@ ion-icon {
 
 .NavPhoneActive {
   display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -47,28 +51,42 @@ nav {
   width: 100%;
   height: 5vh;
   background-color: var(--BackgroundColour);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: fixed;
   z-index: 2;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
+
 nav #DownArrow {
   display: none;
 }
+
 nav #NameText {
-  font-family: "Cookie", cursive;
+  font-family: 'Cookie', cursive;
   font-size: 24px;
 }
+
 nav a {
   font-weight: bold;
   text-decoration: none;
   margin-left: 10%;
 }
+
 nav #LinkHolder {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 20vw;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 /* Landing styling  */
@@ -77,11 +95,21 @@ nav #LinkHolder {
   height: 100vh;
   background-image: url("../../Assets/MainImage3.jpg");
   background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 #MainImage h1:nth-child(2) {
   text-shadow: 2px 2px 2px var(--TextColour);
 }
@@ -89,11 +117,13 @@ nav #LinkHolder {
 #Intro {
   width: 100%;
 }
+
 #Intro #ImgWrap {
   z-index: 3;
   width: 15vw;
   margin: 0px auto;
 }
+
 #Intro #ImgWrap #Img1 {
   width: 100%;
   height: 100%;
@@ -108,6 +138,7 @@ nav #LinkHolder {
 #Gallery {
   width: 100%;
 }
+
 #Gallery .GalleryImage {
   display: none;
   width: 25%;
@@ -116,46 +147,66 @@ nav #LinkHolder {
 
 main {
   width: 100%;
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 10% 80% 10%;
+  -ms-grid-columns: 10% 80% 10%;
+      grid-template-columns: 10% 80% 10%;
 }
+
 main * {
   text-align: center;
+  -ms-grid-column: 2;
   grid-column: 2;
 }
+
 main #LinkHolder {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
+
 main #LinkHolder a {
   font-weight: bold;
   color: var(--TextColour);
 }
+
 main #LinkHolder a:hover {
   color: var(--SecondTextColour);
 }
+
 main #MySkills ul {
   list-style-type: none;
 }
+
 main #MySkills ul li {
   display: inline-block;
   border: 2px solid var(--TextColour);
   padding: 4px;
   margin: 0px 5%;
 }
+
 main #MySkills ul li:hover {
   background-color: var(--SecondBackgroundColour);
+  -webkit-transition: 400ms;
   transition: 400ms;
 }
+
 main .ContentHolder2 {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 main .ContentHolder2 .Content2 {
   width: 50%;
   display: inline-block;
 }
+
 main .ContentHolder2 .Content2 ul li {
   text-align: left;
 }
@@ -166,19 +217,26 @@ main .ContentHolder2 .Content2 ul li {
   text-align: center;
   width: 100%;
 }
+
 #ProjectsHolder #MyProjectHeading {
   background-color: var(--TextColour);
   color: var(--HighlightColour);
 }
+
 #ProjectsHolder .Carsol {
   padding-right: 10%;
   padding-left: 10%;
   background-color: var(--TextColour);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
   height: auto;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
+
 #ProjectsHolder .Carsol .CarsolObject {
   height: 100%;
   width: 30%;
@@ -186,14 +244,17 @@ main .ContentHolder2 .Content2 ul li {
   border: 2px solid var(--HighlightColour);
   background-color: var(--TextColour);
 }
+
 #ProjectsHolder .Carsol .CarsolObject h3 {
-  font-family: "Cookie", cursive;
+  font-family: 'Cookie', cursive;
   font-size: 24px;
   color: var(--HighlightColour);
 }
+
 #ProjectsHolder .Carsol .CarsolObject p {
   color: var(--BackgroundColour);
 }
+
 #ProjectsHolder .Carsol .CarsolObject img {
   width: 100%;
   height: auto;
@@ -202,6 +263,7 @@ main .ContentHolder2 .Content2 ul li {
 footer {
   background-color: var(--TextColour);
 }
+
 footer * {
   color: var(--BackgroundColour);
 }
@@ -212,15 +274,24 @@ footer * {
     background-position: 50% 0%;
   }
   main {
-    grid-template-columns: 100%;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
   }
   main * {
+    -ms-grid-column: 1;
     grid-column: 1;
   }
   #NavPhone {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     background-color: var(--BackgroundColour);
     padding-top: 5vh;
     position: fixed;
@@ -232,16 +303,25 @@ footer * {
   }
   #NavPhone #NameText {
     height: 10%;
-    font-family: "Cookie", cursive;
+    font-family: 'Cookie', cursive;
     font-size: 36px;
     font-weight: bold;
   }
   #NavPhone #NavPhoneLinkHolder {
     height: 90%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   #NavPhone #NavPhoneLinkHolder p a {
     text-decoration: none;
@@ -261,8 +341,12 @@ footer * {
     font-size: 40px;
   }
   nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   nav #LinkHolder, nav a {
     display: none;
@@ -271,13 +355,21 @@ footer * {
     display: block;
   }
   nav #DownArrowActive {
-    transform: rotateX(180deg);
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
   }
   .ContentHolder2 {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .ContentHolder2 .Content2 {
     width: 100%;
@@ -307,6 +399,7 @@ footer * {
   }
   #MySkills ul li:hover {
     background-color: var(--SecondBackgroundColour);
+    -webkit-transition: 400ms;
     transition: 400ms;
   }
   #ImgWrap #Img1 {
@@ -315,6 +408,7 @@ footer * {
     border-radius: 100%;
   }
 }
+
 /* Misc Styling */
 #Typer {
   width: 3px;
@@ -353,4 +447,5 @@ a {
 ::-webkit-scrollbar-thumb {
   background-color: var(--HighlightColour);
   border-radius: 25px;
-}/*# sourceMappingURL=index.css.map */
+}
+/*# sourceMappingURL=index.css.map */
