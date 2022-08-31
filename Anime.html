@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="Javascript/anime.min.js"></script>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+        article {
+            width: 100vw;
+            height: 100vh;
+            overflow-x: hidden;
+        }
+        .square {
+            padding: 10px;
+            background-color: #F8FA;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        window.onload = function() {
+            anime({
+                targets: ".square",
+                translateX: 250
+            });
+        }
+    </script>
+    <article>
+        <span class="square"></span>
+    </article>
+</body>
+</html>
