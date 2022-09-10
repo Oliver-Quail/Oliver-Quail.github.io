@@ -2,22 +2,36 @@
 :root {
   --DefaultTilite: clamp(24px, 40px, 50px);
   --HighlightColour: #7a00e6;
+  --HighlightColour: #ac4dff;
+  --DefaultTitleSize: 7vw;
   --MainWhite: #FAF8F9;
   --BackgroundColour: #212529;
   --ShadowColour: #394047;
   --LightShadow: hsl(210, 11%, 35%);
+  --SelectColour: #ac4dff;
+  font-size: 10px;
+}
+
+::-moz-selection {
+  background-color: var(--SelectColour);
+  opacity: 20%;
+  color: var(--MainWhite);
+}
+
+::selection {
+  background-color: var(--SelectColour);
+  opacity: 20%;
+  color: var(--MainWhite);
 }
 
 @font-face {
   font-family: TitleFont;
   src: url("../Fonts/Acacius-regular.otf"), url("../Fonts/Acaciusregular.ttf") format("ttf");
 }
-
 @font-face {
   font-family: SubFont;
   src: url("../Fonts/Morgan-Regular.otf"), url("../Fonts/Morgan-Regular.ttf") format("ttf");
 }
-
 p {
   font-size: 14px;
   text-align: center;
@@ -46,7 +60,7 @@ p {
 * {
   padding: 0px;
   margin: 0px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   background-color: var(--BackgroundColour);
   color: var(--MainWhite);
   scroll-behavior: smooth;
@@ -58,68 +72,60 @@ body {
 
 #IntroSlide {
   width: 100%;
-  height: calc(100vh - 60px);
-  display: -webkit-box;
-  display: -ms-flexbox;
+  height: 100vh;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-position: fixed;
 }
-
 #IntroSlide #SlideName {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 #IntroSlide #SlideName h1 {
   font-family: "TitleFont";
   font-size: var(--DefaultTilite);
   letter-spacing: 2px;
   text-align: center;
   text-transform: uppercase;
-  text-shadow: #394047 6px 0px;
+  text-shadow: hsl(210deg, 11%, 25%) 6px 0px;
+  font-size: 15vw;
 }
-
 #IntroSlide #SlideName h1:nth-child(1) {
   color: var(--HighlightColour);
   padding-right: 15px;
 }
-
-#IntroSlide #SlideText {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+#IntroSlide #SlideName h1:nth-child(2) {
+  color: var(--MainWhite);
 }
-
+#IntroSlide #SlideText {
+  display: flex;
+  align-items: center;
+}
+#IntroSlide #SlideText * {
+  font-size: 20px;
+}
 #IntroSlide #SlideText ion-icon {
   padding: 0px 10px;
 }
-
+#IntroSlide #SlideText h3 {
+  text-transform: uppercase;
+  font-family: "TitleFont";
+}
 #IntroSlide #SlideText h3:nth-child(3) {
   color: var(--HighlightColour);
 }
 
 nav {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   background-color: var(--ShadowColour);
   height: 60px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  border-top: 2px solid var(--HighlightColour);
 }
-
 nav a {
   background-color: transparent;
   font-size: 20px;
@@ -128,13 +134,19 @@ nav a {
   text-decoration: none;
   padding: 10px 0px;
   text-transform: uppercase;
+  font-style: italic;
 }
-
 nav a:hover {
-  -webkit-transition: 300ms;
-  transition: 300ms;
+  transition: 400ms;
   color: var(--HighlightColour);
   text-shadow: var(--BackgroundColour) 0px 20px;
+}
+nav #L_Name {
+  color: var(--HighlightColour);
+  font-style: italic;
+}
+nav #B_Menu {
+  display: none;
 }
 
 article h1 {
@@ -148,30 +160,19 @@ article h1 {
 #Programming {
   font-family: "TitleFont";
   text-transform: uppercase;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  height: 100vh;
+  padding-bottom: 20px;
 }
-
+#Programming h1 {
+  color: var(--MainWhite);
+  font-size: var(--DefaultTitleSize);
+  margin-bottom: auto;
+}
 #Programming #CardHolder {
-  display: -webkit-box;
-  display: -ms-flexbox;
+  padding-top: 2vh;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 #Programming #CardHolder .Card {
   width: 25vw;
   margin-left: 3vw;
@@ -179,19 +180,12 @@ article h1 {
   border: 5px solid transparent;
   background-color: var(--ShadowColour);
   border-radius: 25px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
 #Programming #CardHolder .Card section:nth-child(1) {
   margin-left: 0px;
 }
-
 #Programming #CardHolder .Card h4 {
   padding-top: 7px;
   background-color: transparent;
@@ -199,90 +193,131 @@ article h1 {
   text-align: center;
   font-family: "TitleFont";
   padding-bottom: 8px;
-  -ms-grid-row: 1;
   grid-row: 1;
 }
-
 #Programming #CardHolder .Card .Image {
   width: 100%;
   height: 100%;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  -ms-grid-row: 2;
   grid-row: 2;
   background-color: transparent;
   margin: auto 0;
 }
-
 #Programming #CardHolder .Card .Image img {
   width: 100%;
   max-height: 30vh;
 }
-
 #Programming #CardHolder .Card p {
-  -ms-grid-row: 3;
   grid-row: 3;
   background-color: transparent;
   text-transform: lowercase;
   margin: auto 0;
 }
-
 #Programming #CardHolder .Card:hover {
-  -webkit-transition: 300ms;
   transition: 300ms;
   border: 5px solid var(--HighlightColour);
   background-color: var(--LightShadow);
 }
 
-#S_Experience #ContentHolder {
-  display: -webkit-box;
-  display: -ms-flexbox;
+#S_Experience {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--ShadowColour);
+}
+#S_Experience * {
+  background-color: transparent;
+}
+#S_Experience .ContentHolder {
   display: flex;
   width: 100%;
 }
-
-#S_Experience #ContentHolder section {
+#S_Experience .ContentHolder section {
   width: 40%;
   margin-left: auto;
+  height: 100%;
 }
-
-#S_Experience #ContentHolder section h2 {
+#S_Experience .ContentHolder section ul li {
+  font-size: 20px;
+}
+#S_Experience .ContentHolder section h2 {
   text-align: center;
 }
-
-#S_Experience #ContentHolder aside {
-  display: -webkit-box;
-  display: -ms-flexbox;
+#S_Experience .ContentHolder aside {
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   width: 40%;
   margin-right: auto;
 }
-
-#S_Experience #ContentHolder aside img {
+#S_Experience .ContentHolder aside img {
   width: 100%;
 }
-
-#S_Experience #ContentHolder aside #ImagePicker {
+#S_Experience .ContentHolder aside #ImagePicker {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-top: 30px;
   margin-bottom: 30px;
 }
-
-#S_Experience #ContentHolder aside #ImagePicker img {
+#S_Experience .ContentHolder aside #ImagePicker img {
   width: 20%;
   margin: 0px auto;
   border: 3px solid transparent;
 }
+#S_Experience .ContentHolder aside #ImagePicker .Selected {
+  border: 3px solid var(--HighlightColour);
+}
 
-#S_Experience #ContentHolder aside #ImagePicker .Selected {
+#S_WebDev {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--BackgroundColour);
+}
+#S_WebDev * {
+  background-color: transparent;
+}
+#S_WebDev .ContentHolder {
+  display: flex;
+  width: 100%;
+}
+#S_WebDev .ContentHolder section {
+  width: 40%;
+  margin-left: auto;
+  height: 100%;
+}
+#S_WebDev .ContentHolder section ul li {
+  font-size: 20px;
+}
+#S_WebDev .ContentHolder section h2 {
+  text-align: center;
+}
+#S_WebDev .ContentHolder aside {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin-right: auto;
+}
+#S_WebDev .ContentHolder aside img {
+  width: 100%;
+}
+#S_WebDev .ContentHolder aside #ImagePicker {
+  width: 100%;
+  display: flex;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+#S_WebDev .ContentHolder aside #ImagePicker img {
+  width: 20%;
+  margin: 0px auto;
+  border: 3px solid transparent;
+}
+#S_WebDev .ContentHolder aside #ImagePicker .Selected {
   border: 3px solid var(--HighlightColour);
 }
 
@@ -291,46 +326,97 @@ article h1 {
   font-style: italic;
   background-color: var(--ShadowColour);
   height: 15vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
 #Quote * {
   background-color: var(--ShadowColour);
   color: var(--HighlightColour);
   font-family: "TitleFont";
 }
-
 #Quote h2:nth-child(1) {
   font-style: normal;
   text-transform: uppercase;
   text-shadow: var(--BackgroundColour) 3px 0px;
 }
-
 #Quote h2:nth-child(2) {
   color: var(--MainWhite);
 }
 
 @media screen and (max-width: 400px) {
-  #CardHolder {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+  #Programming {
+    height: auto;
   }
-  #CardHolder .Card {
+  #Programming #CardHolder {
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  #Programming #CardHolder .Card {
     width: 80%;
+    margin-bottom: 3vh;
+    height: 80vh;
   }
-}
-/*# sourceMappingURL=Index2.css.map */
+  nav a {
+    display: none;
+  }
+  nav #B_Menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: var(--ShadowColour);
+  }
+  nav #B_Menu * {
+    background-color: transparent;
+  }
+  nav #B_Menu ion-icon {
+    margin-right: auto;
+    font-size: 36px;
+  }
+  nav #B_Menu p {
+    margin-right: auto;
+    font-size: 24px;
+    font-family: "TitleFont";
+    text-transform: uppercase;
+  }
+  nav.Grow {
+    transition: 400ms;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  nav.Grow a {
+    display: block;
+    font-size: 10vw;
+  }
+  nav.Grow a:nth-child(6) {
+    margin-bottom: auto;
+  }
+  nav.Grow section {
+    margin-bottom: auto;
+  }
+  nav.Shrink {
+    transform: 400ms;
+    height: 60px;
+  }
+  #S_Experience .ContentHolder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #S_Experience .ContentHolder section {
+    width: 100%;
+  }
+  #S_Experience .ContentHolder aside {
+    width: 100%;
+  }
+}/*# sourceMappingURL=Index2.css.map */

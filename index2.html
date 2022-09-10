@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
     <link type="text/css" rel="stylesheet" href="CSS/Index2.css"/>
-   
+    <script src="Javascript/Index2.js"></script>
    
 </head>
 <body>
+
     <article id="IntroSlide">
         <section id="SlideName">
             <h1>Oliver</h1>
@@ -20,15 +21,18 @@
             <ion-icon name="browsers-sharp"></ion-icon>
             <h3 >Web Developer</h3>
             <ion-icon name="brush-sharp"></ion-icon>
-            <h3>Pixel Artist</h3>
+            <h3>Graphic Designer</h3>
         </section>
     </article>  
-    <nav>
-        <a href="#Programming">Programming</a>
-        <a href="#Experince">Experience</a>
-        <a href="#WebDev">Website Development</a>
-        <a href="#PixelArt">Pixel Art</a>
+    <nav id="NavBar">
+        <section id="B_Menu"><ion-icon name="menu-outline"></ion-icon><p>Menu</p></section>
+        <a href="#IntroSlide" class="L_Menu" id="L_Name">Oliver Quail</a>
+        <a href="#Programming" class="L_Menu">Programming</a>
+        <a href="#S_Experience" class="L_Menu">Experience</a>
+        <a href="#S_WebDev" class="L_Menu">Website Development</a>
+        <a href="#S_GraphicDesigner" class="L_Menu">Graphic Designer</a>
     </nav>
+    
     <article id="Programming">
         <h1>Programming</h1>
         <section id="CardHolder">
@@ -56,8 +60,8 @@
         </section>
     </article>
     <article id="S_Experience">
-        <h1 id="Experince">Experience</h1>
-        <section id="ContentHolder">
+        <h1 id="T_Experince">Experience</h1>
+        <section class="ContentHolder">
             <section>
                 <h2>My Experience</h2>
                 <ul>
@@ -81,13 +85,36 @@
             </aside>
         </section>
     </article>
-    <article id="Quote">
-        <h2>"Digital design is like painting, except the paint never dries "</h2>
-        <h2> -- Neville Brody</h2>
-    </article>
-    <article id="WebDev">
+    <article id="S_WebDev">
         <h1>Website Developement</h1>
+        <section class="ContentHolder">
+            <section>
+                <h2>My Experience</h2>
+                <ul>
+                    <li>5 Years in Web Developement</li>
+                    <li>4 Years experience in Databases</li>
+                    <li>4 Years experience in php</li>
+                    <li>1 Year experience in Unity engine</li>
+                    <li>1 Year experience in Mobile application development</li>
+                    <li>1 Years experience in API development</li>
+                </ul>
+                <p>Aside: some of my work</p>
+            </section>
+            <aside>
+                <img src="Images/Capture.PNG"/>
+                <section id="ImagePicker">
+                    <img class="Selected" src="Images/Capture.PNG"/>
+                    <img src="Images/Capture.PNG"/>
+                    <img src="Images/Capture.PNG"/>
+                    <img src="Images/Capture.PNG"/>
+                </section>
+            </aside>
+        </section>
     </article>
+    <article  id="S_GraphicDesigner">
+            <h1>Graphic Design</h1>
+    </article>
+    
 </body>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
