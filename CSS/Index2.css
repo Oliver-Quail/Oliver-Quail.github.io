@@ -345,7 +345,7 @@ article h1 {
   color: var(--MainWhite);
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   #Programming {
     height: auto;
   }
