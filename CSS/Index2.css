@@ -9,7 +9,6 @@
   --ShadowColour: #394047;
   --LightShadow: hsl(210, 11%, 35%);
   --SelectColour: #ac4dff;
-  font-size: 10px;
 }
 
 ::-moz-selection {
@@ -48,7 +47,7 @@ p {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background-color: var(--MainWhite);
+  background-color: var(--HighlightColour);
   border-radius: 25px;
 }
 
@@ -68,6 +67,13 @@ p {
 
 body {
   overflow-x: hidden;
+}
+
+article h1 {
+  color: var(--HighlightColour);
+  text-align: center;
+  font-size: var(--DefaultTilite);
+  text-transform: uppercase;
 }
 
 #IntroSlide {
@@ -101,9 +107,10 @@ body {
 #IntroSlide #SlideText {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 #IntroSlide #SlideText * {
-  font-size: 20px;
+  font-size: 40px;
 }
 #IntroSlide #SlideText ion-icon {
   padding: 0px 10px;
@@ -111,6 +118,7 @@ body {
 #IntroSlide #SlideText h3 {
   text-transform: uppercase;
   font-family: "TitleFont";
+  text-align: center;
 }
 #IntroSlide #SlideText h3:nth-child(3) {
   color: var(--HighlightColour);
@@ -149,17 +157,8 @@ nav #B_Menu {
   display: none;
 }
 
-article h1 {
-  color: var(--HighlightColour);
-  text-shadow: var(--ShadowColour) 5px 0px;
-  text-align: center;
-  font-size: var(--DefaultTilite);
-  text-transform: uppercase;
-}
-
 #Programming {
   font-family: "TitleFont";
-  text-transform: uppercase;
   height: 100vh;
   padding-bottom: 20px;
 }
@@ -167,6 +166,7 @@ article h1 {
   color: var(--MainWhite);
   font-size: var(--DefaultTitleSize);
   margin-bottom: auto;
+  text-transform: uppercase;
 }
 #Programming #CardHolder {
   padding-top: 2vh;
@@ -194,6 +194,7 @@ article h1 {
   font-family: "TitleFont";
   padding-bottom: 8px;
   grid-row: 1;
+  text-transform: uppercase;
 }
 #Programming #CardHolder .Card .Image {
   width: 100%;
@@ -212,7 +213,6 @@ article h1 {
 #Programming #CardHolder .Card p {
   grid-row: 3;
   background-color: transparent;
-  text-transform: lowercase;
   margin: auto 0;
 }
 #Programming #CardHolder .Card:hover {
@@ -231,6 +231,9 @@ article h1 {
 }
 #S_Experience * {
   background-color: transparent;
+}
+#S_Experience h1 {
+  text-shadow: var(--BackgroundColour) 5px 0px;
 }
 #S_Experience .ContentHolder {
   display: flex;
@@ -281,6 +284,9 @@ article h1 {
 }
 #S_WebDev * {
   background-color: transparent;
+}
+#S_WebDev h1 {
+  text-shadow: var(--ShadowColour) 5px 0px;
 }
 #S_WebDev .ContentHolder {
   display: flex;
@@ -345,7 +351,7 @@ article h1 {
   color: var(--MainWhite);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
   #Programming {
     height: auto;
   }
@@ -382,7 +388,6 @@ article h1 {
     margin-right: auto;
     font-size: 24px;
     font-family: "TitleFont";
-    text-transform: uppercase;
   }
   nav.Grow {
     transition: 400ms;
@@ -407,16 +412,20 @@ article h1 {
     transform: 400ms;
     height: 60px;
   }
-  #S_Experience .ContentHolder {
+  #S_Experience .ContentHolder, #S_WebDev .ContentHolder {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
   }
-  #S_Experience .ContentHolder section {
+  #S_Experience .ContentHolder section, #S_WebDev .ContentHolder section {
     width: 100%;
   }
-  #S_Experience .ContentHolder aside {
+  #S_Experience .ContentHolder aside, #S_WebDev .ContentHolder aside {
     width: 100%;
+  }
+  .T_Slide {
+    font-size: 15px !important;
   }
 }/*# sourceMappingURL=Index2.css.map */

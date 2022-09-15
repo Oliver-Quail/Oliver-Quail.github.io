@@ -10,8 +10,6 @@
     --ShadowColour: #394047;
     --LightShadow: hsl(210, 11%, 35%);
     --SelectColour: #ac4dff;
-    font-size: 10px;
-    
 }
 
 ::selection {
@@ -19,11 +17,7 @@
     background-color: var(--SelectColour);
     opacity: 20%;
     color: var(--MainWhite);
-
-    
-
 }
-
 
 @font-face {
     font-family: TitleFont;
@@ -35,11 +29,11 @@
 }
 
 
-@mixin AddShadow {
-    text-shadow: var(--ShadowColour) 5px 0px;
+@mixin AddShadow($ShadowColour) {
+    text-shadow: $ShadowColour 5px 0px;
 }
 
-@mixin ContentHolder2($BackgroundColour) {
+@mixin ContentHolder2($BackgroundColour, $ShadowColour) {
 
     min-height: 100vh;
     display: flex;
@@ -49,7 +43,10 @@
     background-color: $BackgroundColour;
     * {
         background-color: transparent;
-        
+    }
+
+    h1 {
+        @include AddShadow($ShadowColour);
     }
 
     .ContentHolder {
@@ -124,7 +121,7 @@ p {
   
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background-color: var(--MainWhite);
+    background-color: var(--HighlightColour);
     border-radius: 25px;
   }
   
@@ -147,6 +144,20 @@ body {
 
 }
 
+article  {
+    h1 {
+        color: var(--HighlightColour);
+        //text-shadow: var(--ShadowColour) 5px 0px;
+
+
+
+        text-align: center;
+        font-size: var(--DefaultTilite);
+        text-transform: uppercase;
+    }
+}
+
+
 #IntroSlide {
     width: 100%;
     height: 100vh;
@@ -166,8 +177,6 @@ body {
             text-transform: uppercase;
             text-shadow: hsl(210, 11%, 25%) 6px 0px;
             font-size: 15vw;
-            
-            
         }
         h1:nth-child(1) {
             color: var(--HighlightColour);
@@ -180,10 +189,11 @@ body {
     }
     #SlideText {
         display: flex;
-        align-items: center;   
+        align-items: center;
+        justify-content: center; 
         
         * {
-            font-size: 20px;
+            font-size: 40px;
         }
         
         ion-icon {
@@ -193,7 +203,10 @@ body {
         h3 {
             text-transform: uppercase;
             font-family: "TitleFont";
+            text-align: center;
+
         }
+
 
         h3:nth-child(3) {
             color: var(--HighlightColour);
@@ -241,32 +254,20 @@ nav {
 
 }
 
-article  {
-    h1 {
-        color: var(--HighlightColour);
-        text-shadow: var(--ShadowColour) 5px 0px;
-        text-align: center;
-        font-size: var(--DefaultTilite);
-        text-transform: uppercase;
-    }
-}
+
 
 
 #Programming {
     font-family: "TitleFont";
-    text-transform: uppercase;
     height: 100vh;
     padding-bottom: 20px;
-    
-
-     
     
     h1 {
         color: var(--MainWhite);
         font-size: var(--DefaultTitleSize);
-        margin-bottom: auto;        
+        margin-bottom: auto;       
+        text-transform: uppercase; 
     }
-
 
     #CardHolder {
         padding-top: 2vh;
@@ -275,7 +276,6 @@ article  {
         .Card {
             width: 25vw;
             margin-left: 3vw;
-            
             height: auto;
             border: 5px solid transparent;
             background-color: var(--ShadowColour);
@@ -294,6 +294,7 @@ article  {
                 font-family: "TitleFont";
                 padding-bottom: 8px;
                 grid-row: 1;
+                text-transform: uppercase; 
             }
 
             .Image {
@@ -314,7 +315,6 @@ article  {
             p {
                 grid-row: 3;
                 background-color: transparent;
-                text-transform: lowercase;
                 margin: auto 0;
             }
 
@@ -328,11 +328,12 @@ article  {
 }
 
 #S_Experience {
-    @include ContentHolder2(var(--ShadowColour));
+    @include ContentHolder2(var(--ShadowColour), var(--BackgroundColour));
 }
 
 #S_WebDev {
-    @include ContentHolder2(var(--BackgroundColour));
+    @include ContentHolder2(var(--BackgroundColour), var(--ShadowColour));
+
 }
 #Quote {
     width: 100%;
@@ -365,11 +366,10 @@ article  {
 
 
 // Mobile support
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
 
     #Programming {
         height: auto;
-
 
         #CardHolder {
             flex-direction: column;
@@ -381,8 +381,6 @@ article  {
                 width: 80%;
                 margin-bottom: 3vh;
                 height: 80vh;
-
-
             }
 
         }
@@ -391,7 +389,6 @@ article  {
     nav {
         a {
             display: none;
-
         }
 
         #B_Menu {
@@ -413,7 +410,7 @@ article  {
                 margin-right: auto;
                 font-size: 24px;
                 font-family: "TitleFont";
-                text-transform: uppercase;
+
             }
 
         }
@@ -444,12 +441,13 @@ article  {
         height: 60px;
     }
 
-    #S_Experience{
+    #S_Experience, #S_WebDev{
         .ContentHolder {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            text-align: center;
             section {
                 width: 100%;
             }
@@ -458,8 +456,8 @@ article  {
             }
         }
     }
-   
-
-    
+    .T_Slide {
+        font-size: 15px !important;
+    }
 }
 

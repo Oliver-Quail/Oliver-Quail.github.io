@@ -5,9 +5,9 @@ window.onload = function() {
     var L_Menu = document.getElementsByClassName("L_Menu");
     B_Menu.addEventListener("click", function(){
         if(NavBar.classList.contains("Grow")) {
+            NavBar.classList.add("Shrink");
             NavBar.classList.remove("Grow");
             //NavBar.style.height = "100vh";
-            NavBar.classList.add("Shrink");
         }
         else {
             NavBar.classList.add("Grow");

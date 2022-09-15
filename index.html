@@ -4,131 +4,119 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oliver Quail</title>
-    <link type="text/css" rel="stylesheet" href="CSS/index/index.css"/>
-    <script src="Javascript/index.js"></script>
-      
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    
-</head> 
-<body>  
-    <script>
-        window.onload = function() {
-           // window.location = 'https://ollie-q.github.io/CountDown.html';
-        }
-    </script>
-    
-    <section id="NavPhone">
-        <p id="NameText"><a>Oliver Quail</a></p>
-        <section id="NavPhoneLinkHolder">
-            <section>
-                <p><a href="https://au.linkedin.com/in/oliver-quail" taregt="_blank" id="Link1" class="EndLink"><ion-icon name="logo-linkedin"></ion-icon><span>LinkedIn</span></a></p>
-                <p><a href="mailto:oliver.quail2@gmail.com" class="EndLink"><ion-icon name="mail"></ion-icon><span>Email</span></a></p>
-                <p><a href="https://www.youtube.com/channel/UCEqdyq_H-cUeLg-kp2ZPThA"><ion-icon name="logo-youtube"></ion-icon><span>Youtube</span></a></p>
-            </section>
-            
-        </section>
-        
-    </section>
-    
-    <nav>
-        <a id="NameText">Oliver Quail</a>
-        <section id="LinkHolder">
-            <a href="https://au.linkedin.com/in/oliver-quail" taregt="_blank" id="Link1" class="EndLink"><ion-icon name="logo-linkedin"></ion-icon></a>
-            <a href="mailto:oliver.quail2@gmail.com" class="EndLink"><ion-icon name="mail"></ion-icon></a>
-            <a href="https://www.youtube.com/channel/UCEqdyq_H-cUeLg-kp2ZPThA"><ion-icon name="logo-youtube"></ion-icon></a>
-        </section>
-        <p id="DownArrow" class="DownArrowInActive"><ion-icon name="chevron-down"></ion-icon></p>
+    <title>Home</title>
+    <link type="text/css" rel="stylesheet" href="CSS/Index2.css"/>
+    <script src="Javascript/Index2.js"></script>
+   
+</head>
+<body>
 
-        
-     
+    <article id="IntroSlide">
+        <section id="SlideName">
+            <h1>Oliver</h1>
+            <h1>Quail</h1>
+        </section>
+        <section id="SlideText">
+            <h3 class="T_Slide">Programmer</h3>
+            <ion-icon class="T_Slide" name="browsers-sharp"></ion-icon>
+            <h3 class="T_Slide">Web Developer</h3>
+            <ion-icon class="T_Slide" name="brush-sharp"></ion-icon>
+            <h3 class="T_Slide">Graphic Designer</h3>
+        </section>
+    </article>  
+    <nav id="NavBar">
+        <section id="B_Menu"><ion-icon name="menu-outline"></ion-icon><p>Menu</p></section>
+        <a href="#IntroSlide" class="L_Menu" id="L_Name">Oliver Quail</a>
+        <a href="#Programming" class="L_Menu">Programming</a>
+        <a href="#S_Experience" class="L_Menu">Experience</a>
+        <a href="#S_WebDev" class="L_Menu">Website Development</a>
+        <a href="#S_GraphicDesigner" class="L_Menu">Graphic Designer</a>
     </nav>
-    <div id="MainImage">
-        <h1>Oliver Quail is a</h1>
-        <h1><span id="Text"></span><span id="Typer"></span></h1>
+    
+    <article id="Programming">
+        <h1>Programming</h1>
+        <section id="CardHolder">
+            <section class="Card">
+                <h4>Waste audit manage system</h4>
+                <section class="Image">
+                    <img src="Images/WAMS.jpg"/>
+                </section>
+                <p>This project involved presenting data collected by students during a student run waste audit and presnt the data gathered to the school. Additionally it uses a desion tree to allocate jobs to and manage students. Current in use by Kardinia International College</p> 
+            </section>
+            <section class="Card">
+                <h4>Virtual Study Planner</h4>
+                <section class="Image">
+                    <img src="Images/Study.JPG"/>
 
-
-        
-    </div>
-    <article id="Intro">
-        <p id="Line"></p>
-        <div id="ImgWrap">
-            <img src="Assets/me.jpg" id="Img1" />
-        </div>
-        
+                </section>
+                <p>This was a project which my friends and i built for fun. It had the goal to replace the currently in use study planners. On this project I learnt how to lead a small team of developers and leveraging solution architectures, version control software and other technologies to lead a team and build a product.</p>
+            </section>
+            <section class="Card">
+                <h4>Kardinians Prototype App</h4>
+                <section class="Image">
+                    <img src="Images/Kardinians.JPG"/>
+                </section>
+                <p>This was a project built for a applied computing SAC (school assessed courswork) for my final year of school. In the project I worked with a client, applied the Problem solving methodology and built an API to service a high fidelity for a future mobile application.</p>
+            </section>
+        </section>
+    </article>
+    <article id="S_Experience">
+        <h1 id="T_Experince">Experience</h1>
+        <section class="ContentHolder">
+            <section>
+                <h2>My Experience</h2>
+                <ul>
+                    <li>5 Years in Web Developement</li>
+                    <li>4 Years experience in Databases</li>
+                    <li>4 Years experience in php</li>
+                    <li>1 Year experience in Unity engine</li>
+                    <li>1 Year experience in Mobile application development</li>
+                    <li>1 Years experience in API development</li>
+                </ul>
+                <p>Aside: some of my work</p>
+            </section>
+            <aside>
+                <img src="Images/Capture.PNG"/>
+                <section id="ImagePicker">
+                    <img class="Selected" src="Images/Capture.PNG"/>
+                    <img src="Images/Capture.PNG"/>
+                    <img src="Images/Capture.PNG"/>
+                    <img src="Images/Capture.PNG"/>
+                </section>
+            </aside>
+        </section>
+    </article>
+    <article id="S_WebDev">
+        <h1>Website Developement</h1>
+        <section class="ContentHolder">
+            <section>
+                <h2>My Experience</h2>
+                <ul>
+                    <li>5 Years in Web Developement</li>
+                    <li>4 Years experience in Databases</li>
+                    <li>4 Years experience in php</li>
+                    <li>1 Year experience in Unity engine</li>
+                    <li>1 Year experience in Mobile application development</li>
+                    <li>1 Years experience in API development</li>
+                </ul>
+                <p>Aside: some of my work</p>
+            </section>
+            <aside>
+                <img src="Images/Capture.PNG"/>
+                <section id="ImagePicker">
+                    <img class="Selected" src="Images/Capture.PNG"/>
+                    <img src="Images/Capture.PNG"/>
+                    <img src="Images/Capture.PNG"/>
+                    <img src="Images/Capture.PNG"/>
+                </section>
+            </aside>
+        </section>
+    </article>
+    <article  id="S_GraphicDesigner">
+            <h1>Graphic Design</h1>
     </article>
     
-    <h2 id="JobTitle">Web Developer</h2>
-
-    <main>
-        <div id="ImageWrapper">
-            
-        </div>
-        
-        <article id="MySkills">
-            <h2>Key <span class="Highlight">Skills</span>:</h2>
-            <ul>
-                <li>Web Developement</li>
-                <li>Database Design</li>
-                <li>Applied visual Design</li>
-
-            </ul>
-        </article>
-
-       <article id="Gallery">
-            <img src="Assets/MainImage3.jpg" class="GalleryImage"/>
-        </article>--> 
-
-        <article class="ContentHolder2">
-            <section class="Content2">
-                <h2>Experiences</h2>
-                <ul>
-                    <li><span class="Highlight">4 Years</span> as a Web Developer</li>
-                    <li><span class="Highlight">3 Years</span> as a Database Developer</li>
-                    <li><span class="Highlight">3 Years</span> as a User Interface Designer</li>
-                    <li><span class="Highlight">1 Year</span> as a User Experiences Designer</li>
-                </ul>
-            </section>
-            <section class="Content2">
-                <h2><span class="Highlight">Examples</span> of my Work</h2>
-                <ul>
-                    <li><a href="AddUser.html" target="_blank">Event++</a></li>
-                    <li><a href="DataIntro.html" target="_blank">DataPages interation 1</a></li>
-                    <li><a href="DataIntro2.html" target="_blank">DataPages interation 2</a></li>
-
-                </ul>
-
-            </section>
-        </article>
-        <p id="Line"></p>
-        
-    </main>
-    <article id="ProjectsHolder">
-        <h1 id="MyProjectHeading">My Projects</h1>
-    <article class="Carsol">
-        <section class="CarsolObject">
-            <h3>Project 1</h3>
-            <img src="Assets/CarsolImage.JPG" />
-
-
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, mollitia nemo! Hic voluptate nulla eligendi, ipsa, itaque enim voluptatum corrupti cum unde quas voluptatibus veritatis asperiores minus eius quo laboriosam!</p>
-        </section>
-        <section class="CarsolObject">
-
-        </section>
-        <section class="CarsolObject">
-
-        </section>
-    </article>
-
-    </article>
-    
-
-    <p id="Line"></p>
-    <footer>
-        <p>&copy; Oliver Quail 2021</p>
-    </footer>-->
-  
 </body>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </html>
