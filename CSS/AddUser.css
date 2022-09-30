@@ -1,117 +1,124 @@
-@import url("https://fonts.googleapis.com/css2?family=Jura:wght@500&family=Maven+Pro&family=Varta&display=swap");
-/*$Main_Font: 'Space Grotesk', sans-serif;*/
-* {
-  font-family: "Varta", sans-serif;
-}
-
-/* Updated colours */
-/*$MainWhite: #fefefe;*/
-/*$DarkestBlue: #009CAD;
-$SecondBlue: #19E8FF;
-$MiddleBlue: #00E1FA;
-$DarkOrgane: #AD4A00;
-$LightOrange: #FA6A00;*/
-/* THEME TWO */
-:root {
-  --LighestColour: #29f2c6;
-  --DarkestColour: #03a682;
-  --MiddleColour: #15caa2;
-  --TextColour: white;
-  --BackgroundColour: #181818;
-  --SecondBackgroundColour: #212121;
-  --MainGrey: #606060;
-  font-size: 16px;
-}
-
-* {
-  padding: 0;
-  margin: 0;
-  color: var(--TextColour);
-}
-
-:export {
-  --value1: #606060;
-}
-
-/*# sourceMappingURL=Universal_Assets.css.map */
+@import url(c:\Users\olive\OneDrive\Documents\GitHub\Ollie-Q\CSS\Universal_Assets.css);
 #Content {
   width: 100vw;
   height: 100vh;
   background-color: var(--BackgroundColour);
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: 10% 40% 40% 10%;
-  grid-template-rows: -webkit-max-content auto;
-  grid-template-rows: max-content auto;
+  -ms-grid-columns: 10% 40% 40% 10%;
+      grid-template-columns: 10% 40% 40% 10%;
+  -ms-grid-rows: max-content auto;
+      grid-template-rows: -webkit-max-content auto;
+      grid-template-rows: max-content auto;
 }
+
 #Content #LeftContent {
+  -ms-grid-column: 2;
   grid-column: 2;
   width: 100%;
   height: 90vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 #Content #LeftContent #AddUsers {
   text-align: center;
 }
+
 #Content #LeftContent #AddUsers div * {
   display: inline-block;
 }
+
 #Content #LeftContent #AddUsers div h4 {
   font-size: 1.2rem;
 }
+
 #Content #LeftContent #AddUsers p {
   font-size: 1.2rem;
   border: 2px solid var(--TextColour);
   padding: 0 1%;
   margin-top: 2%;
 }
+
 #Content #LeftContent #EmailSend {
   width: 100%;
   height: 100%;
   text-align: center;
   display: none;
 }
+
 #Content #LeftContent #EmailSend input {
   display: block;
   width: 95%;
 }
+
 #Content #LeftContent #EmailSend textarea {
   width: 100%;
   height: 60%;
 }
+
 #Content #LeftContent #EmailSend .EmailButtonHolder {
   width: 100%;
 }
+
 #Content #LeftContent #EmailSend .EmailButtonHolder section {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
+
 #Content #ButtonBox {
+  -ms-grid-column: 2;
   grid-column: 2;
+  -ms-grid-row: 2;
   grid-row: 2;
   width: 100%;
   height: 10vh;
 }
+
 #Content #ButtonBox .ButtonHolder {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 100%;
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
+
 #Content #CurrentUsers {
+  -ms-grid-column: 3;
   grid-column: 3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
   grid-row: 1/3;
   color: var(--TextColour);
   width: 100%;
 }
+
 #Content #CurrentUsers table {
   width: 100%;
 }
+
 #Content #CurrentUsers table tr, #Content #CurrentUsers table td, #Content #CurrentUsers table th {
   text-align: center;
 }
+
 #Content #CurrentUsers table tr, #Content #CurrentUsers table td {
   border-bottom-style: solid;
 }
@@ -131,12 +138,17 @@ $LightOrange: #FA6A00;*/
     width: 100%;
     height: 100vh;
     background-color: var(--BackgroundColour);
+    display: -ms-grid;
     display: grid;
-    grid-template-columns: 100%;
-    grid-template-rows: 90% 10%;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+    -ms-grid-rows: 90% 10%;
+        grid-template-rows: 90% 10%;
   }
   #Content #LeftContent {
+    -ms-grid-column: 1;
     grid-column: 1;
+    -ms-grid-row: 1;
     grid-row: 1;
     display: none;
     z-index: 2;
@@ -144,17 +156,21 @@ $LightOrange: #FA6A00;*/
     background-color: var(--BackgroundColour);
   }
   #Content #ButtonBox {
+    -ms-grid-column: 1;
     grid-column: 1;
     background-color: var(--BackgroundColour);
+    -ms-grid-row: 2;
     grid-row: 2;
     position: fixed;
     z-index: 3;
     bottom: 0px;
   }
   #Content #CurrentUsers {
+    -ms-grid-column: 1;
     grid-column: 1;
     width: 100%;
     height: 100%;
+    -ms-grid-row: 1;
     grid-row: 1;
   }
   #ClosePane {
@@ -164,4 +180,5 @@ $LightOrange: #FA6A00;*/
     padding: 0px 2%;
     border: 1px solid var(--TextColour);
   }
-}/*# sourceMappingURL=AddUser.css.map */
+}
+/*# sourceMappingURL=AddUser.css.map */
