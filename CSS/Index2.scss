@@ -342,7 +342,7 @@ nav {
 
 #Programming {
     font-family: "TitleFont";
-    height: 100vh;
+    min-height: 100vh;
     padding-bottom: 20px;
     
     h1 {
@@ -460,11 +460,10 @@ nav {
             height: auto;
             justify-content: center;
             align-items: center;
-            height: 100%;
             .Card {
                 width: 80%;
                 margin-bottom: 3vh;
-                height: 80vh;
+                min-height: 80vh;
             }
 
         }
