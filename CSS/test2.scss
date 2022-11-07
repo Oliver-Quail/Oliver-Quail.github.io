@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap');
+
+@font-face {
+    font-family: TitleFont;
+    src: url("../Fonts/Acacius-regular.otf"), url("../Fonts/Acaciusregular.ttf") format("ttf"),
+}
+
+:root {
+    --MainWhite: #FAF8F9;
+    --MainBlack: #212529;
+    --MainPurple: #ac4dff;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+    color: var(--MainBlack);
+    overflow-x: hidden;
+
+}
+
+
+#Intro {
+    display: flex;
+    
+    #Name {
+        height: 100vh;
+        writing-mode: vertical-lr;
+        text-align: center;
+        font-family: TitleFont;
+        letter-spacing: 2vh;
+        font-size: 30px;
+        background-color: var(--MainBlack);
+        color: var(--MainWhite);
+    }
+
+    section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: TitleFont;
+        font-size: 40px;
+
+        ion-icon {
+            font-size: 200px;
+            animation: fade 2s ease-in-out 0s infinite alternate;
+        }
+    }
+}
+
+#ContentHolder {
+    padding-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+
+    .ContentHolder3 {
+        border: 3px solid transparent;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 30vw;
+
+        ion-icon {
+            font-size: 24px;
+        }
+
+        h1 {
+            font-family: TitleFont;
+        }
+
+        p {
+            text-align: center;
+            font-family: 'Source Sans Pro', sans-serif;
+
+        }
+    }
+
+    .ContentHolder3:hover {
+        transition: 400ms;
+        border: 3px solid var(--MainPurple);
+        border-radius: 15%;
+        
+        ion-icon {
+            color: var(--MainPurple);
+        }
+        h1 {
+            color: var(--MainPurple);
+        }
+    }
+}
+
+
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
