@@ -264,13 +264,25 @@ footer p {
   display: grid;
   height: 100vh;
   width: 100%;
-  -ms-grid-rows: 70% 20% auto;
-      grid-template-rows: 70% 20% auto;
+  -ms-grid-rows: auto 40% 20%;
+      grid-template-rows: auto 40% 20%;
+  text-align: center;
   -ms-grid-columns: auto 80% auto;
       grid-template-columns: auto 80% auto;
 }
 
 .SlideshowContainer div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto 0;
+  width: 60%;
   -ms-grid-row: 1;
   grid-row: 1;
   -ms-grid-column: 2;
@@ -304,6 +316,7 @@ footer p {
 .Slide {
   display: none;
   width: 100%;
+  padding-left: 20%;
 }
 
 .Slide img {

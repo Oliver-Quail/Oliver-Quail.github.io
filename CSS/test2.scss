@@ -223,14 +223,20 @@ footer {
     display: grid;
     height: 100vh;
     width: 100%;
-    grid-template-rows: 70% 20% auto;
+    grid-template-rows: auto 40% 20%;
+    text-align: center;
     grid-template-columns: auto 80% auto;
 
-
-    div {
+    div {    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto 0;
+        width: 60%;
         grid-row: 1;
-        grid-column: 2;
+        grid-column: 2;        
     }
+
     section {
         grid-row: 2;
         grid-column: 2;
@@ -250,18 +256,15 @@ footer {
     }
 }
 
-   
-
-
-  
   /* Hide the images by default */
   .Slide {
     display: none;
     width: 100%;
+    padding-left: 20%;
 
     img {
-      width:100%;
-      height: auto;
+        width: 100%;
+        height: auto;
 
     }
   }
@@ -314,7 +317,7 @@ footer {
         height: 100vh;
         width: 100%;
         grid-template-rows: 35% 20%;
-        
+
         grid-template-columns: auto 80% auto;
     }
     #UnderText {
