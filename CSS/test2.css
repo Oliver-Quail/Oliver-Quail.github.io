@@ -3,10 +3,39 @@
   font-family: TitleFont;
   src: url("../Fonts/Acacius-regular.otf"), url("../Fonts/Acaciusregular.ttf") format("ttf");
 }
+
 :root {
   --MainWhite: #FAF8F9;
   --MainBlack: #212529;
   --MainPurple: #ac4dff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: var(--MainWhite);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: var(--MainPurple);
+  border-radius: 25px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--MainPurple);
+}
+
+html {
+  font-size: 10px;
+}
+
+p {
+  font-size: 1.6rem;
 }
 
 * {
@@ -16,86 +45,344 @@
   overflow-x: hidden;
 }
 
+h1, h2 {
+  font-weight: 100;
+  text-transform: uppercase;
+  font-family: TitleFont;
+  text-align: center;
+}
+
+p {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
 #Intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
+
 #Intro #Name {
   height: 100vh;
-  -ms-writing-mode: tb-lr;
-      writing-mode: vertical-lr;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
   text-align: center;
   font-family: TitleFont;
   letter-spacing: 2vh;
-  font-size: 30px;
+  font-size: 3rem;
   background-color: var(--MainBlack);
   color: var(--MainWhite);
 }
+
 #Intro section {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-family: TitleFont;
-  font-size: 40px;
+  font-size: 4rem;
 }
+
 #Intro section ion-icon {
-  font-size: 200px;
+  font-size: 20rem;
   -webkit-animation: fade 2s ease-in-out 0s infinite alternate;
           animation: fade 2s ease-in-out 0s infinite alternate;
 }
 
 #ContentHolder {
   padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
+  overflow: hidden;
 }
+
 #ContentHolder .ContentHolder3 {
+  margin-bottom: auto;
   border: 3px solid transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 30vw;
+  height: 100%;
 }
-#ContentHolder .ContentHolder3 ion-icon {
-  font-size: 24px;
+
+#ContentHolder .ContentHolder3 section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-#ContentHolder .ContentHolder3 h1 {
+
+#ContentHolder .ContentHolder3 section ion-icon {
+  margin-top: auto;
+  font-size: 2.4rem;
+}
+
+#ContentHolder .ContentHolder3 section h1 {
+  margin-bottom: auto;
   font-family: TitleFont;
+  font-size: 2.4rem;
 }
+
 #ContentHolder .ContentHolder3 p {
   text-align: center;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.6rem;
 }
+
 #ContentHolder .ContentHolder3:hover {
+  -webkit-transition: 400ms;
   transition: 400ms;
   border: 3px solid var(--MainPurple);
   border-radius: 15%;
 }
+
 #ContentHolder .ContentHolder3:hover ion-icon {
   color: var(--MainPurple);
 }
+
 #ContentHolder .ContentHolder3:hover h1 {
   color: var(--MainPurple);
+}
+
+#WorkTitle {
+  margin-top: 20px;
+  font-size: 2.4rem;
+}
+
+#Content2 {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#Content2 #MailButton {
+  background-color: #ac4dff;
+}
+
+#Content2 #FiverButton {
+  background-color: #57d097;
+}
+
+#Content2 #MailButton:hover {
+  -webkit-transition: 200ms;
+  transition: 200ms;
+}
+
+#Content2 section {
+  cursor: pointer;
+  width: 50%;
+  min-height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#Content2 section * {
+  color: var(--MainWhite);
+}
+
+#Content2 section ion-icon {
+  font-size: 3rem;
+}
+
+footer {
+  background-color: var(--MainBlack);
+  padding: 5px 0px;
+}
+
+footer p {
+  color: var(--MainWhite);
 }
 
 @-webkit-keyframes fade {
   0% {
     opacity: 0;
+    color: var(--MainBlack);
   }
   100% {
     opacity: 1;
+    color: var(--MainPurple);
   }
 }
 
 @keyframes fade {
   0% {
     opacity: 0;
+    color: var(--MainBlack);
   }
   100% {
     opacity: 1;
+    color: var(--MainPurple);
   }
-}/*# sourceMappingURL=test2.css.map */
+}
+
+.SlideshowContainer {
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  -ms-grid-rows: 70% 20% auto;
+      grid-template-rows: 70% 20% auto;
+  -ms-grid-columns: auto 80% auto;
+      grid-template-columns: auto 80% auto;
+}
+
+.SlideshowContainer div {
+  -ms-grid-row: 1;
+  grid-row: 1;
+  -ms-grid-column: 2;
+  grid-column: 2;
+}
+
+.SlideshowContainer section {
+  -ms-grid-row: 2;
+  grid-row: 2;
+  -ms-grid-column: 2;
+  grid-column: 2;
+  margin-top: auto;
+  background-color: var(--MainBlack);
+  text-align: center;
+}
+
+.SlideshowContainer section ion-icon {
+  color: var(--MainPurple);
+  font-size: 5rem;
+}
+
+.SlideshowContainer #UnderText {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  -ms-grid-row: 3;
+  grid-row: 3;
+  font-size: 1.2rem;
+}
+
+/* Hide the images by default */
+.Slide {
+  display: none;
+  width: 100%;
+}
+
+.Slide img {
+  width: 100%;
+  height: auto;
+}
+
+.Fade {
+  -webkit-animation-name: fade;
+          animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+          animation-duration: 1.5s;
+}
+
+@-webkit-keyframes Fade1 {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes Fade1 {
+  from {
+    opacity: .4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  html {
+    font-size: 12px;
+  }
+  #ContentHolder {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  #ContentHolder .ContentHolder3 {
+    width: 70%;
+  }
+  #Content2 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  #Content2 section {
+    width: 100%;
+    height: 50vh;
+  }
+  .SlideshowContainer {
+    height: 100vh;
+    width: 100%;
+    -ms-grid-rows: 35% 20%;
+        grid-template-rows: 35% 20%;
+    -ms-grid-columns: auto 80% auto;
+        grid-template-columns: auto 80% auto;
+  }
+  #UnderText {
+    -ms-grid-row: 3;
+    grid-row: 3;
+    -ms-grid-column: 2;
+    grid-column: 2;
+    font-size: 1.2rem;
+  }
+}
+/*# sourceMappingURL=test2.css.map */
