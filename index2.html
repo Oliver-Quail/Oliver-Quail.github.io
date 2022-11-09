@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link type="text/css" rel="stylesheet" href="CSS/Index2.css"/>
+    <script src="Javascript/Index2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js"></script>
+   
+</head>
+<body>
+
+    <article id="IntroSlide">
+        <section id="SlideName">
+            <h1>Oliver</h1>
+            <h1>Quail</h1>
+        </section>
+        <section id="SlideText">
+            <h3 class="T_Slide">Programmer</h3>
+            <ion-icon class="T_Slide" name="browsers-sharp"></ion-icon>
+            <h3 class="T_Slide">Web Developer</h3>
+            <ion-icon class="T_Slide" name="brush-sharp"></ion-icon>
+            <h3 class="T_Slide">Graphic Designer</h3>
+        </section>
+    </article>  
+    <nav id="NavBar">
+        <section id="B_Menu"><ion-icon name="menu-outline"></ion-icon><p>Menu</p></section>
+        <a href="#IntroSlide" class="L_Menu" id="L_Name">Oliver Quail</a>
+        <a href="#Programming" class="L_Menu">Programming</a>
+        <a href="#S_Experience" class="L_Menu">Experience</a>
+        <a href="#S_WebDev" class="L_Menu">Website Development</a>
+        <a href="#S_GraphicDesigner" class="L_Menu">Graphic Designer</a>
+    </nav>
+    
+    <article id="Programming">
+        <h1>Programming</h1>
+        <section id="CardHolder">
+            <section class="Card">
+                <h4>Waste audit manage system</h4>
+                <section class="Image">
+                    <img src="Images/WAMS.jpg"/>
+                </section>
+                <p>This project involved presenting data collected by students during a student run waste audit and presnt the data gathered to the school. Additionally it uses a desion tree to allocate jobs to and manage students. Current in use by Kardinia International College</p> 
+            </section>
+            <section class="Card">
+                <h4>Virtual Study Planner</h4>
+                <section class="Image">
+                    <img src="Images/Study.JPG"/>
+
+                </section>
+                <p>This was a project which my friends and i built for fun. It had the goal to replace the currently in use study planners. On this project I learnt how to lead a small team of developers and leveraging solution architectures, version control software and other technologies to lead a team and build a product.</p>
+            </section>
+            <section class="Card">
+                <h4>Kardinians Prototype App</h4>
+                <section class="Image">
+                    <img src="Images/Kardinians.JPG"/>
+                </section>
+                <p>This was a project built for a applied computing SAC (school assessed courswork) for my final year of school. In the project I worked with a client, applied the Problem solving methodology and built an API to service a high fidelity for a future mobile application.</p>
+            </section>
+        </section>
+    </article>
+    <article id="S_Experience">
+        <h1 id="T_Experince">Experience</h1>
+        <section class="ContentHolder">
+            <section>
+                <h2>My Experience</h2>
+                <ul>
+                    <li>5 Years in Web Developement</li>
+                    <li>4 Years experience in Databases</li>
+                    <li>4 Years experience in php</li>
+                    <li>1 Year experience in Unity engine</li>
+                    <li>1 Year experience in Mobile application development</li>
+                    <li>1 Years experience in API development</li>
+                </ul>
+                <p>Aside: some of my work</p>
+            </section>
+            <aside>
+                <section>
+                    <!-- Slideshow container -->
+                    <div class="slideshow-container">
+
+                        <!-- Full-width images with number and caption text -->
+                        <div class="mySlides fade active">
+                            <img src="Images/Kardinians.JPG">
+                        </div>
+                    
+                        <div class="mySlides fade">
+                            <img src="Images/WAMS.jpg">
+                        </div>
+                    
+                        <div class="mySlides fade">
+                            <img src="Images/Study.JPG">
+                        </div>
+                    
+                        <!-- Next and previous buttons -->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        </div>
+                </section>
+                <section id="ImagePicker">
+                    <img onclick="currentSlide(1)" class="Selected" src="Images/Capture.PNG"/>
+                    <img onclick="currentSlide(2)" src="Images/Capture.PNG"/>
+                    <img onclick="currentSlide(3)" src="Images/Capture.PNG"/>
+                    <img onclick="currentSlide(1)" src="Images/Capture.PNG"/>
+                </section>
+            </aside>
+        </section>
+    </article>
+    <article id="S_WebDev">
+        <h1>Website Developement</h1>
+        <section class="ContentHolder">
+            <section>
+                <h2>My Experience</h2>
+                <ul>
+                    <li>5 Years in Web Developement</li>
+                    <li>4 Years experience in Databases</li>
+                    <li>4 Years experience in php</li>
+                    <li>1 Year experience in Unity engine</li>
+                    <li>1 Year experience in Mobile application development</li>
+                    <li>1 Years experience in API development</li>
+                </ul>
+                <p>Aside: some of my work</p>
+            </section>
+            <aside>
+                <img src="Images/Capture.PNG"/>
+                <section id="ImagePicker">
+                    <img class="Selected" src="Images/Capture.PNG"/>
+                    <img src="Images/Capture.PNG"/>
+                    <img src="Images/Capture.PNG"/>
+                    <img src="Images/Capture.PNG"/>
+                </section>
+            </aside>
+        </section>
+    </article>
+    <article  id="S_GraphicDesigner">
+            <h1>Graphic Design</h1>
+    </article>
+    
+</body>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</html>

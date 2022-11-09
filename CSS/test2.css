@@ -349,6 +349,24 @@ footer p {
   }
 }
 
+@-webkit-keyframes Shin {
+  0% {
+    color: var(--MainBlack);
+  }
+  100% {
+    color: var(--MainPurple);
+  }
+}
+
+@keyframes Shin {
+  0% {
+    color: var(--MainBlack);
+  }
+  100% {
+    color: var(--MainPurple);
+  }
+}
+
 @media only screen and (min-width: 1000px) {
   html {
     font-size: 20px;
@@ -389,6 +407,12 @@ footer p {
         grid-template-rows: 35% 20%;
     -ms-grid-columns: auto 80% auto;
         grid-template-columns: auto 80% auto;
+  }
+  .SlideshowContainer div {
+    margin: 0px;
+    width: 100%;
+    height: auto;
+    padding: 0;
   }
   #UnderText {
     -ms-grid-row: 3;
