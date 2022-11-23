@@ -43,16 +43,14 @@ p {
 
 #Content3 {
   margin-top: 40px;
+  margin-bottom: 20px;
   width: 100%;
-  height: 40vh;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 #Content3 section {
@@ -65,9 +63,6 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: baseline;
-      -ms-flex-pack: baseline;
-          justify-content: baseline;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -77,12 +72,61 @@ p {
   text-align: center;
 }
 
-#Content3 section i {
+#Content3 section section {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#Content3 section section i {
   font-size: 40px;
 }
 
-#Content3 section h1 {
+#Content3 section section h1 {
   font-family: TitleFont;
   font-size: 26px;
+}
+
+#Reviews {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 60px;
+  overflow-x: hidden;
+  border-top: 2px solid var(--MainBlack);
+  background-image: url("../Images/Treesbg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#Reviews * {
+  color: var(--MainWhite);
+}
+
+#Reviews h1 {
+  font-family: TitleFont;
+  font-size: 40px;
+}
+
+#Reviews section {
+  width: 80%;
+  text-align: center;
+}
+
+#Reviews p:first-child {
+  font-weight: bold;
 }
 /*# sourceMappingURL=Demo1.css.map */
