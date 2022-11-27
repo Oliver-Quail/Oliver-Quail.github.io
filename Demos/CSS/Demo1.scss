@@ -7,9 +7,19 @@
 
 }
 
+html {
+    font-size: 10px;
+}
+
+
 @font-face {
     font-family: TitleFont;
     src: url("../Fonts/Acantra-regular.otf"), url("../Fonts/Acantra-regular.ttf") format("ttf"),
+}
+
+@font-face {
+    font-family: SpecialFont;
+    src: url("../Fonts/Kayla-Regular.otf"), url("../Fonts/Kayla-Regular.ttf") format("ttf"),
 }
 
 * {
@@ -30,30 +40,26 @@ h1 {
     width: 100%;
     height: 100vh;
     background-image: url(../Images/Trees.jpg);
-    background-size: cover;
+    background-size: 100% 100%;
     background-attachment: fixed;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-
-
-    #Triangle {
-        background-color: var(--MainWhite);
-        width: 50%;
-        height: 100%;
-        background: linear-gradient(to bottom right, #F8FAF9 0%, rgba(249, 251, 250, 0.4) 50%, transparent 50%, transparent 100%);
-
-        #CurveText {
-            font-family: TitleFont;
-            margin-bottom: auto;
-            font-size: 60px;
-            letter-spacing: 2px;            
-        }
-        #UnderText {
-            font-family: TitleFont;
-            font-size: 30px;
-            letter-spacing: 2px;    
-        }
+    h1, h2 {
+        font-family: SpecialFont;
+        color: var(--MainWhite);
     }
-
+    h1 {
+        font-size: 80px;
+        letter-spacing: 10px;
+    }
+    h2 {
+        font-size: 50px;
+        font-style: italic;
+    }
 }
 
 
