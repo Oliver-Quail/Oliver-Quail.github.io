@@ -29,7 +29,10 @@ html {
 
 p {
     font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.4rem;
+
 }
+
 
 h1 {
     font-family: TitleFont;
@@ -40,7 +43,7 @@ h1 {
     width: 100%;
     height: 100vh;
     background-image: url(../Images/Trees.jpg);
-    background-size: 100% 100%;
+    background-size: 200% 100%;
     background-attachment: fixed;
     background-repeat: no-repeat;
     display: flex;
@@ -49,15 +52,16 @@ h1 {
     justify-content: center;
 
     h1, h2 {
+        text-align: center;
         font-family: SpecialFont;
         color: var(--MainWhite);
     }
     h1 {
-        font-size: 80px;
+        font-size: 8rem;
         letter-spacing: 10px;
     }
     h2 {
-        font-size: 50px;
+        font-size: 5rem;
         font-style: italic;
     }
 }
@@ -88,11 +92,11 @@ h1 {
             display: flex;
             flex-direction: column;
             i {
-                font-size: 40px;
+                font-size: 4rem;
             }
             h1 {
                 font-family: TitleFont;
-                font-size: 26px;
+                font-size: 2.6rem;
             }
         }
 
@@ -194,7 +198,7 @@ h1 {
 
     h1 {
         font-family: TitleFont;
-        font-size: 40px;
+        font-size: 4rem;
     }
 
     section {
@@ -205,10 +209,23 @@ h1 {
     p:first-child {
         font-weight: bold;
     }
+    i {
+        font-size: 1.4rem;
+    }
 
 }
 
 @media only screen and (max-width: 600px) {
+
+    #Intro {
+        h1 {
+            font-size: 6rem;
+        }
+        h2 {
+            font-size: 4rem;
+        }
+    }
+
     #Content3 {
         flex-direction: column;
 
@@ -219,6 +236,5 @@ h1 {
     }
     #Intro {
         background-image: url("../Images/Tree4.jpg");
-        
     }    
 }
