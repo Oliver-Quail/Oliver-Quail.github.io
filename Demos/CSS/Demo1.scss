@@ -53,20 +53,33 @@ h1 {
     align-items: center;
     justify-content: center;
 
+    img {
+        width: 100%;
+        height: 100vh;
+        display: none;
+    }
 
-    h1, h2 {
-        text-align: center;
-        font-family: SpecialFont;
-        color: var(--MainWhite);
+
+    section {
+        position: absolute;
+        top: auto;
+        h1, h2 {
+            text-align: center;
+            font-family: SpecialFont;
+            color: var(--MainWhite);
+            z-index: 2;
+         
+        }
+        h1 {
+            font-size: 8rem;
+            letter-spacing: 10px;
+        }
+        h2 {
+            font-size: 5rem;
+            font-style: italic;
+        }
     }
-    h1 {
-        font-size: 8rem;
-        letter-spacing: 10px;
-    }
-    h2 {
-        font-size: 5rem;
-        font-style: italic;
-    }
+    
 }
 
 
@@ -260,7 +273,10 @@ h1 {
     }
 
     #Intro {
-        background-image: url("../Images/TreesM.jpg");
-
+        background-image: none;
+        img {
+            display: block;
+            
+        }
     }
 }
