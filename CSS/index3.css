@@ -62,7 +62,7 @@ nav a {
 }
 
 nav a:first-child {
-  border-left: 0px;
+  border-left: 1px solid transparent;
   background-image: var(--Gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -76,18 +76,20 @@ nav a:hover {
   -webkit-text-fill-color: transparent;
 }
 
+nav ion-icon {
+  display: none;
+}
+
 #TextHolder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: left;
-      -ms-flex-pack: left;
-          justify-content: left;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
   height: 100vh;
+  background-color: var(--MainBlack);
 }
 
 #TextHolder #Video {
@@ -104,7 +106,6 @@ nav a:hover {
 }
 
 #TextHolder #Roles {
-  margin-left: 40px;
   z-index: 2;
   font-family: TitleFont;
   text-transform: uppercase;
@@ -141,6 +142,16 @@ nav a:hover {
   background-color: var(--MainBlack);
 }
 
+#Experience h1 {
+  font-family: TitleFont;
+  background-image: var(--Gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 4rem;
+  text-transform: uppercase;
+  margin-left: 40px;
+}
+
 @-webkit-keyframes Blinking {
   0% {
     opacity: 0;
@@ -159,18 +170,12 @@ nav a:hover {
   }
 }
 
-@media only screen and (min-width: 1000px) {
-  html {
-    font-family: 20px;
-  }
-}
-
 @media only screen and (max-width: 600px) {
   html {
-    font-family: 6px;
+    font-size: 10px;
   }
   #Roles {
-    margin-left: auto;
+    margin-left: 5px;
   }
   nav {
     display: -webkit-box;
@@ -179,6 +184,9 @@ nav a:hover {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   nav ion-icon {
     display: block;
@@ -187,6 +195,34 @@ nav a:hover {
   }
   nav a {
     display: none;
+  }
+  .ShowMenu {
+    -webkit-transition: 200ms;
+    transition: 200ms;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+  }
+  .ShowMenu a {
+    display: block;
+    font-size: 4rem;
+    text-align: left;
+    border: 0px solid transparent;
+    border-bottom: 3px solid var(--LeftColour);
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  html {
+    font-family: 20px;
+  }
+  #Roles {
+    margin-left: 40px;
   }
 }
 /*# sourceMappingURL=index3.css.map */

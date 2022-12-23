@@ -18,7 +18,20 @@ window.onload = function() {
             CounterLength = 0;
             Counter++;
         }
-
     }, 200);
+
+    var MenuButton = document.getElementById("MenuButton");
+    var Menu = document.getElementById("MenuBar");
+    var MenuShown = 0;
+    MenuButton.addEventListener("click", function(){
+        if(MenuShown == 0) {
+            MenuShown = 1;
+            Menu.classList.add("ShowMenu");
+        }
+        else {
+            MenuShown = 0;
+            Menu.classList.remove("ShowMenu");
+        }
+    });
 
 }
