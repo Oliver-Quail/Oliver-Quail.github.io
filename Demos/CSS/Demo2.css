@@ -57,4 +57,25 @@ video {
   color: var(--MainWhite);
   font-size: 10rem;
 }
-/*# sourceMappingURL=DEmo2.css.map */
+
+nav {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  background-color: var(--MainBlack);
+  min-height: 20px;
+  z-index: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+nav a {
+  color: var(--MainWhite);
+  font-family: TitleFont;
+  font-size: 30px;
+}
+/*# sourceMappingURL=Demo2.css.map */

@@ -54,3 +54,20 @@ video {
 
     }
 }
+
+nav {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: var(--MainBlack);
+    min-height: 20px;
+    z-index: 2;
+    display: flex;
+    justify-content: space-around;
+    a {
+        color: var(--MainWhite);
+        font-family: TitleFont;
+        font-size: 30px;
+    }
+}
