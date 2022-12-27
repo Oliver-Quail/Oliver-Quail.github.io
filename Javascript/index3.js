@@ -49,7 +49,7 @@ function CreateFluxList(TitlesHolder, ContentHolder) {
     var Counter = 0;
     while(Counter < TitlesArray.length) {
         TitlesArray[Counter].addEventListener("click", function() {
-            var 
+            //var 
         });
     }
     
