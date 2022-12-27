@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 @font-face {
   font-family: TitleFont;
   src: url("../Fonts/Karrik-Regular.otf"), url("../Fonts/Karrik-Regular.ttf") format("ttf");
@@ -15,6 +16,7 @@
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -113,6 +115,7 @@ nav ion-icon {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 4.8rem;
+  margin-left: 40px;
 }
 
 #TextHolder #Typer {
@@ -137,7 +140,7 @@ nav ion-icon {
 }
 
 #Experience {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-color: var(--MainBlack);
 }
@@ -150,6 +153,34 @@ nav ion-icon {
   font-size: 4rem;
   text-transform: uppercase;
   margin-left: 40px;
+}
+
+#Experience .Template3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 100%;
+}
+
+#Experience .Template3 section {
+  width: 29%;
+  height: 100%;
+}
+
+#Experience .Template3 section h2 {
+  color: var(--MainWhite);
+  font-family: TitleFont;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+#Experience .Template3 section p {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--MainWhite);
+  font-size: 2.5rem;
 }
 
 @-webkit-keyframes Blinking {
@@ -170,12 +201,13 @@ nav ion-icon {
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   html {
-    font-size: 10px;
+    font-family: 10px;
   }
-  #Roles {
-    margin-left: 5px;
+  #TextHolder #Roles {
+    margin-left: 10px;
+    font-size: 3.5rem;
   }
   nav {
     display: -webkit-box;
@@ -208,6 +240,11 @@ nav ion-icon {
             flex-direction: column;
     height: 100%;
   }
+  .ShowMenu #MenuButton {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+  }
   .ShowMenu a {
     display: block;
     font-size: 4rem;
@@ -215,14 +252,31 @@ nav ion-icon {
     border: 0px solid transparent;
     border-bottom: 3px solid var(--LeftColour);
   }
-}
-
-@media only screen and (min-width: 600px) {
-  html {
-    font-family: 20px;
+  #Experience h1 {
+    font-size: 3.5rem;
   }
-  #Roles {
-    margin-left: 40px;
+  #Experience .Template3 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  #Experience .Template3 section {
+    width: 100%;
+    padding-top: 10px;
+  }
+  #Experience .Template3 section p {
+    font-size: 1rem;
+  }
+  #Experience .Template3 section h2 {
+    border-top: 5px solid var(--LeftColour);
+  }
+  #Experience .Template3 section h2, #Experience .Template3 section p {
+    margin-left: 15px;
   }
 }
 /*# sourceMappingURL=index3.css.map */

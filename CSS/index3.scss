@@ -2,6 +2,8 @@
     font-family: TitleFont;
     src: url("../Fonts/Karrik-Regular.otf"), url("../Fonts/Karrik-Regular.ttf") format("ttf"),
 }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 
 :root {
     --MainBlack: #212529;
@@ -16,6 +18,8 @@
     margin: 0px;
     padding: 0px;
     overflow-x: hidden;
+    scroll-behavior: smooth;
+
 }
 
 html {
@@ -109,7 +113,8 @@ nav {
         font-family: TitleFont;
         text-transform: uppercase;
         @include ReverseText();
-        font-size: 4.8rem;        
+        font-size: 4.8rem;       
+        margin-left: 40px; 
     }    
 
     #Typer {
@@ -133,9 +138,10 @@ nav {
 }
 
 #Experience {
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     background-color: var(--MainBlack);
+
     h1 {
         font-family: TitleFont;
         @include ReverseText();
@@ -143,6 +149,32 @@ nav {
         text-transform: uppercase;
         margin-left: 40px;
     }
+
+    .Template3 {
+        display: flex;
+        justify-content: space-evenly;     
+        height: 100%;
+
+        section {
+            width: 29%;       
+            height: 100%;
+
+            h2 {
+                color: var(--MainWhite);
+                font-family: TitleFont;
+                text-transform: uppercase;  
+                font-size: 3rem;
+            }
+
+            p {
+                font-family: 'Montserrat', sans-serif;
+                color: var(--MainWhite);
+                font-size: 2.5rem;
+            }
+        }
+    }
+   
+  
 }
 
 
@@ -155,15 +187,19 @@ nav {
         opacity: 1;
     }
 }
-@media only screen and (max-width: 600px) {
 
+@media only screen and (max-width: 800px) {
     html {
-        font-size: 10px;
+        font-family: 10px;
     }
-
-    #Roles {
-        margin-left: 5px;
+    
+    #TextHolder {
+        #Roles {
+            margin-left: 10px;
+            font-size: 3.5rem;
+        }
     }
+  
 
     nav {
         display: flex;
@@ -173,18 +209,24 @@ nav {
             display: block;
             color: var(--MainWhite);
             font-size: 2rem;
-
         }
         a {
             display: none;
         }
     }
 
+
     .ShowMenu {
         transition: 200ms;
         display: flex;
         flex-direction: column;
         height: 100%;
+
+        #MenuButton {
+            position: absolute;
+            top: 5px;
+            left: 5px;
+        }
 
         a {
             display: block;
@@ -195,17 +237,34 @@ nav {
         }
     }
 
-}
+    #Experience {
+        h1 {
+            font-size: 3.5rem;
+        }
 
+        .Template3 {
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            
+            section {
+                width: 100%;
+                padding-top: 10px;
 
-@media only screen and (min-width: 600px) {
-    html {
-        font-family: 20px;
+                p {
+                    font-size: 1rem;
+                }
+    
+                h2 {
+                    border-top: 5px solid var(--LeftColour);
+                }
+    
+    
+                h2, p {
+                    margin-left: 15px;
+                }
+            }
+        }
     }
-
-    #Roles {
-        margin-left: 40px;
-    }
-
 }
 
