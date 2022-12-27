@@ -23,7 +23,7 @@
 }
 
 html {
-    font-family: 10px;
+    font-size: 20px;
 }
 
 @mixin ReverseText() {
@@ -90,6 +90,18 @@ nav {
    
 }
 
+article {
+    width: 100%;
+
+    h1 {
+        font-family: TitleFont;
+        @include ReverseText();
+        font-size: 4rem;
+        text-transform: uppercase;
+        margin-left: 40px;
+    }
+}
+
 #TextHolder {
     display: flex;
     align-items: center;
@@ -141,14 +153,7 @@ nav {
     min-height: 100vh;
     width: 100%;
     background-color: var(--MainBlack);
-
-    h1 {
-        font-family: TitleFont;
-        @include ReverseText();
-        font-size: 4rem;
-        text-transform: uppercase;
-        margin-left: 40px;
-    }
+    padding-bottom: 20px;
 
     .Template3 {
         display: flex;
@@ -169,12 +174,46 @@ nav {
             p {
                 font-family: 'Montserrat', sans-serif;
                 color: var(--MainWhite);
-                font-size: 2.5rem;
+                font-size: 1rem;
             }
         }
     }
-   
-  
+}
+
+#Skills {
+    #SkillDisplay {
+        display: flex;
+
+        section {
+            width: 50%;
+        }
+
+        #SkillsList {
+            font-family: TitleFont;
+
+            .ActiveSkill {
+                background: var(--Gradient);
+                color: var(--MainWhite);
+            }
+        }
+       
+
+        #SkillDescription {
+            h2 {
+                font-family: TitleFont;
+                text-transform: uppercase;
+            }
+
+            section {
+                width: 100%;
+                display: none;
+            }
+            
+            .ActiveSkillText {
+                display: block;
+            }
+        }  
+    }
 }
 
 
@@ -189,14 +228,10 @@ nav {
 }
 
 @media only screen and (max-width: 800px) {
-    html {
-        font-family: 10px;
-    }
-    
     #TextHolder {
         #Roles {
+            font-size: 2.4rem;
             margin-left: 10px;
-            font-size: 3.5rem;
         }
     }
   
@@ -221,6 +256,7 @@ nav {
         display: flex;
         flex-direction: column;
         height: 100%;
+        align-items: flex-end;
 
         #MenuButton {
             position: absolute;
@@ -230,17 +266,23 @@ nav {
 
         a {
             display: block;
-            font-size: 4rem;
+            font-size: 3rem;
             text-align: left;
             border: 0px solid transparent;
             border-bottom: 3px solid var(--LeftColour);
+            width: 100%;
+            text-align: right;
+
+        }
+    }
+    article {
+        h1 {
+            font-size: 3rem;
+            margin-left: 10px;
         }
     }
 
     #Experience {
-        h1 {
-            font-size: 3.5rem;
-        }
 
         .Template3 {
             flex-direction: column;
@@ -250,18 +292,15 @@ nav {
             section {
                 width: 100%;
                 padding-top: 10px;
-
-                p {
-                    font-size: 1rem;
-                }
-    
                 h2 {
+                    font-size: 2.5rem;
                     border-top: 5px solid var(--LeftColour);
                 }
     
+
     
                 h2, p {
-                    margin-left: 15px;
+                    padding-left: 15px;
                 }
             }
         }

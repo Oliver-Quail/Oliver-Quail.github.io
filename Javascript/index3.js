@@ -1,4 +1,6 @@
 window.onload = function() {
+    var ActiveSkillText = document.getElementById("SkillDescription").children;
+    console.log(ActiveSkillText);
     var Roles = document.getElementById("Roles");
     var RolesText = ["Web Developer", "Programmer", "Graphic Designer"];
     var RolesOutputText = "";
@@ -33,5 +35,22 @@ window.onload = function() {
             Menu.classList.remove("ShowMenu");
         }
     });
+}
 
+function CreateFluxList(TitlesHolder, ContentHolder) {
+    var TitlesArray = TitlesHolder.children;
+    var ContentsArray = ContentHolder.children;
+
+    if(TitlesArray.length != ContentsArray.length) {
+        console.error("The number of Titles does not match the number of contents pannels");
+        return;
+    }
+
+    var Counter = 0;
+    while(Counter < TitlesArray.length) {
+        TitlesArray[Counter].addEventListener("click", function() {
+            var 
+        });
+    }
+    
 }

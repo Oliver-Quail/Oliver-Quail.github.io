@@ -20,7 +20,7 @@
 }
 
 html {
-  font-family: 10px;
+  font-size: 20px;
 }
 
 /* width */
@@ -80,6 +80,20 @@ nav a:hover {
 
 nav ion-icon {
   display: none;
+}
+
+article {
+  width: 100%;
+}
+
+article h1 {
+  font-family: TitleFont;
+  background-image: var(--Gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 4rem;
+  text-transform: uppercase;
+  margin-left: 40px;
 }
 
 #TextHolder {
@@ -143,16 +157,7 @@ nav ion-icon {
   min-height: 100vh;
   width: 100%;
   background-color: var(--MainBlack);
-}
-
-#Experience h1 {
-  font-family: TitleFont;
-  background-image: var(--Gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-size: 4rem;
-  text-transform: uppercase;
-  margin-left: 40px;
+  padding-bottom: 20px;
 }
 
 #Experience .Template3 {
@@ -180,7 +185,40 @@ nav ion-icon {
 #Experience .Template3 section p {
   font-family: 'Montserrat', sans-serif;
   color: var(--MainWhite);
-  font-size: 2.5rem;
+  font-size: 1rem;
+}
+
+#Skills #SkillDisplay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#Skills #SkillDisplay section {
+  width: 50%;
+}
+
+#Skills #SkillDisplay #SkillsList {
+  font-family: TitleFont;
+}
+
+#Skills #SkillDisplay #SkillsList .ActiveSkill {
+  background: var(--Gradient);
+  color: var(--MainWhite);
+}
+
+#Skills #SkillDisplay #SkillDescription h2 {
+  font-family: TitleFont;
+  text-transform: uppercase;
+}
+
+#Skills #SkillDisplay #SkillDescription section {
+  width: 100%;
+  display: none;
+}
+
+#Skills #SkillDisplay #SkillDescription .ActiveSkillText {
+  display: block;
 }
 
 @-webkit-keyframes Blinking {
@@ -202,12 +240,9 @@ nav ion-icon {
 }
 
 @media only screen and (max-width: 800px) {
-  html {
-    font-family: 10px;
-  }
   #TextHolder #Roles {
+    font-size: 2.4rem;
     margin-left: 10px;
-    font-size: 3.5rem;
   }
   nav {
     display: -webkit-box;
@@ -239,6 +274,9 @@ nav ion-icon {
         -ms-flex-direction: column;
             flex-direction: column;
     height: 100%;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
   }
   .ShowMenu #MenuButton {
     position: absolute;
@@ -247,13 +285,16 @@ nav ion-icon {
   }
   .ShowMenu a {
     display: block;
-    font-size: 4rem;
+    font-size: 3rem;
     text-align: left;
     border: 0px solid transparent;
     border-bottom: 3px solid var(--LeftColour);
+    width: 100%;
+    text-align: right;
   }
-  #Experience h1 {
-    font-size: 3.5rem;
+  article h1 {
+    font-size: 3rem;
+    margin-left: 10px;
   }
   #Experience .Template3 {
     -webkit-box-orient: vertical;
@@ -269,14 +310,12 @@ nav ion-icon {
     width: 100%;
     padding-top: 10px;
   }
-  #Experience .Template3 section p {
-    font-size: 1rem;
-  }
   #Experience .Template3 section h2 {
+    font-size: 2.5rem;
     border-top: 5px solid var(--LeftColour);
   }
   #Experience .Template3 section h2, #Experience .Template3 section p {
-    margin-left: 15px;
+    padding-left: 15px;
   }
 }
 /*# sourceMappingURL=index3.css.map */
