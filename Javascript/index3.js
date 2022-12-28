@@ -65,6 +65,10 @@ function CreateFluxList(TitlesHolder, ContentHolder) {
             }
             CurrentPanel.classList.add("ActiveSkillText");
             this.classList.add("ActiveSkill");
+
+            if(window.window < 600) {
+                window.location = CurrentPanel;
+            }
         });
         
     });

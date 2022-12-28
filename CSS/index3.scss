@@ -26,17 +26,74 @@
 .GradientOffWhite {
     height: 12vh;
     width: 100%;
-    background: linear-gradient(to bottom, var(--MainBlack) 0%, var(--MainWhite) 100%);
+    background: linear-gradient(to bottom, var(--MainBlack) 0%, transparent 100%);
+}
+
+article {
+    width: 100%;
 }
 
 html {
     font-size: 20px;
 }
 
+
+
 @mixin ReverseText() {
     background-image: var(--Gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+
+@mixin TripleTemplate() {
+    .Template3 {
+        display: flex;
+        justify-content: space-evenly;     
+        height: 100%;
+
+        section {
+            width: 29%;       
+            height: 100%;
+
+            h2 {
+                color: var(--MainWhite);
+                font-family: TitleFont;
+                text-transform: uppercase;  
+                font-size: 3rem;
+            }
+
+            p {
+                font-family: 'Montserrat', sans-serif;
+                color: var(--MainWhite);
+                font-size: 1rem;
+            }
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .Template3 {
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            
+            section {
+                width: 100%;
+                padding-top: 10px;
+                h2 {
+                    font-size: 2.5rem;
+                    border-top: 5px solid var(--LeftColour);
+                }
+    
+
+    
+                h2, p {
+                    padding-left: 15px;
+                }
+            }
+        }
+        
+    }
 }
 
 /* width */
@@ -162,29 +219,8 @@ article {
     background-color: var(--MainBlack);
     padding-bottom: 20px;
 
-    .Template3 {
-        display: flex;
-        justify-content: space-evenly;     
-        height: 100%;
-
-        section {
-            width: 29%;       
-            height: 100%;
-
-            h2 {
-                color: var(--MainWhite);
-                font-family: TitleFont;
-                text-transform: uppercase;  
-                font-size: 3rem;
-            }
-
-            p {
-                font-family: 'Montserrat', sans-serif;
-                color: var(--MainWhite);
-                font-size: 1rem;
-            }
-        }
-    }
+    @include TripleTemplate();
+   
 }
 
 #Skills {
@@ -211,6 +247,9 @@ article {
                 text-transform: uppercase;
             }
 
+            p {
+                font-family: 'Montserrat', sans-serif;
+            }
             section {
                 width: 100%;
                 display: none;
@@ -221,6 +260,11 @@ article {
             }
         }  
     }
+}
+
+#FAQ {
+    background-color: var(--MainBlack);
+    @include TripleTemplate();
 }
 
 
@@ -288,29 +332,25 @@ article {
             margin-left: 10px;
         }
     }
-
-    #Experience {
-
-        .Template3 {
-            flex-direction: column;
-            justify-content: center;
+    #Skills {
+        #SkillDisplay {
             width: 100%;
-            
+            flex-direction: column;
+
             section {
                 width: 100%;
-                padding-top: 10px;
-                h2 {
-                    font-size: 2.5rem;
-                    border-top: 5px solid var(--LeftColour);
-                }
-    
+            }
 
-    
-                h2, p {
-                    padding-left: 15px;
-                }
+            #SkillsList, #SkillDescription {
+                width: 100%;
+                text-align: center;
+            }
+
+            #SkillDescription {
+                border-top: 4px solid var(--LeftColour);
             }
         }
     }
+
 }
 

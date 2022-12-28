@@ -22,8 +22,12 @@
 .GradientOffWhite {
   height: 12vh;
   width: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(var(--MainBlack)), to(var(--MainWhite)));
-  background: linear-gradient(to bottom, var(--MainBlack) 0%, var(--MainWhite) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(var(--MainBlack)), to(transparent));
+  background: linear-gradient(to bottom, var(--MainBlack) 0%, transparent 100%);
+}
+
+article {
+  width: 100%;
 }
 
 html {
@@ -195,6 +199,30 @@ article h1 {
   font-size: 1rem;
 }
 
+@media screen and (max-width: 600px) {
+  #Experience .Template3 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  #Experience .Template3 section {
+    width: 100%;
+    padding-top: 10px;
+  }
+  #Experience .Template3 section h2 {
+    font-size: 2.5rem;
+    border-top: 5px solid var(--LeftColour);
+  }
+  #Experience .Template3 section h2, #Experience .Template3 section p {
+    padding-left: 15px;
+  }
+}
+
 #Skills #SkillDisplay {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -219,6 +247,10 @@ article h1 {
   text-transform: uppercase;
 }
 
+#Skills #SkillDisplay #SkillDescription p {
+  font-family: 'Montserrat', sans-serif;
+}
+
 #Skills #SkillDisplay #SkillDescription section {
   width: 100%;
   display: none;
@@ -226,6 +258,62 @@ article h1 {
 
 #Skills #SkillDisplay #SkillDescription .ActiveSkillText {
   display: block;
+}
+
+#FAQ {
+  background-color: var(--MainBlack);
+}
+
+#FAQ .Template3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 100%;
+}
+
+#FAQ .Template3 section {
+  width: 29%;
+  height: 100%;
+}
+
+#FAQ .Template3 section h2 {
+  color: var(--MainWhite);
+  font-family: TitleFont;
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+#FAQ .Template3 section p {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--MainWhite);
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  #FAQ .Template3 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 100%;
+  }
+  #FAQ .Template3 section {
+    width: 100%;
+    padding-top: 10px;
+  }
+  #FAQ .Template3 section h2 {
+    font-size: 2.5rem;
+    border-top: 5px solid var(--LeftColour);
+  }
+  #FAQ .Template3 section h2, #FAQ .Template3 section p {
+    padding-left: 15px;
+  }
 }
 
 @-webkit-keyframes Blinking {
@@ -303,26 +391,22 @@ article h1 {
     font-size: 3rem;
     margin-left: 10px;
   }
-  #Experience .Template3 {
+  #Skills #SkillDisplay {
+    width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+  }
+  #Skills #SkillDisplay section {
     width: 100%;
   }
-  #Experience .Template3 section {
+  #Skills #SkillDisplay #SkillsList, #Skills #SkillDisplay #SkillDescription {
     width: 100%;
-    padding-top: 10px;
+    text-align: center;
   }
-  #Experience .Template3 section h2 {
-    font-size: 2.5rem;
-    border-top: 5px solid var(--LeftColour);
-  }
-  #Experience .Template3 section h2, #Experience .Template3 section p {
-    padding-left: 15px;
+  #Skills #SkillDisplay #SkillDescription {
+    border-top: 4px solid var(--LeftColour);
   }
 }
 /*# sourceMappingURL=index3.css.map */
