@@ -10,6 +10,7 @@
   --LeftColour: #84fab0;
   --RightColour: #8fd3f4;
   --Gradient: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  --OtherFont: 'Montserrat', sans-serif;
 }
 
 * {
@@ -24,10 +25,6 @@
   width: 100%;
   background: -webkit-gradient(linear, left top, left bottom, from(var(--MainBlack)), to(transparent));
   background: linear-gradient(to bottom, var(--MainBlack) 0%, transparent 100%);
-}
-
-article {
-  width: 100%;
 }
 
 html {
@@ -65,13 +62,26 @@ nav {
   padding: 10px 0px;
 }
 
-nav a {
+nav a, nav #OliverQuail {
   text-transform: uppercase;
   font-family: TitleFont;
   border-left: 2px solid var(--LeftColour);
   padding: 0px 10px;
   color: var(--MainWhite);
   text-decoration: none;
+  display: inline-block;
+}
+
+nav #LogoMenu {
+  display: inline;
+}
+
+nav #LogoMenu #OliverQuail {
+  border-left: 0px solid transparent;
+  background-image: var(--Gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: TitleFont;
 }
 
 nav a:first-child {
@@ -108,6 +118,15 @@ article h1 {
   font-size: 4rem;
   text-transform: uppercase;
   margin-left: 40px;
+}
+
+article .UnderTitle {
+  color: var(--MainWhite);
+  font-style: italic;
+  margin-left: 40px;
+  width: 30%;
+  padding-bottom: 20px;
+  font-family: var(--OtherFont);
 }
 
 #TextHolder {
@@ -198,7 +217,7 @@ article h1 {
 }
 
 #Experience .Template3 section p {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--OtherFont);
   color: var(--MainWhite);
   font-size: 1rem;
 }
@@ -227,31 +246,81 @@ article h1 {
   }
 }
 
+#PreviousWork {
+  background-color: var(--MainBlack);
+}
+
 #PreviousWork .Image3 {
-  width: 100%;
-  position: relative;
+  padding-bottom: 10px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto 50% 30% auto;
+      grid-template-columns: auto 50% 30% auto;
+  padding-bottom: 10vh;
 }
 
-#PreviousWork .Image3 img {
-  width: 100%;
-  height: 100vh;
+#PreviousWork .Image3 .ImageHolder {
+  text-align: center;
+  -ms-grid-column: 2;
+  grid-column: 2;
 }
 
-#PreviousWork .Image3 .FloatingBackGround {
+#PreviousWork .Image3 .ImageHolder img {
+  width: 80%;
+  border-radius: 25px;
+}
+
+#PreviousWork .Image3 .Overlay {
   z-index: 2;
-  position: absolute;
-  top: 0;
-  left: 10px;
+  -ms-grid-column: 3;
+  grid-column: 3;
+  height: 100%;
 }
 
-#PreviousWork .Image3 .FloatingBackGround h2 {
+#PreviousWork .Image3 .Overlay h2 {
+  font-size: 2.5rem;
+  padding-left: 10%;
   background-image: var(--Gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: TitleFont;
-  width: 100%;
-  padding: 10px;
   background-color: #212529;
+}
+
+#PreviousWork .Image3 .Overlay section {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+#PreviousWork .Image3 .Overlay section i {
+  font-family: var(--OtherFont);
+  color: var(--MainWhite);
+}
+
+#PreviousWork .Image3 .Overlay section a {
+  display: none;
+}
+
+#PreviousWork .Image3 .Overlay .ButtonLink {
+  display: block;
+  overflow-x: visible;
+  text-align: center;
+  text-decoration: none;
+  color: var(--MainWhite);
+  background: var(--Gradient);
+  border-radius: 25px;
+  font-family: TitleFont;
+  padding: 10px;
+  border: 2px solid transparent;
+  font-size: 1rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-left: auto;
+}
+
+#PreviousWork .Image3 .Overlay .ButtonLink:hover {
+  border: 2px solid var(--MainWhite);
 }
 
 #Skills #SkillDisplay {
@@ -279,7 +348,7 @@ article h1 {
 }
 
 #Skills #SkillDisplay #SkillDescription p {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--OtherFont);
 }
 
 #Skills #SkillDisplay #SkillDescription section {
@@ -318,7 +387,7 @@ article h1 {
 }
 
 #FAQ .Template3 section p {
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--OtherFont);
   color: var(--MainWhite);
   font-size: 1rem;
 }
@@ -381,7 +450,23 @@ article h1 {
         -ms-flex-align: center;
             align-items: center;
   }
-  nav ion-icon {
+  nav #LogoMenu {
+    margin-right: auto;
+    padding-left: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  nav #LogoMenu #OliverQuail {
+    display: block;
+  }
+  nav #LogoMenu ion-icon {
     display: block;
     color: var(--MainWhite);
     font-size: 2rem;
@@ -404,10 +489,8 @@ article h1 {
         -ms-flex-align: end;
             align-items: flex-end;
   }
-  .ShowMenu #MenuButton {
-    position: absolute;
-    top: 5px;
-    left: 5px;
+  .ShowMenu #LogoMenu, .ShowMenu #LastLink {
+    margin-bottom: auto;
   }
   .ShowMenu a {
     display: block;
@@ -421,6 +504,74 @@ article h1 {
   article h1 {
     font-size: 3rem;
     margin-left: 10px;
+  }
+  article .UnderTitle {
+    margin-left: 10px;
+    width: 90%;
+    padding-bottom: 20px;
+  }
+  #PreviousWork .Image3 {
+    padding-bottom: 10px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 100%;
+        grid-template-columns: 100%;
+  }
+  #PreviousWork .Image3 .ImageHolder, #PreviousWork .Image3 .Overlay {
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-row: 1;
+    grid-row: 1;
+  }
+  #PreviousWork .Image3 .ImageHolder {
+    -webkit-filter: brightness(0.3);
+            filter: brightness(0.3);
+    text-align: center;
+  }
+  #PreviousWork .Image3 .ImageHolder img {
+    width: 90%;
+    border-radius: 25px;
+  }
+  #PreviousWork .Image3 .Overlay {
+    z-index: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #PreviousWork .Image3 .Overlay h2 {
+    padding-left: 5%;
+    font-size: 2.5rem;
+    background-image: var(--Gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: TitleFont;
+    background-color: #212529;
+  }
+  #PreviousWork .Image3 .Overlay section {
+    padding-left: 5%;
+    padding-right: 5;
+  }
+  #PreviousWork .Image3 .Overlay section i {
+    font-family: var(--OtherFont);
+    color: var(--MainWhite);
+  }
+  #PreviousWork .Image3 .Overlay section a {
+    display: inline;
+    background-image: var(--Gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: TitleFont;
+    text-decoration: underline;
+  }
+  #PreviousWork .Image3 .Overlay .ButtonLink {
+    display: none;
   }
   #Skills #SkillDisplay {
     width: 100%;
