@@ -43,6 +43,7 @@ html {
     background-image: var(--Gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-family: TitleFont;
 }
 
 
@@ -222,6 +223,34 @@ article {
     @include TripleTemplate();
    
 }
+
+
+#PreviousWork {
+    .Image3 {
+        width: 100%;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 100vh;
+        }
+        .FloatingBackGround {
+            z-index: 2;
+            position: absolute;
+            top: 0;
+            left: 10px;
+            h2 {
+                @include ReverseText();  
+                width: 100%;
+                padding: 10px;
+                background-color: #212529;
+            }
+        }
+       
+    }
+}
+
+
 
 #Skills {
     #SkillDisplay {

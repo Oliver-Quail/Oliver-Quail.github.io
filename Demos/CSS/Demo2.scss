@@ -1,13 +1,14 @@
 
 :root {
     --MainBlack: #212529;
+    --MainBlack: #070606;
     --MainWhite: #F8FAF9;
 
 }
 
 @font-face {
     font-family: TitleFont;
-    src: url("../Fonts/Evelyn-Regular.otf"), url("../Fonts/Evelyn-Regular.ttf") format("ttf"),
+    src: url("../Fonts/Rachel-Regular.otf"), url("../Fonts/Rachel-Regular.ttf") format("ttf"),
 }
 
 html {
@@ -31,6 +32,7 @@ video {
     min-width: 100vw;
     min-height: 100%;
     background-color: var(--MainBlack);
+    object-fit: cover;
 }
 
 
@@ -51,23 +53,25 @@ video {
     h1 {
         color: var(--MainWhite);
         font-size: 10rem;
-
+        letter-spacing: 5px;
     }
 }
 
 nav {
     position: fixed;
-    top: 0px;
-    left: 0px;
+    bottom: 0;
+    left: 0;
+    padding: 10px 0px;
     width: 100%;
     background-color: var(--MainBlack);
     min-height: 20px;
-    z-index: 2;
+    z-index: 4;
     display: flex;
     justify-content: space-around;
     a {
         color: var(--MainWhite);
         font-family: TitleFont;
         font-size: 30px;
+        font-weight: bold;
     }
 }
