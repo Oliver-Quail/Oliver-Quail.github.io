@@ -9,6 +9,7 @@
   --MainWhite: #F8FAF9;
   --LeftColour: #84fab0;
   --RightColour: #8fd3f4;
+  --MiddleColour: #8ee3d2;
   --Gradient: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
   --OtherFont: 'Montserrat', sans-serif;
 }
@@ -307,11 +308,10 @@ article .UnderTitle {
   text-align: center;
   text-decoration: none;
   color: var(--MainWhite);
-  background: var(--Gradient);
+  border: 5px solid var(--MiddleColour);
   border-radius: 25px;
   font-family: TitleFont;
   padding: 10px;
-  border: 2px solid transparent;
   font-size: 1rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -320,7 +320,31 @@ article .UnderTitle {
 }
 
 #PreviousWork .Image3 .Overlay .ButtonLink:hover {
-  border: 2px solid var(--MainWhite);
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  background: var(--Gradient);
+}
+
+#PreviousWork #ReadMore {
+  text-decoration: none;
+  color: var(--MainWhite);
+  font-family: TitleFont;
+  border-radius: 50px;
+  margin-left: 10%;
+  text-align: center;
+  width: 80%;
+  padding: 20px 0px;
+  display: block;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  border: 5px solid var(--MiddleColour);
+}
+
+#PreviousWork #ReadMore:hover {
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  -webkit-box-shadow: rgba(250, 248, 249, 0.2) 2px 1px 2px;
+          box-shadow: rgba(250, 248, 249, 0.2) 2px 1px 2px;
 }
 
 #Skills #SkillDisplay {
@@ -362,6 +386,7 @@ article .UnderTitle {
 
 #FAQ {
   background-color: var(--MainBlack);
+  padding-bottom: 20px;
 }
 
 #FAQ .Template3 {
@@ -414,6 +439,10 @@ article .UnderTitle {
   #FAQ .Template3 section h2, #FAQ .Template3 section p {
     padding-left: 15px;
   }
+}
+
+#Outro {
+  background-color: var(--MainBlack);
 }
 
 @-webkit-keyframes Blinking {
@@ -573,6 +602,10 @@ article .UnderTitle {
   #PreviousWork .Image3 .Overlay .ButtonLink {
     display: none;
   }
+  #PreviousWork #ReadMore {
+    margin-left: 5%;
+    width: 90%;
+  }
   #Skills #SkillDisplay {
     width: 100%;
     -webkit-box-orient: vertical;
@@ -589,6 +622,9 @@ article .UnderTitle {
   }
   #Skills #SkillDisplay #SkillDescription {
     border-top: 4px solid var(--LeftColour);
+  }
+  #FAQ .Template3 section h2 {
+    font-size: 2rem;
   }
 }
 /*# sourceMappingURL=index3.css.map */

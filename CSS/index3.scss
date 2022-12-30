@@ -10,6 +10,7 @@
     --MainWhite: #F8FAF9;
     --LeftColour: #84fab0;
     --RightColour: #8fd3f4;
+    --MiddleColour: #8ee3d2;
     --Gradient: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
     --OtherFont: 'Montserrat', sans-serif;
 }
@@ -243,7 +244,6 @@ article {
 
 #PreviousWork {
     background-color: var(--MainBlack);
-
     
 
     .Image3 {
@@ -289,21 +289,42 @@ article {
                 text-align: center;
                 text-decoration: none;
                 color: var(--MainWhite);
-                background: var(--Gradient);
+                border: 5px solid var(--MiddleColour);
                 border-radius: 25px;
                 font-family: TitleFont;
                 padding: 10px;
-                border: 2px solid transparent;
                 font-size: 1rem;
                 width: fit-content;
                 margin-left: auto;
             }
 
             .ButtonLink:hover {
-                border: 2px solid var(--MainWhite);
+                transition: 200ms;
+                background: var(--Gradient);
             }
 
         }
+    }
+
+    #ReadMore {
+        text-decoration: none;
+        color: var(--MainWhite);
+        font-family: TitleFont;
+        border-radius: 50px;
+        margin-left: 10%;
+        text-align: center;
+        width: 80%;
+        padding: 20px 0px;
+        display: block;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        border: 5px solid var(--MiddleColour);
+    }
+
+    #ReadMore:hover {
+        transition: 200ms;
+        box-shadow: rgba(250, 248, 249, .2) 2px 1px 2px;
+
     }
 
 }
@@ -352,8 +373,12 @@ article {
 #FAQ {
     background-color: var(--MainBlack);
     @include TripleTemplate();
+    padding-bottom: 20px;
 }
 
+#Outro {
+    background-color: var(--MainBlack);
+}
 
 
 @keyframes Blinking {
@@ -492,6 +517,11 @@ article {
                }
             }
         }
+
+        #ReadMore {
+            margin-left: 5%;
+            width: 90%;
+        }
     }
 
 
@@ -511,6 +541,16 @@ article {
 
             #SkillDescription {
                 border-top: 4px solid var(--LeftColour);
+            }
+        }
+    }
+
+    #FAQ {
+        .Template3 {
+            section {
+                h2 {
+                    font-size: 2rem;
+                }
             }
         }
     }
