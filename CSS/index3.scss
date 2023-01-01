@@ -34,6 +34,10 @@ html {
     font-size: 20px;
 }
 
+body {
+    background-color: var(--MainBlack);
+}
+
 
 
 @mixin ReverseText() {
@@ -119,7 +123,7 @@ html {
 }
 
 nav {
-    z-index: 3;
+    z-index: 5;
     position: fixed;
     background-color: var(--MainBlack);
     width: 100%;
@@ -178,7 +182,7 @@ article {
         color: var(--MainWhite);
         font-style: italic;
         margin-left: 40px;
-        width: 30%;
+        margin-right: 20%;
         padding-bottom: 20px;
         font-family: var(--OtherFont);
     }
@@ -275,9 +279,7 @@ article {
                 padding-right: 10%;
                 i {
                     font-family: var(--OtherFont);
-                    color: var(--MainWhite);
-    
-                   
+                    color: var(--MainWhite); 
                 }
                 a {
                     display: none;
@@ -289,7 +291,7 @@ article {
                 text-align: center;
                 text-decoration: none;
                 color: var(--MainWhite);
-                border: 5px solid var(--MiddleColour);
+                border: 2px solid var(--MiddleColour);
                 border-radius: 25px;
                 font-family: TitleFont;
                 padding: 10px;
@@ -301,6 +303,7 @@ article {
             .ButtonLink:hover {
                 transition: 200ms;
                 background: var(--Gradient);
+                color: var(--MainBlack);
             }
 
         }
@@ -332,6 +335,8 @@ article {
 
 
 #Skills {
+    background-color: var(--MainBlack);
+    height: fit-content;
     #SkillDisplay {
         display: flex;
 
@@ -340,31 +345,52 @@ article {
         }
 
         #SkillsList {
-            font-family: TitleFont;
+            position: relative;
 
-            .ActiveSkill {
+            p {
+                color: var(--MainWhite);
+                font-family: TitleFont;
+                height: max-content;
+            }
+
+            .ActiveTitle {
                 background: var(--Gradient);
+                color: var(--MainBlack);
+            }
+            
+        }
+        #SkillDescription {
+            display: grid;
+            height: 100%;
+
+            section {
+                width: 100%;
+                z-index: 1;
+                opacity: 0;
+                grid-column: 1;
+                grid-row: 1;
+            }
+
+
+            p, h2 {
                 color: var(--MainWhite);
             }
-        }
-       
 
-        #SkillDescription {
             h2 {
                 font-family: TitleFont;
                 text-transform: uppercase;
+                border-bottom: 2px solid var(--MiddleColour);
             }
 
             p {
                 font-family: var(--OtherFont);
             }
-            section {
-                width: 100%;
-                display: none;
-            }
+           
             
-            .ActiveSkillText {
-                display: block;
+            .ActivePanel {
+                transition: 500ms;
+                opacity: 1;
+                z-index: 3;
             }
         }  
     }
@@ -378,6 +404,91 @@ article {
 
 #Outro {
     background-color: var(--MainBlack);
+
+    #ContactHolder {
+        width: 100%;
+        display: flex;
+        
+        section {
+            width: 50%;
+        }
+
+        #ContactTitles {
+            font-family: TitleFont;
+            color: var(--MainWhite);
+            #Fiver.ActiveTitle {
+                background-color: var(--LeftColour);
+                color: var(--MainBlack);
+            }
+
+            #Upwork.ActiveTitle {
+                background-color: var(--MiddleColour);
+                color: var(--MainBlack);
+            }
+
+            #Email.ActiveTitle {
+                background-color: var(--RightColour);
+            }
+            
+            .ActiveTitle {
+                width: 100%;
+            }
+        }
+
+        #ContactPanel {
+            display: grid;
+
+            section {
+                width: 100%;
+                grid-row: 1;
+                grid-column: 1;
+                opacity: 0;
+
+                h2 {
+                    font-family: TitleFont;
+                    color: var(--MainWhite);
+                    border-bottom: 2px solid var(--MiddleColour);
+                    width: 100%;
+                }
+
+                p {
+                    color: var(--MainWhite);
+                    font-family: var(--OtherFont);
+                }
+
+                a {
+                    display: block;
+                    text-decoration: none;
+                    color: var(--MainWhite);
+                    font-family: TitleFont;
+                    border: 2px solid var(--MiddleColour);
+                    border-radius: 25px;
+                    text-align: center;
+                    margin-top: 10px;
+                }
+
+               
+            }
+            .ActivePanel {
+                transition: 200ms;
+                opacity: 1;
+
+            }
+        }
+    }
+}
+
+footer {
+    background-color: var(--MainBlack);
+    padding-bottom: 20px;
+    text-align: center;
+
+    p {
+        font-family: TitleFont;
+        border-bottom: 2px solid var(--MiddleColour);
+        color: var(--MainWhite);
+    }
+
 }
 
 
@@ -411,6 +522,7 @@ article {
             display: flex;
             justify-content: center;
             align-items: center;
+
             #OliverQuail {
                 display: block;
 
@@ -520,7 +632,8 @@ article {
 
         #ReadMore {
             margin-left: 5%;
-            width: 90%;
+            margin-right: 5%;
+            width: auto;
         }
     }
 
@@ -540,7 +653,26 @@ article {
             }
 
             #SkillDescription {
-                border-top: 4px solid var(--LeftColour);
+                margin-top: 20px;                
+            }
+        }
+    }
+
+    #Outro {
+        #ContactHolder {
+            width: 100%;
+            flex-direction: column;
+            padding-bottom: 40px;
+            section {
+                width: 100%;
+            }
+
+            #ContactTitles {
+                text-align: center;
+            }
+
+            #ContactPanel {
+                margin-top: 20px;
             }
         }
     }

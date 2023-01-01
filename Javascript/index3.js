@@ -37,6 +37,7 @@ window.onload = function() {
     });
 
     CreateFluxList(document.getElementById("SkillsList"), document.getElementById("SkillDescription"));
+    CreateFluxList(document.getElementById("ContactTitles"), document.getElementById("ContactPanel"));
 }
 
 function CreateFluxList(TitlesHolder, ContentHolder) {
@@ -48,8 +49,6 @@ function CreateFluxList(TitlesHolder, ContentHolder) {
         console.error("The number of Titles does not match the number of contents pannels");
         return;
     }
-
-    var Counter = 0;
     console.log("--------");
 
     Object.keys(TitlesArray).forEach(Key => {
@@ -63,8 +62,8 @@ function CreateFluxList(TitlesHolder, ContentHolder) {
                 TitlesArray[ContentCounter].removeAttribute("class");
                 ContentCounter++;
             }
-            CurrentPanel.classList.add("ActiveSkillText");
-            this.classList.add("ActiveSkill");
+            CurrentPanel.classList.add("ActivePanel");
+            this.classList.add("ActiveTitle");
 
             if(window.window < 600) {
                 window.location = CurrentPanel;

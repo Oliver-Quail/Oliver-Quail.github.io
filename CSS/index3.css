@@ -32,6 +32,10 @@ html {
   font-size: 20px;
 }
 
+body {
+  background-color: var(--MainBlack);
+}
+
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
@@ -56,7 +60,7 @@ html {
 }
 
 nav {
-  z-index: 3;
+  z-index: 5;
   position: fixed;
   background-color: var(--MainBlack);
   width: 100%;
@@ -125,7 +129,7 @@ article .UnderTitle {
   color: var(--MainWhite);
   font-style: italic;
   margin-left: 40px;
-  width: 30%;
+  margin-right: 20%;
   padding-bottom: 20px;
   font-family: var(--OtherFont);
 }
@@ -308,7 +312,7 @@ article .UnderTitle {
   text-align: center;
   text-decoration: none;
   color: var(--MainWhite);
-  border: 5px solid var(--MiddleColour);
+  border: 2px solid var(--MiddleColour);
   border-radius: 25px;
   font-family: TitleFont;
   padding: 10px;
@@ -323,6 +327,7 @@ article .UnderTitle {
   -webkit-transition: 200ms;
   transition: 200ms;
   background: var(--Gradient);
+  color: var(--MainBlack);
 }
 
 #PreviousWork #ReadMore {
@@ -347,6 +352,13 @@ article .UnderTitle {
           box-shadow: rgba(250, 248, 249, 0.2) 2px 1px 2px;
 }
 
+#Skills {
+  background-color: var(--MainBlack);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
 #Skills #SkillDisplay {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -358,30 +370,57 @@ article .UnderTitle {
 }
 
 #Skills #SkillDisplay #SkillsList {
-  font-family: TitleFont;
+  position: relative;
 }
 
-#Skills #SkillDisplay #SkillsList .ActiveSkill {
+#Skills #SkillDisplay #SkillsList p {
+  color: var(--MainWhite);
+  font-family: TitleFont;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+#Skills #SkillDisplay #SkillsList .ActiveTitle {
   background: var(--Gradient);
+  color: var(--MainBlack);
+}
+
+#Skills #SkillDisplay #SkillDescription {
+  display: -ms-grid;
+  display: grid;
+  height: 100%;
+}
+
+#Skills #SkillDisplay #SkillDescription section {
+  width: 100%;
+  z-index: 1;
+  opacity: 0;
+  -ms-grid-column: 1;
+  grid-column: 1;
+  -ms-grid-row: 1;
+  grid-row: 1;
+}
+
+#Skills #SkillDisplay #SkillDescription p, #Skills #SkillDisplay #SkillDescription h2 {
   color: var(--MainWhite);
 }
 
 #Skills #SkillDisplay #SkillDescription h2 {
   font-family: TitleFont;
   text-transform: uppercase;
+  border-bottom: 2px solid var(--MiddleColour);
 }
 
 #Skills #SkillDisplay #SkillDescription p {
   font-family: var(--OtherFont);
 }
 
-#Skills #SkillDisplay #SkillDescription section {
-  width: 100%;
-  display: none;
-}
-
-#Skills #SkillDisplay #SkillDescription .ActiveSkillText {
-  display: block;
+#Skills #SkillDisplay #SkillDescription .ActivePanel {
+  -webkit-transition: 500ms;
+  transition: 500ms;
+  opacity: 1;
+  z-index: 3;
 }
 
 #FAQ {
@@ -443,6 +482,95 @@ article .UnderTitle {
 
 #Outro {
   background-color: var(--MainBlack);
+}
+
+#Outro #ContactHolder {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#Outro #ContactHolder section {
+  width: 50%;
+}
+
+#Outro #ContactHolder #ContactTitles {
+  font-family: TitleFont;
+  color: var(--MainWhite);
+}
+
+#Outro #ContactHolder #ContactTitles #Fiver.ActiveTitle {
+  background-color: var(--LeftColour);
+  color: var(--MainBlack);
+}
+
+#Outro #ContactHolder #ContactTitles #Upwork.ActiveTitle {
+  background-color: var(--MiddleColour);
+  color: var(--MainBlack);
+}
+
+#Outro #ContactHolder #ContactTitles #Email.ActiveTitle {
+  background-color: var(--RightColour);
+}
+
+#Outro #ContactHolder #ContactTitles .ActiveTitle {
+  width: 100%;
+}
+
+#Outro #ContactHolder #ContactPanel {
+  display: -ms-grid;
+  display: grid;
+}
+
+#Outro #ContactHolder #ContactPanel section {
+  width: 100%;
+  -ms-grid-row: 1;
+  grid-row: 1;
+  -ms-grid-column: 1;
+  grid-column: 1;
+  opacity: 0;
+}
+
+#Outro #ContactHolder #ContactPanel section h2 {
+  font-family: TitleFont;
+  color: var(--MainWhite);
+  border-bottom: 2px solid var(--MiddleColour);
+  width: 100%;
+}
+
+#Outro #ContactHolder #ContactPanel section p {
+  color: var(--MainWhite);
+  font-family: var(--OtherFont);
+}
+
+#Outro #ContactHolder #ContactPanel section a {
+  display: block;
+  text-decoration: none;
+  color: var(--MainWhite);
+  font-family: TitleFont;
+  border: 2px solid var(--MiddleColour);
+  border-radius: 25px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#Outro #ContactHolder #ContactPanel .ActivePanel {
+  -webkit-transition: 200ms;
+  transition: 200ms;
+  opacity: 1;
+}
+
+footer {
+  background-color: var(--MainBlack);
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+footer p {
+  font-family: TitleFont;
+  border-bottom: 2px solid var(--MiddleColour);
+  color: var(--MainWhite);
 }
 
 @-webkit-keyframes Blinking {
@@ -604,7 +732,8 @@ article .UnderTitle {
   }
   #PreviousWork #ReadMore {
     margin-left: 5%;
-    width: 90%;
+    margin-right: 5%;
+    width: auto;
   }
   #Skills #SkillDisplay {
     width: 100%;
@@ -621,7 +750,24 @@ article .UnderTitle {
     text-align: center;
   }
   #Skills #SkillDisplay #SkillDescription {
-    border-top: 4px solid var(--LeftColour);
+    margin-top: 20px;
+  }
+  #Outro #ContactHolder {
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding-bottom: 40px;
+  }
+  #Outro #ContactHolder section {
+    width: 100%;
+  }
+  #Outro #ContactHolder #ContactTitles {
+    text-align: center;
+  }
+  #Outro #ContactHolder #ContactPanel {
+    margin-top: 20px;
   }
   #FAQ .Template3 section h2 {
     font-size: 2rem;
