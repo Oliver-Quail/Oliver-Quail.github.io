@@ -72,3 +72,13 @@ function CreateFluxList(TitlesHolder, ContentHolder) {
         
     });
 }
+
+function AdvanceFux(TitlesHolder, ContentHolder, Counter) {
+    var TitlesArray = TitlesHolder.children;
+    var ContentsArray = ContentHolder.children;
+
+    Object.keys(TitlesArray).forEach(Element => {
+        
+    });
+
+}

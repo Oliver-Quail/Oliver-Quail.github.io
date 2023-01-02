@@ -560,6 +560,7 @@ article .UnderTitle {
 
 #Outro #ContactHolder #ContactPanel section {
   width: 100%;
+  height: 100%;
   -ms-grid-row: 1;
   grid-row: 1;
   -ms-grid-column: 1;
@@ -578,6 +579,7 @@ article .UnderTitle {
 #Outro #ContactHolder #ContactPanel section p {
   color: var(--MainWhite);
   font-family: var(--OtherFont);
+  margin-bottom: auto;
 }
 
 #Outro #ContactHolder #ContactPanel section a {
@@ -588,13 +590,14 @@ article .UnderTitle {
   border: 2px solid var(--MiddleColour);
   border-radius: 25px;
   text-align: center;
-  margin-top: 10px;
+  margin-top: auto;
 }
 
 #Outro #ContactHolder #ContactPanel .ActivePanel {
   -webkit-transition: 200ms;
   transition: 200ms;
   opacity: 1;
+  z-index: 3;
 }
 
 footer {
