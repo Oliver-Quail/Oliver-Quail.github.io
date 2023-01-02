@@ -59,12 +59,14 @@ body {
         section {
             width: 29%;       
             height: 100%;
+            overflow-x: visible;
 
             h2 {
                 color: var(--MainWhite);
                 font-family: TitleFont;
                 text-transform: uppercase;  
                 font-size: 3rem;
+                overflow-x: visible;
             }
 
             p {
@@ -402,6 +404,14 @@ article {
     background-color: var(--MainBlack);
     @include TripleTemplate();
     padding-bottom: 20px;
+
+    .Template3 {
+        section {
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    }
 }
 
 #Outro {
@@ -425,8 +435,13 @@ article {
             section {
                 height: 100%;
                 display: flex;
-                align-items: center;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100%;
 
+                p {
+                    text-align: center;
+                }
             }
             
             #Fiver.ActiveTitle {
@@ -462,6 +477,7 @@ article {
                     color: var(--MainWhite);
                     border-bottom: 2px solid var(--MiddleColour);
                     width: 100%;
+                    text-transform: uppercase;
                 }
 
                 p {
@@ -519,7 +535,7 @@ footer {
     }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1080px) {
 
     html {
         font-size: 15px;
@@ -530,21 +546,25 @@ footer {
         .Template3 {
             section {
                 h2 {
-                    font-size: 2rem;
+                    font-size: 1.5rem;
+
                 }
             }
         }
     }
-
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 850px) {
 
     #Experience {
         .Template3 {
+            overflow-x: visible;
             section {
+                overflow-x: visible;
+
                 h2 {
-                    font-size: 2.8rem;
+                    overflow-x: visible;
+                    font-size: 2rem;
                 }
             }
         }
@@ -566,6 +586,23 @@ footer {
         }
     }
 
+    #Outro {
+        #ContactHolder {
+            #ContactTitles {
+                section {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    p {
+                        
+                        font-size: 1.5rem;
+
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 
@@ -577,7 +614,6 @@ footer {
         }
     }
   
-
     nav {
         display: flex;
         justify-content: center;
@@ -593,8 +629,8 @@ footer {
 
             #OliverQuail {
                 display: block;
-
             }
+
             ion-icon {
                 display: block;
                 color: var(--MainWhite);
@@ -602,7 +638,6 @@ footer {
             }
         }
 
-        
         a {
             display: none;
         }
@@ -705,7 +740,6 @@ footer {
         }
     }
 
-
     #Skills {
         #SkillDisplay {
             width: 100%;
@@ -731,12 +765,9 @@ footer {
             width: 100%;
             flex-direction: column;
             padding-bottom: 40px;
+
             section {
                 width: 100%;
-            }
-
-            #ContactTitles {
-                text-align: center;
             }
 
             #ContactPanel {

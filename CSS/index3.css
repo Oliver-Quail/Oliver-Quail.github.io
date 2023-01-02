@@ -211,6 +211,7 @@ article .UnderTitle {
 #Experience .Template3 section {
   width: 29%;
   height: 100%;
+  overflow-x: visible;
 }
 
 #Experience .Template3 section h2 {
@@ -218,6 +219,7 @@ article .UnderTitle {
   font-family: TitleFont;
   text-transform: uppercase;
   font-size: 3rem;
+  overflow-x: visible;
 }
 
 #Experience .Template3 section p {
@@ -440,6 +442,7 @@ article .UnderTitle {
 #FAQ .Template3 section {
   width: 29%;
   height: 100%;
+  overflow-x: visible;
 }
 
 #FAQ .Template3 section h2 {
@@ -447,6 +450,7 @@ article .UnderTitle {
   font-family: TitleFont;
   text-transform: uppercase;
   font-size: 3rem;
+  overflow-x: visible;
 }
 
 #FAQ .Template3 section p {
@@ -477,6 +481,10 @@ article .UnderTitle {
   #FAQ .Template3 section h2, #FAQ .Template3 section p {
     padding-left: 15px;
   }
+}
+
+#FAQ .Template3 section h2 {
+  font-size: 1.5rem;
 }
 
 #Outro {
@@ -514,9 +522,17 @@ article .UnderTitle {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 100%;
+}
+
+#Outro #ContactHolder #ContactTitles section p {
+  text-align: center;
 }
 
 #Outro #ContactHolder #ContactTitles #Fiver.ActiveTitle {
@@ -556,6 +572,7 @@ article .UnderTitle {
   color: var(--MainWhite);
   border-bottom: 2px solid var(--MiddleColour);
   width: 100%;
+  text-transform: uppercase;
 }
 
 #Outro #ContactHolder #ContactPanel section p {
@@ -618,24 +635,45 @@ footer p {
   }
 }
 
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1080px) {
   html {
     font-size: 15px;
   }
   #FAQ .Template3 section h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 850px) {
+  #Experience .Template3 {
+    overflow-x: visible;
+  }
+  #Experience .Template3 section {
+    overflow-x: visible;
+  }
   #Experience .Template3 section h2 {
-    font-size: 2.8rem;
+    overflow-x: visible;
+    font-size: 2rem;
   }
   #PreviousWork .Image3 {
     -ms-grid-columns: 5% auto auto 5%;
         grid-template-columns: 5% auto auto 5%;
   }
   #Skills #SkillDisplay #SkillsList p {
+    font-size: 1.5rem;
+  }
+  #Outro #ContactHolder #ContactTitles section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #Outro #ContactHolder #ContactTitles section p {
     font-size: 1.5rem;
   }
 }
@@ -811,9 +849,6 @@ footer p {
   }
   #Outro #ContactHolder section {
     width: 100%;
-  }
-  #Outro #ContactHolder #ContactTitles {
-    text-align: center;
   }
   #Outro #ContactHolder #ContactPanel {
     margin-top: 20px;
