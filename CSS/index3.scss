@@ -13,6 +13,8 @@
     --MiddleColour: #8ee3d2;
     --Gradient: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
     --OtherFont: 'Montserrat', sans-serif;
+    $BreakPointMobile: 600px;
+    $BreakPointSmall: 800px
 }
 
 * {
@@ -236,10 +238,10 @@ article {
 }
 
 #Experience {
-    min-height: 100vh;
     width: 100%;
     background-color: var(--MainBlack);
     padding-bottom: 20px;
+
 
     @include TripleTemplate();
    
@@ -416,6 +418,17 @@ article {
         #ContactTitles {
             font-family: TitleFont;
             color: var(--MainWhite);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            section {
+                height: 100%;
+                display: flex;
+                align-items: center;
+
+            }
+            
             #Fiver.ActiveTitle {
                 background-color: var(--LeftColour);
                 color: var(--MainBlack);
@@ -480,13 +493,18 @@ article {
 
 footer {
     background-color: var(--MainBlack);
-    padding-bottom: 20px;
-    text-align: center;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
 
     p {
         font-family: TitleFont;
         border-bottom: 2px solid var(--MiddleColour);
         color: var(--MainWhite);
+        border-bottom: 2px solid var(--MiddleColour);
     }
 
 }
@@ -501,7 +519,57 @@ footer {
     }
 }
 
+@media only screen and (max-width: 1000px) {
+
+    html {
+        font-size: 15px;
+    }
+
+    #FAQ {
+
+        .Template3 {
+            section {
+                h2 {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+
+}
+
 @media only screen and (max-width: 800px) {
+
+    #Experience {
+        .Template3 {
+            section {
+                h2 {
+                    font-size: 2.8rem;
+                }
+            }
+        }
+    }
+
+    #PreviousWork {
+        .Image3 {
+            grid-template-columns: 5% auto auto 5%;
+        }
+    }
+
+    #Skills {
+        #SkillDisplay {
+            #SkillsList {
+                p {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+
+}
+
+
+@media only screen and (max-width: 600px) {
     #TextHolder {
         #Roles {
             font-size: 2.4rem;

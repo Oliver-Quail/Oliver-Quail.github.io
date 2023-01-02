@@ -193,7 +193,6 @@ article .UnderTitle {
 }
 
 #Experience {
-  min-height: 100vh;
   width: 100%;
   background-color: var(--MainBlack);
   padding-bottom: 20px;
@@ -498,6 +497,26 @@ article .UnderTitle {
 #Outro #ContactHolder #ContactTitles {
   font-family: TitleFont;
   color: var(--MainWhite);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#Outro #ContactHolder #ContactTitles section {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #Outro #ContactHolder #ContactTitles #Fiver.ActiveTitle {
@@ -563,14 +582,22 @@ article .UnderTitle {
 
 footer {
   background-color: var(--MainBlack);
-  padding-bottom: 20px;
-  text-align: center;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 footer p {
   font-family: TitleFont;
   border-bottom: 2px solid var(--MiddleColour);
   color: var(--MainWhite);
+  border-bottom: 2px solid var(--MiddleColour);
 }
 
 @-webkit-keyframes Blinking {
@@ -591,7 +618,29 @@ footer p {
   }
 }
 
+@media only screen and (max-width: 1000px) {
+  html {
+    font-size: 15px;
+  }
+  #FAQ .Template3 section h2 {
+    font-size: 2rem;
+  }
+}
+
 @media only screen and (max-width: 800px) {
+  #Experience .Template3 section h2 {
+    font-size: 2.8rem;
+  }
+  #PreviousWork .Image3 {
+    -ms-grid-columns: 5% auto auto 5%;
+        grid-template-columns: 5% auto auto 5%;
+  }
+  #Skills #SkillDisplay #SkillsList p {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 600px) {
   #TextHolder #Roles {
     font-size: 2.4rem;
     margin-left: 10px;
