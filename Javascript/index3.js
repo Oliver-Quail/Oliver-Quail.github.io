@@ -38,6 +38,30 @@ window.onload = function() {
 
     CreateFluxList(document.getElementById("SkillsList"), document.getElementById("SkillDescription"));
     CreateFluxList(document.getElementById("ContactTitles"), document.getElementById("ContactPanel"));
+
+    var options = {
+        threshold:1,
+        rootMargin: "-100px"
+    }
+
+    const ExperienceObserver = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+            console.log(entry);
+            if(entry.isIntersecting) {
+                entry.target.classList.add("Active");
+            }
+        });
+       
+    }, options);
+
+    const ExperienceTitles = document.getElementsByClassName("RollIn");
+    const ExperienceText = document.getElementsByClassName("FadeIn");
+    Object.keys(ExperienceTitles).forEach(Title => {
+        ExperienceObserver.observe(ExperienceTitles[Title]);
+    });
+    Object.keys(ExperienceText).forEach(Title => {
+        ExperienceObserver.observe(ExperienceText[Title]);
+    });
 }
 
 function CreateFluxList(TitlesHolder, ContentHolder) {
@@ -71,6 +95,7 @@ function CreateFluxList(TitlesHolder, ContentHolder) {
         });
         
     });
+
 }
 
 function AdvanceFux(TitlesHolder, ContentHolder, Counter) {
