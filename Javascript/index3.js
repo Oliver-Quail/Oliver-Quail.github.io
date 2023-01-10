@@ -28,6 +28,8 @@ window.onload = function() {
     MenuButton.addEventListener("click", function(){
         if(MenuShown == 0) {
             MenuShown = 1;
+            //Menu.classList.remove("HiddingMenu");
+            //Menu.classList.remove("ShowMenu");
             Menu.classList.add("ShowMenu");
             Menu.addEventListener("animationend", function(){
                 Menu.classList.add("ShownMenu");
@@ -35,8 +37,12 @@ window.onload = function() {
         }
         else {
             MenuShown = 0;
-            Menu.classList.remove("ShownMenu");
-            Menu.classList.remove("ShowMenu");
+            Menu.classList.add("HiddingMenu");
+            Menu.addEventListener("animationend", function(){
+                Menu.classList.remove("HiddingMenu");
+                Menu.classList.remove("ShownMenu");
+            });
+            Menu.classList.remove("ShowMenu");          
         }
     });
 

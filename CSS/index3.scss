@@ -706,6 +706,21 @@ footer {
          }
     }
 
+    nav.HiddingMenu {
+
+        animation-name: HideMenuMobile;
+        animation-duration: 400ms;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+        animation-direction: normal;
+
+        a {
+            display: none;
+        }
+
+
+    }
+
     article {
         h1 {
             font-size: 3rem;
@@ -842,7 +857,24 @@ footer {
 
     100% {
         height: 100%;
-        //transform: translateY(0%);
+    }
+}
+
+@keyframes HideMenuMobile {
+    0% {
+        height: 100%;
+    }
+
+    50% {
+        height: 50%;
+    }
+
+    90% {
+        height: 10%;
+    }
+
+    100% {
+        height: fit-content;
     }
 }
 
