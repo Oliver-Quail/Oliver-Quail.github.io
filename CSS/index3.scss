@@ -80,12 +80,17 @@ body {
                 font-family: var(--OtherFont);
                 color: var(--MainWhite);
                 font-size: 1rem;
-                opacity: 0;
-                transition: opacity 400ms;
             }
 
-            p.Active {
+            .FadeIn {
+                opacity: 0;
+                filter: blur(100%);
+                transition: opacity 400ms, filter 600ms;
+            }
+
+            .FadeIn.Active {
                 opacity: 1;
+                filter: blur(0%);
             }
         }
     }
@@ -633,7 +638,8 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center; 
-      
+
+        //transition: height 200ms;
 
         #LogoMenu {
             margin-right: auto;
@@ -659,11 +665,12 @@ footer {
     }
 
 
-    .ShowMenu {
+    nav.ShowMenu {
         transition: 200ms;
+        height: 100%;
+
         display: flex;
         flex-direction: column;
-        height: 100%;
         align-items: flex-end;
 
         #LogoMenu, #LastLink {

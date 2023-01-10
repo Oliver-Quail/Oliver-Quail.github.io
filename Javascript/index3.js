@@ -44,15 +44,32 @@ window.onload = function() {
         rootMargin: "-100px"
     }
 
+    var TextOptions = {
+        threshold:1,
+        rootMargin: "0px"
+    }
+
     const ExperienceObserver = new IntersectionObserver(function(entries, observer) {
         entries.forEach(entry => {
-            console.log(entry);
             if(entry.isIntersecting) {
+                console.log(entry.target);
                 entry.target.classList.add("Active");
+                observer.unobserve(entry.target);
             }
         });
        
     }, options);
+
+    const TextObserver = new IntersectionObserver(function(entries, observer) {
+        entries.forEach(entry => {
+            if(entry.isIntersecting) {
+                console.log(entry.target);
+                entry.target.classList.add("Active");
+                observer.unobserve(entry.target);
+            }
+        });
+       
+    }, TextOptions);
 
     const ExperienceTitles = document.getElementsByClassName("RollIn");
     const ExperienceText = document.getElementsByClassName("FadeIn");
@@ -60,7 +77,7 @@ window.onload = function() {
         ExperienceObserver.observe(ExperienceTitles[Title]);
     });
     Object.keys(ExperienceText).forEach(Title => {
-        ExperienceObserver.observe(ExperienceText[Title]);
+        TextObserver.observe(ExperienceText[Title]);
     });
 }
 

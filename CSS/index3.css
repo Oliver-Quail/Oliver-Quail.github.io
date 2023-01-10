@@ -237,13 +237,22 @@ article .UnderTitle {
   font-family: var(--OtherFont);
   color: var(--MainWhite);
   font-size: 1rem;
-  opacity: 0;
-  -webkit-transition: opacity 400ms;
-  transition: opacity 400ms;
 }
 
-#Experience .Template3 section p.Active {
+#Experience .Template3 section .FadeIn {
+  opacity: 0;
+  -webkit-filter: blur(100%);
+          filter: blur(100%);
+  -webkit-transition: opacity 400ms, -webkit-filter 600ms;
+  transition: opacity 400ms, -webkit-filter 600ms;
+  transition: opacity 400ms, filter 600ms;
+  transition: opacity 400ms, filter 600ms, -webkit-filter 600ms;
+}
+
+#Experience .Template3 section .FadeIn.Active {
   opacity: 1;
+  -webkit-filter: blur(0%);
+          filter: blur(0%);
 }
 
 @media screen and (max-width: 600px) {
@@ -486,13 +495,22 @@ article .UnderTitle {
   font-family: var(--OtherFont);
   color: var(--MainWhite);
   font-size: 1rem;
-  opacity: 0;
-  -webkit-transition: opacity 400ms;
-  transition: opacity 400ms;
 }
 
-#FAQ .Template3 section p.Active {
+#FAQ .Template3 section .FadeIn {
+  opacity: 0;
+  -webkit-filter: blur(100%);
+          filter: blur(100%);
+  -webkit-transition: opacity 400ms, -webkit-filter 600ms;
+  transition: opacity 400ms, -webkit-filter 600ms;
+  transition: opacity 400ms, filter 600ms;
+  transition: opacity 400ms, filter 600ms, -webkit-filter 600ms;
+}
+
+#FAQ .Template3 section .FadeIn.Active {
   opacity: 1;
+  -webkit-filter: blur(0%);
+          filter: blur(0%);
 }
 
 @media screen and (max-width: 600px) {
@@ -757,9 +775,10 @@ footer p {
   nav a {
     display: none;
   }
-  .ShowMenu {
+  nav.ShowMenu {
     -webkit-transition: 200ms;
     transition: 200ms;
+    height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -767,15 +786,14 @@ footer p {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 100%;
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
   }
-  .ShowMenu #LogoMenu, .ShowMenu #LastLink {
+  nav.ShowMenu #LogoMenu, nav.ShowMenu #LastLink {
     margin-bottom: auto;
   }
-  .ShowMenu a {
+  nav.ShowMenu a {
     display: block;
     font-size: 3rem;
     text-align: left;
