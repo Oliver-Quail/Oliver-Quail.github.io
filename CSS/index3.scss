@@ -198,6 +198,19 @@ article {
         font-size: 4rem;
         text-transform: uppercase;
         margin-left: 40px;
+        
+    }
+
+    .ArticleTitle {
+        transform: rotateX(90deg);
+    }
+
+    h1.Active {
+        animation-name: RoatateText;
+        animation-duration: 600ms;
+        animation-timing-function: linear;
+        animation-fill-mode: forwards;
+        animation-direction: normal;
     }
 
     .UnderTitle {
@@ -368,7 +381,7 @@ article {
 
         #SkillsList {
             position: relative;
-
+            margin-left: 40px;
             p {
                 color: var(--MainWhite);
                 font-family: TitleFont;
@@ -384,7 +397,7 @@ article {
         #SkillDescription {
             display: grid;
             height: 100%;
-
+            margin-right: 40px;
             section {
                 width: 100%;
                 z-index: 1;
@@ -449,17 +462,11 @@ article {
             display: flex;
             flex-direction: column;
             justify-content: center;
+            margin-left: 40px;
 
             section {
                 height: 100%;
-                display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    width: 100%;
-
-                p {
-                    text-align: center;
-                }
+                width: 100%;
             }
             
             #Fiver.ActiveTitle {
@@ -483,7 +490,7 @@ article {
 
         #ContactPanel {
             display: grid;
-
+            margin-right: 40px;
             section {
                 width: 100%;
                 height: 100%;
@@ -599,24 +606,28 @@ footer {
     #Skills {
         #SkillDisplay {
             #SkillsList {
+                margin-left: 40px;
                 p {
                     font-size: 1.5rem;
                 }
             }
+        }
+        #SkillDescription {
+             margin-right: 40px;
         }
     }
 
     #Outro {
         #ContactHolder {
             #ContactTitles {
+                margin-left: 40px;
+
                 section {
                     display: flex;
                     justify-content: center;
                     align-items: center;
                     p {
-                        
                         font-size: 1.5rem;
-
                     }
                 }
             }
@@ -796,6 +807,7 @@ footer {
 
     #Skills {
         #SkillDisplay {
+            margin-left: 0px;
             width: 100%;
             flex-direction: column;
 
@@ -809,6 +821,7 @@ footer {
             }
 
             #SkillDescription {
+                margin-right: 0px;
                 margin-top: 20px;                
             }
         }
@@ -841,9 +854,6 @@ footer {
     }
 
 }
-
-
-
 
 @keyframes ShowMenuMobile {
 

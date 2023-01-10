@@ -125,6 +125,24 @@ article h1 {
   margin-left: 40px;
 }
 
+article .ArticleTitle {
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+}
+
+article h1.Active {
+  -webkit-animation-name: RoatateText;
+          animation-name: RoatateText;
+  -webkit-animation-duration: 600ms;
+          animation-duration: 600ms;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-direction: normal;
+          animation-direction: normal;
+}
+
 article .UnderTitle {
   color: var(--MainWhite);
   font-style: italic;
@@ -399,6 +417,7 @@ article .UnderTitle {
 
 #Skills #SkillDisplay #SkillsList {
   position: relative;
+  margin-left: 40px;
 }
 
 #Skills #SkillDisplay #SkillsList p {
@@ -418,6 +437,7 @@ article .UnderTitle {
   display: -ms-grid;
   display: grid;
   height: 100%;
+  margin-right: 40px;
 }
 
 #Skills #SkillDisplay #SkillDescription section {
@@ -569,24 +589,12 @@ article .UnderTitle {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-left: 40px;
 }
 
 #Outro #ContactHolder #ContactTitles section {
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   width: 100%;
-}
-
-#Outro #ContactHolder #ContactTitles section p {
-  text-align: center;
 }
 
 #Outro #ContactHolder #ContactTitles #Fiver.ActiveTitle {
@@ -610,6 +618,7 @@ article .UnderTitle {
 #Outro #ContactHolder #ContactPanel {
   display: -ms-grid;
   display: grid;
+  margin-right: 40px;
 }
 
 #Outro #ContactHolder #ContactPanel section {
@@ -716,8 +725,17 @@ footer p {
     -ms-grid-columns: 5% auto auto 5%;
         grid-template-columns: 5% auto auto 5%;
   }
+  #Skills #SkillDisplay #SkillsList {
+    margin-left: 40px;
+  }
   #Skills #SkillDisplay #SkillsList p {
     font-size: 1.5rem;
+  }
+  #Skills #SkillDescription {
+    margin-right: 40px;
+  }
+  #Outro #ContactHolder #ContactTitles {
+    margin-left: 40px;
   }
   #Outro #ContactHolder #ContactTitles section {
     display: -webkit-box;
@@ -915,6 +933,7 @@ footer p {
     width: auto;
   }
   #Skills #SkillDisplay {
+    margin-left: 0px;
     width: 100%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -929,6 +948,7 @@ footer p {
     text-align: center;
   }
   #Skills #SkillDisplay #SkillDescription {
+    margin-right: 0px;
     margin-top: 20px;
   }
   #Outro #ContactHolder {

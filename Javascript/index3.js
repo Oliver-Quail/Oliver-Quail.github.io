@@ -51,7 +51,8 @@ window.onload = function() {
 
     var options = {
         threshold:1,
-        rootMargin: "-100px"
+        rootMargin: "-100px",
+
     }
 
     var TextOptions = {
@@ -83,12 +84,17 @@ window.onload = function() {
 
     const ExperienceTitles = document.getElementsByClassName("RollIn");
     const ExperienceText = document.getElementsByClassName("FadeIn");
+    const ArticleTitles = document.getElementsByClassName("ArticleTitle");
     Object.keys(ExperienceTitles).forEach(Title => {
         ExperienceObserver.observe(ExperienceTitles[Title]);
     });
     Object.keys(ExperienceText).forEach(Title => {
         TextObserver.observe(ExperienceText[Title]);
     });
+    Object.keys(ArticleTitles).forEach(Title => {
+        ExperienceObserver.observe(ArticleTitles[Title]);
+    });
+
 }
 
 function CreateFluxList(TitlesHolder, ContentHolder) {
