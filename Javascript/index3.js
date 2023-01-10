@@ -29,9 +29,13 @@ window.onload = function() {
         if(MenuShown == 0) {
             MenuShown = 1;
             Menu.classList.add("ShowMenu");
+            Menu.addEventListener("animationend", function(){
+                Menu.classList.add("ShownMenu");
+            });
         }
         else {
             MenuShown = 0;
+            Menu.classList.remove("ShownMenu");
             Menu.classList.remove("ShowMenu");
         }
     });
