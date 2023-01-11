@@ -384,7 +384,7 @@ article .UnderTitle {
   font-family: var(--OtherFont);
 }
 #Skills #SkillDisplay #SkillDescription .ActivePanel {
-  transition: 500ms;
+  transition: 700ms;
   opacity: 1;
   z-index: 3;
 }

@@ -404,6 +404,7 @@ article {
             display: grid;
             height: 100%;
             margin-right: 40px;
+
             section {
                 width: 100%;
                 z-index: 1;
@@ -411,7 +412,6 @@ article {
                 grid-column: 1;
                 grid-row: 1;
             }
-
 
             p, h2 {
                 color: var(--MainWhite);
@@ -429,7 +429,7 @@ article {
            
             
             .ActivePanel {
-                transition: 500ms;
+                transition: 700ms;
                 opacity: 1;
                 z-index: 3;
             }
