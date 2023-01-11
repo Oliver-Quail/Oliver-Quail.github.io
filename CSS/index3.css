@@ -944,6 +944,7 @@ footer p {
     width: 100%;
   }
   #Skills #SkillDisplay #SkillsList, #Skills #SkillDisplay #SkillDescription {
+    margin-left: 0px;
     width: 100%;
     text-align: center;
   }
@@ -958,6 +959,9 @@ footer p {
         -ms-flex-direction: column;
             flex-direction: column;
     padding-bottom: 40px;
+  }
+  #Outro #ContactHolder #ContactTitles {
+    margin-left: 0px;
   }
   #Outro #ContactHolder section {
     width: 100%;
