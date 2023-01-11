@@ -3,15 +3,16 @@
   font-family: TitleFont;
   src: url("../Fonts/Karrik-Regular.otf"), url("../Fonts/Karrik-Regular.ttf") format("ttf");
 }
-
 :root {
   --MainBlack: #212529;
+  --MainGray: #5b6671;
+  --SpecialGray: rgba(91, 102, 113, .1);
   --MainWhite: #F8FAF9;
   --LeftColour: #84fab0;
   --RightColour: #8fd3f4;
   --MiddleColour: #8ee3d2;
   --Gradient: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
-  --OtherFont: 'Montserrat', sans-serif;
+  --OtherFont: "Montserrat", sans-serif;
 }
 
 * {
@@ -24,7 +25,6 @@
 .GradientOffWhite {
   height: 12vh;
   width: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(var(--MainBlack)), to(transparent));
   background: linear-gradient(to bottom, var(--MainBlack) 0%, transparent 100%);
 }
 
@@ -66,7 +66,6 @@ nav {
   width: 100%;
   padding: 10px 0px;
 }
-
 nav a, nav #OliverQuail {
   text-transform: uppercase;
   font-family: TitleFont;
@@ -76,11 +75,9 @@ nav a, nav #OliverQuail {
   text-decoration: none;
   display: inline-block;
 }
-
 nav #LogoMenu {
   display: inline;
 }
-
 nav #LogoMenu #OliverQuail {
   border-left: 0px solid transparent;
   background-image: var(--Gradient);
@@ -88,7 +85,6 @@ nav #LogoMenu #OliverQuail {
   -webkit-text-fill-color: transparent;
   font-family: TitleFont;
 }
-
 nav a:first-child {
   border-left: 1px solid transparent;
   background-image: var(--Gradient);
@@ -96,16 +92,13 @@ nav a:first-child {
   -webkit-text-fill-color: transparent;
   font-family: TitleFont;
 }
-
 nav a:hover {
-  -webkit-transition: 200ms;
   transition: 200ms;
   background-image: var(--Gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-family: TitleFont;
 }
-
 nav ion-icon {
   display: none;
 }
@@ -113,7 +106,6 @@ nav ion-icon {
 article {
   width: 100%;
 }
-
 article h1 {
   font-family: TitleFont;
   background-image: var(--Gradient);
@@ -123,18 +115,13 @@ article h1 {
   font-size: 4rem;
   text-transform: uppercase;
   margin-left: 40px;
+  transform: rotateX(90deg);
 }
-
-article .ArticleTitle {
-  -webkit-transform: rotateX(90deg);
-          transform: rotateX(90deg);
-}
-
-article h1.Active {
+article .ArticleTitle.Active {
   -webkit-animation-name: RoatateText;
           animation-name: RoatateText;
-  -webkit-animation-duration: 600ms;
-          animation-duration: 600ms;
+  -webkit-animation-duration: 400ms;
+          animation-duration: 400ms;
   -webkit-animation-timing-function: linear;
           animation-timing-function: linear;
   -webkit-animation-fill-mode: forwards;
@@ -142,7 +129,6 @@ article h1.Active {
   -webkit-animation-direction: normal;
           animation-direction: normal;
 }
-
 article .UnderTitle {
   color: var(--MainWhite);
   font-style: italic;
@@ -153,17 +139,12 @@ article .UnderTitle {
 }
 
 #TextHolder {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   width: 100%;
   height: 100vh;
   background-color: var(--MainBlack);
 }
-
 #TextHolder #Video {
   z-index: 1;
   -o-object-fit: cover;
@@ -173,10 +154,8 @@ article .UnderTitle {
   position: absolute;
   top: 0px;
   left: 0px;
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
+  filter: grayscale(100%);
 }
-
 #TextHolder #Roles {
   z-index: 2;
   font-family: TitleFont;
@@ -188,7 +167,6 @@ article .UnderTitle {
   font-size: 4.8rem;
   margin-left: 40px;
 }
-
 #TextHolder #Typer {
   width: 3px;
   height: auto;
@@ -197,7 +175,6 @@ article .UnderTitle {
           animation: Blinking 100ms ease 0ms infinite alternate;
   color: transparent;
 }
-
 #TextHolder #GradientOff {
   height: 12vh;
   width: 100%;
@@ -205,7 +182,6 @@ article .UnderTitle {
   bottom: 0px;
   left: 0px;
   background-color: #212529;
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(var(--MainBlack)));
   background: linear-gradient(to bottom, transparent 0%, var(--MainBlack) 100%);
   z-index: 2;
 }
@@ -215,73 +191,47 @@ article .UnderTitle {
   background-color: var(--MainBlack);
   padding-bottom: 20px;
 }
-
 #Experience .Template3 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  justify-content: space-evenly;
   height: 100%;
 }
-
 #Experience .Template3 section {
   width: 29%;
   height: 100%;
   overflow-x: visible;
 }
-
 #Experience .Template3 section h2 {
   color: var(--MainWhite);
   font-family: TitleFont;
   text-transform: uppercase;
   font-size: 3rem;
   overflow-x: visible;
-  -webkit-transform: rotateX(90deg);
-          transform: rotateX(90deg);
-  -webkit-transition: -webkit-transform 400ms;
-  transition: -webkit-transform 400ms;
+  transform: rotateX(90deg);
   transition: transform 400ms;
-  transition: transform 400ms, -webkit-transform 400ms;
+  text-shadow: hsl(210deg, 11%, 40%) 1px 1px;
 }
-
 #Experience .Template3 section h2.Active {
-  -webkit-transform: rotateX(0deg);
-          transform: rotateX(0deg);
+  transform: rotateX(0deg);
 }
-
 #Experience .Template3 section p {
   font-family: var(--OtherFont);
   color: var(--MainWhite);
   font-size: 1rem;
 }
-
 #Experience .Template3 section .FadeIn {
   opacity: 0;
-  -webkit-filter: blur(100%);
-          filter: blur(100%);
-  -webkit-transition: opacity 400ms, -webkit-filter 600ms;
-  transition: opacity 400ms, -webkit-filter 600ms;
+  filter: blur(100%);
   transition: opacity 400ms, filter 600ms;
-  transition: opacity 400ms, filter 600ms, -webkit-filter 600ms;
 }
-
 #Experience .Template3 section .FadeIn.Active {
   opacity: 1;
-  -webkit-filter: blur(0%);
-          filter: blur(0%);
+  filter: blur(0%);
 }
-
 @media screen and (max-width: 600px) {
   #Experience .Template3 {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
   }
   #Experience .Template3 section {
@@ -290,7 +240,7 @@ article .UnderTitle {
   }
   #Experience .Template3 section h2 {
     font-size: 2.5rem;
-    border-top: 5px solid var(--LeftColour);
+    border-bottom: 3px solid var(--MiddleColour);
   }
   #Experience .Template3 section h2, #Experience .Template3 section p {
     padding-left: 15px;
@@ -300,34 +250,25 @@ article .UnderTitle {
 #PreviousWork {
   background-color: var(--MainBlack);
 }
-
 #PreviousWork .Image3 {
   padding-bottom: 10px;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto 50% 30% auto;
-      grid-template-columns: auto 50% 30% auto;
+  grid-template-columns: auto 50% 30% auto;
   padding-bottom: 10vh;
 }
-
 #PreviousWork .Image3 .ImageHolder {
   text-align: center;
-  -ms-grid-column: 2;
   grid-column: 2;
 }
-
 #PreviousWork .Image3 .ImageHolder img {
   width: 80%;
   border-radius: 25px;
 }
-
 #PreviousWork .Image3 .Overlay {
   z-index: 2;
-  -ms-grid-column: 3;
   grid-column: 3;
   height: 100%;
 }
-
 #PreviousWork .Image3 .Overlay h2 {
   font-size: 2.5rem;
   padding-left: 10%;
@@ -337,21 +278,17 @@ article .UnderTitle {
   font-family: TitleFont;
   background-color: #212529;
 }
-
 #PreviousWork .Image3 .Overlay section {
   padding-left: 10%;
   padding-right: 10%;
 }
-
 #PreviousWork .Image3 .Overlay section i {
   font-family: var(--OtherFont);
   color: var(--MainWhite);
 }
-
 #PreviousWork .Image3 .Overlay section a {
   display: none;
 }
-
 #PreviousWork .Image3 .Overlay .ButtonLink {
   display: block;
   overflow-x: visible;
@@ -368,14 +305,11 @@ article .UnderTitle {
   width: fit-content;
   margin-left: auto;
 }
-
 #PreviousWork .Image3 .Overlay .ButtonLink:hover {
-  -webkit-transition: 200ms;
   transition: 200ms;
   background: var(--Gradient);
   color: var(--MainBlack);
 }
-
 #PreviousWork #ReadMore {
   text-decoration: none;
   color: var(--MainWhite);
@@ -390,12 +324,9 @@ article .UnderTitle {
   text-transform: uppercase;
   border: 5px solid var(--MiddleColour);
 }
-
 #PreviousWork #ReadMore:hover {
-  -webkit-transition: 200ms;
   transition: 200ms;
-  -webkit-box-shadow: rgba(250, 248, 249, 0.2) 2px 1px 2px;
-          box-shadow: rgba(250, 248, 249, 0.2) 2px 1px 2px;
+  box-shadow: rgba(250, 248, 249, 0.2) 2px 1px 2px;
 }
 
 #Skills {
@@ -404,68 +335,55 @@ article .UnderTitle {
   height: -moz-fit-content;
   height: fit-content;
 }
-
 #Skills #SkillDisplay {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 #Skills #SkillDisplay section {
   width: 50%;
 }
-
 #Skills #SkillDisplay #SkillsList {
-  position: relative;
   margin-left: 40px;
 }
-
 #Skills #SkillDisplay #SkillsList p {
   color: var(--MainWhite);
   font-family: TitleFont;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
+  border-left: 3px solid var(--MainWhite);
+  padding-left: 4px;
 }
-
+#Skills #SkillDisplay #SkillsList p:hover {
+  transition: 300ms;
+  background-color: var(--SpecialGray);
+}
 #Skills #SkillDisplay #SkillsList .ActiveTitle {
-  background: var(--Gradient);
-  color: var(--MainBlack);
+  border-left: 3px solid var(--MiddleColour);
 }
-
 #Skills #SkillDisplay #SkillDescription {
-  display: -ms-grid;
   display: grid;
   height: 100%;
   margin-right: 40px;
 }
-
 #Skills #SkillDisplay #SkillDescription section {
   width: 100%;
   z-index: 1;
   opacity: 0;
-  -ms-grid-column: 1;
   grid-column: 1;
-  -ms-grid-row: 1;
   grid-row: 1;
 }
-
 #Skills #SkillDisplay #SkillDescription p, #Skills #SkillDisplay #SkillDescription h2 {
   color: var(--MainWhite);
 }
-
 #Skills #SkillDisplay #SkillDescription h2 {
   font-family: TitleFont;
   text-transform: uppercase;
   border-bottom: 2px solid var(--MiddleColour);
 }
-
 #Skills #SkillDisplay #SkillDescription p {
   font-family: var(--OtherFont);
 }
-
 #Skills #SkillDisplay #SkillDescription .ActivePanel {
-  -webkit-transition: 500ms;
   transition: 500ms;
   opacity: 1;
   z-index: 3;
@@ -475,73 +393,47 @@ article .UnderTitle {
   background-color: var(--MainBlack);
   padding-bottom: 20px;
 }
-
 #FAQ .Template3 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  justify-content: space-evenly;
   height: 100%;
 }
-
 #FAQ .Template3 section {
   width: 29%;
   height: 100%;
   overflow-x: visible;
 }
-
 #FAQ .Template3 section h2 {
   color: var(--MainWhite);
   font-family: TitleFont;
   text-transform: uppercase;
   font-size: 3rem;
   overflow-x: visible;
-  -webkit-transform: rotateX(90deg);
-          transform: rotateX(90deg);
-  -webkit-transition: -webkit-transform 400ms;
-  transition: -webkit-transform 400ms;
+  transform: rotateX(90deg);
   transition: transform 400ms;
-  transition: transform 400ms, -webkit-transform 400ms;
+  text-shadow: hsl(210deg, 11%, 40%) 1px 1px;
 }
-
 #FAQ .Template3 section h2.Active {
-  -webkit-transform: rotateX(0deg);
-          transform: rotateX(0deg);
+  transform: rotateX(0deg);
 }
-
 #FAQ .Template3 section p {
   font-family: var(--OtherFont);
   color: var(--MainWhite);
   font-size: 1rem;
 }
-
 #FAQ .Template3 section .FadeIn {
   opacity: 0;
-  -webkit-filter: blur(100%);
-          filter: blur(100%);
-  -webkit-transition: opacity 400ms, -webkit-filter 600ms;
-  transition: opacity 400ms, -webkit-filter 600ms;
+  filter: blur(100%);
   transition: opacity 400ms, filter 600ms;
-  transition: opacity 400ms, filter 600ms, -webkit-filter 600ms;
 }
-
 #FAQ .Template3 section .FadeIn.Active {
   opacity: 1;
-  -webkit-filter: blur(0%);
-          filter: blur(0%);
+  filter: blur(0%);
 }
-
 @media screen and (max-width: 600px) {
   #FAQ .Template3 {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
   }
   #FAQ .Template3 section {
@@ -550,13 +442,12 @@ article .UnderTitle {
   }
   #FAQ .Template3 section h2 {
     font-size: 2.5rem;
-    border-top: 5px solid var(--LeftColour);
+    border-bottom: 3px solid var(--MiddleColour);
   }
   #FAQ .Template3 section h2, #FAQ .Template3 section p {
     padding-left: 15px;
   }
 }
-
 #FAQ .Template3 section h2 {
   font-size: 1.5rem;
 }
@@ -564,73 +455,53 @@ article .UnderTitle {
 #Outro {
   background-color: var(--MainBlack);
 }
-
 #Outro #ContactHolder {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 #Outro #ContactHolder section {
   width: 50%;
 }
-
 #Outro #ContactHolder #ContactTitles {
   font-family: TitleFont;
   color: var(--MainWhite);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   margin-left: 40px;
 }
-
 #Outro #ContactHolder #ContactTitles section {
   height: 100%;
   width: 100%;
 }
-
+#Outro #ContactHolder #ContactTitles section p {
+  font-size: 2rem;
+}
 #Outro #ContactHolder #ContactTitles #Fiver.ActiveTitle {
   background-color: var(--LeftColour);
   color: var(--MainBlack);
 }
-
 #Outro #ContactHolder #ContactTitles #Upwork.ActiveTitle {
   background-color: var(--MiddleColour);
   color: var(--MainBlack);
 }
-
 #Outro #ContactHolder #ContactTitles #Email.ActiveTitle {
   background-color: var(--RightColour);
 }
-
 #Outro #ContactHolder #ContactTitles .ActiveTitle {
   width: 100%;
 }
-
 #Outro #ContactHolder #ContactPanel {
-  display: -ms-grid;
   display: grid;
   margin-right: 40px;
 }
-
 #Outro #ContactHolder #ContactPanel section {
   width: 100%;
   height: 100%;
-  -ms-grid-row: 1;
   grid-row: 1;
-  -ms-grid-column: 1;
   grid-column: 1;
   opacity: 0;
 }
-
 #Outro #ContactHolder #ContactPanel section h2 {
   font-family: TitleFont;
   color: var(--MainWhite);
@@ -638,13 +509,11 @@ article .UnderTitle {
   width: 100%;
   text-transform: uppercase;
 }
-
 #Outro #ContactHolder #ContactPanel section p {
   color: var(--MainWhite);
   font-family: var(--OtherFont);
   margin-bottom: auto;
 }
-
 #Outro #ContactHolder #ContactPanel section a {
   display: block;
   text-decoration: none;
@@ -655,9 +524,7 @@ article .UnderTitle {
   text-align: center;
   margin-top: auto;
 }
-
 #Outro #ContactHolder #ContactPanel .ActivePanel {
-  -webkit-transition: 200ms;
   transition: 200ms;
   opacity: 1;
   z-index: 3;
@@ -668,14 +535,9 @@ footer {
   padding-bottom: 30px;
   padding-top: 30px;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
-
 footer p {
   font-family: TitleFont;
   border-bottom: 2px solid var(--MiddleColour);
@@ -700,7 +562,6 @@ footer p {
     opacity: 1;
   }
 }
-
 @media only screen and (max-width: 1080px) {
   html {
     font-size: 15px;
@@ -709,7 +570,6 @@ footer p {
     font-size: 1.5rem;
   }
 }
-
 @media only screen and (max-width: 850px) {
   #Experience .Template3 {
     overflow-x: visible;
@@ -722,8 +582,7 @@ footer p {
     font-size: 2rem;
   }
   #PreviousWork .Image3 {
-    -ms-grid-columns: 5% auto auto 5%;
-        grid-template-columns: 5% auto auto 5%;
+    grid-template-columns: 5% auto auto 5%;
   }
   #Skills #SkillDisplay #SkillsList {
     margin-left: 40px;
@@ -738,49 +597,30 @@ footer p {
     margin-left: 40px;
   }
   #Outro #ContactHolder #ContactTitles section {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
   }
   #Outro #ContactHolder #ContactTitles section p {
     font-size: 1.5rem;
   }
 }
-
 @media only screen and (max-width: 600px) {
   #TextHolder #Roles {
     font-size: 2.4rem;
     margin-left: 10px;
   }
   nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
   }
   nav #LogoMenu {
     margin-right: auto;
     padding-left: 10px;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    justify-content: center;
+    align-items: center;
   }
   nav #LogoMenu #OliverQuail {
     display: block;
@@ -794,16 +634,9 @@ footer p {
     display: none;
   }
   nav.ShowMenu {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
+    flex-direction: column;
+    align-items: flex-end;
     -webkit-animation-name: ShowMenuMobile;
             animation-name: ShowMenuMobile;
     -webkit-animation-duration: 600ms;
@@ -866,20 +699,15 @@ footer p {
   }
   #PreviousWork .Image3 {
     padding-bottom: 10px;
-    display: -ms-grid;
     display: grid;
-    -ms-grid-columns: 100%;
-        grid-template-columns: 100%;
+    grid-template-columns: 100%;
   }
   #PreviousWork .Image3 .ImageHolder, #PreviousWork .Image3 .Overlay {
-    -ms-grid-column: 1;
     grid-column: 1;
-    -ms-grid-row: 1;
     grid-row: 1;
   }
   #PreviousWork .Image3 .ImageHolder {
-    -webkit-filter: brightness(0.3);
-            filter: brightness(0.3);
+    filter: brightness(0.3);
     text-align: center;
   }
   #PreviousWork .Image3 .ImageHolder img {
@@ -888,16 +716,9 @@ footer p {
   }
   #PreviousWork .Image3 .Overlay {
     z-index: 2;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    justify-content: center;
+    flex-direction: column;
   }
   #PreviousWork .Image3 .Overlay h2 {
     padding-left: 5%;
@@ -935,10 +756,18 @@ footer p {
   #Skills #SkillDisplay {
     margin-left: 0px;
     width: 100%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
+  }
+  #Skills #SkillDisplay #SkillsList p {
+    border: 0px;
+  }
+  #Skills #SkillDisplay #SkillsList .ActiveTitle {
+    border: 0px;
+    background-color: var(--MiddleColour);
+    color: var(--MainBlack);
+  }
+  #Skills #SkillDisplay #SkillsList .ActiveTitle:hover {
+    background-color: var(--MiddleColour);
   }
   #Skills #SkillDisplay section {
     width: 100%;
@@ -952,12 +781,12 @@ footer p {
     margin-right: 0px;
     margin-top: 20px;
   }
+  #FAQ .Template3 section h2 {
+    font-size: 2rem;
+  }
   #Outro #ContactHolder {
     width: 100%;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     padding-bottom: 40px;
   }
   #Outro #ContactHolder #ContactTitles {
@@ -969,11 +798,7 @@ footer p {
   #Outro #ContactHolder #ContactPanel {
     margin-top: 20px;
   }
-  #FAQ .Template3 section h2 {
-    font-size: 2rem;
-  }
 }
-
 @-webkit-keyframes ShowMenuMobile {
   0% {
     height: 20px;
@@ -985,7 +810,6 @@ footer p {
     height: 100%;
   }
 }
-
 @keyframes ShowMenuMobile {
   0% {
     height: 20px;
@@ -997,7 +821,6 @@ footer p {
     height: 100%;
   }
 }
-
 @-webkit-keyframes HideMenuMobile {
   0% {
     height: 100%;
@@ -1013,7 +836,6 @@ footer p {
     height: fit-content;
   }
 }
-
 @keyframes HideMenuMobile {
   0% {
     height: 100%;
@@ -1030,26 +852,19 @@ footer p {
     height: fit-content;
   }
 }
-
 @-webkit-keyframes RoatateText {
   0% {
-    -webkit-transform: rotateX(90deg);
-            transform: rotateX(90deg);
+    transform: rotateX(90deg);
   }
   100% {
-    -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
+    transform: rotateX(0deg);
   }
 }
-
 @keyframes RoatateText {
   0% {
-    -webkit-transform: rotateX(90deg);
-            transform: rotateX(90deg);
+    transform: rotateX(90deg);
   }
   100% {
-    -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
+    transform: rotateX(0deg);
   }
-}
-/*# sourceMappingURL=index3.css.map */
+}/*# sourceMappingURL=index3.css.map */
