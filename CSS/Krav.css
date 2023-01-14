@@ -1,0 +1,121 @@
+@font-face {
+  font-family: TitleFont;
+  src: url("../Fonts/FivoSansModern-Heavy.otf"), url("../Fonts/Karrik-Regular.ttf") format("ttf");
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  overflow-y: hidden;
+}
+
+:root {
+  --Purple: #8F00FF;
+}
+
+a {
+  font-family: TitleFont;
+  border: 4px solid var(--Purple);
+  border-radius: 25px;
+  padding: 0px 5px;
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+}
+
+.Highlight {
+  color: var(--Purple);
+}
+
+main {
+  height: 100vh;
+  display: flex;
+}
+main #Image {
+  width: 100%;
+}
+main #Image #MainImage {
+  width: 100%;
+  height: 100%;
+}
+main #InfoSide {
+  position: absolute;
+  right: 0;
+  width: 40%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: hsla(0deg, 0%, 80%, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+main #InfoSide #KravLogo {
+  width: 80%;
+  margin-left: 10%;
+  padding-top: 20px;
+  drop-shadow: 2px 2px black;
+}
+main #InfoSide h2 {
+  font-family: TitleFont;
+  text-align: center;
+}
+main #InfoSide h3 {
+  font-family: TitleFont;
+  text-align: center;
+}
+main #InfoSide h2, main #InfoSide h3 {
+  text-shadow: 1px 1px #434242;
+}
+main #InfoSide #Links {
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+main #InfoSide #Links a {
+  font-size: 24px;
+  width: auto;
+  width: 16ch;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  text-shadow: 1px 1px #434242;
+}
+main #InfoSide #Links a:first-child {
+  margin-bottom: 20px;
+}
+main #InfoSide #SocialMedia {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+  padding: 20px 0px;
+}
+main #InfoSide #SocialMedia a {
+  border: none;
+}
+main #InfoSide #SocialMedia a ion-icon {
+  color: var(--Purple);
+  font-size: 24px;
+}
+
+@media screen and (max-width: 800px) {
+  main #InfoSide {
+    width: 100vw;
+    position: static;
+  }
+  main #InfoSide h2, main #InfoSide h3 {
+    text-shadow: none;
+  }
+  main #InfoSide #Links {
+    text-shadow: none;
+  }
+  main #Image {
+    display: none;
+  }
+}/*# sourceMappingURL=Krav.css.map */

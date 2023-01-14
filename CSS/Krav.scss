@@ -1,0 +1,150 @@
+@font-face {
+    font-family: TitleFont;
+    src: url("../Fonts/FivoSansModern-Heavy.otf"), url("../Fonts/Karrik-Regular.ttf") format("ttf"),
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    overflow-y: hidden;
+}
+
+
+:root {
+    --Purple: #8F00FF;
+}
+
+
+a {
+    font-family: TitleFont;
+    border: 4px solid var(--Purple);
+    border-radius: 25px;
+    padding: 0px 5px;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+}
+
+.Highlight {
+    color: var(--Purple);
+}
+
+main {
+    height: 100vh;
+    display: flex;
+
+    
+    #Image {
+        width: 100%;
+        #MainImage {
+            width: 100%;
+            height: 100%;
+        }
+
+       
+    }
+
+    #InfoSide {
+        position: absolute;
+        right: 0;
+        width: 40%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background: hsla(0, 0%, 80%, 0.2);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+
+        
+        #KravLogo {
+            width: 80%;
+            margin-left: 10%;
+            padding-top: 20px;
+            drop-shadow: 2px 2px black;
+        }
+        h2 {
+            font-family: TitleFont;
+            text-align: center;
+        }
+
+        h3 {
+            font-family: TitleFont;
+            text-align: center;
+        }
+
+        h2, h3 {
+            text-shadow: 1px 1px #434242;
+        }
+
+        #Links {
+            margin-top: auto;
+            margin-bottom: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            a {
+                font-size: 24px;
+                width: auto;
+                width: 16ch;
+                text-align: center;      
+                padding-top: 5px;
+                padding-bottom: 5px;
+                text-shadow: 1px 1px #434242;
+            }
+            
+            a:first-child {
+                margin-bottom: 20px;
+            }
+        }
+
+        #SocialMedia {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: white;
+
+            padding: 20px 0px;
+    
+            a {
+                border: none;
+
+                ion-icon {
+                    color: var(--Purple);
+                    font-size: 24px;
+                }
+
+            }
+
+        }
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+
+    main {
+        #InfoSide {
+            width: 100vw;
+            position: static;
+
+            h2, h3 {
+                text-shadow: none;
+            }
+
+            #Links {
+                text-shadow: none;
+            }
+        }
+    
+        #Image {
+            display: none;
+        }
+    }
+   
+}
+
