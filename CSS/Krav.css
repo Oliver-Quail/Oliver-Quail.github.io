@@ -5,6 +5,7 @@
 * {
   padding: 0;
   margin: 0;
+  text-transform: uppercase;
 }
 
 body {
@@ -43,6 +44,9 @@ main #Image #MainImage {
 main #InfoSide {
   position: absolute;
   right: 0;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
   width: 40%;
   height: 100vh;
   display: flex;
@@ -57,7 +61,6 @@ main #InfoSide #KravLogo {
   width: 80%;
   margin-left: 10%;
   padding-top: 20px;
-  drop-shadow: 2px 2px black;
 }
 main #InfoSide h2 {
   font-family: TitleFont;
@@ -66,9 +69,8 @@ main #InfoSide h2 {
 main #InfoSide h3 {
   font-family: TitleFont;
   text-align: center;
-}
-main #InfoSide h2, main #InfoSide h3 {
-  text-shadow: 1px 1px #434242;
+  border-bottom: 3px solid var(--Purple);
+  text-shadow: none;
 }
 main #InfoSide #Links {
   margin-top: auto;
@@ -84,7 +86,7 @@ main #InfoSide #Links a {
   text-align: center;
   padding-top: 5px;
   padding-bottom: 5px;
-  text-shadow: 1px 1px #434242;
+  color: white;
 }
 main #InfoSide #Links a:first-child {
   margin-bottom: 20px;
@@ -104,18 +106,6 @@ main #InfoSide #SocialMedia a ion-icon {
   font-size: 24px;
 }
 
-@media screen and (max-width: 800px) {
-  main #InfoSide {
-    width: 100vw;
-    position: static;
-  }
-  main #InfoSide h2, main #InfoSide h3 {
-    text-shadow: none;
-  }
-  main #InfoSide #Links {
-    text-shadow: none;
-  }
-  main #Image {
-    display: none;
-  }
+h2, h3 {
+  color: white;
 }/*# sourceMappingURL=Krav.css.map */

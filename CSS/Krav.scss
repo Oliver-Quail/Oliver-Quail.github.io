@@ -6,6 +6,7 @@
 * {
     padding: 0;
     margin: 0;
+    text-transform: uppercase;
 }
 
 body {
@@ -50,6 +51,9 @@ main {
     #InfoSide {
         position: absolute;
         right: 0;
+        left: 0;
+        margin-left: auto;
+        margin-right: auto;
         width: 40%;
         height: 100vh;
         display: flex;
@@ -59,13 +63,13 @@ main {
         backdrop-filter: blur(10px);
         -webkit-backdrop-filter: blur(5px);
         border: 1px solid rgba(255, 255, 255, 0.3);
-
+        
         
         #KravLogo {
             width: 80%;
             margin-left: 10%;
             padding-top: 20px;
-            drop-shadow: 2px 2px black;
+
         }
         h2 {
             font-family: TitleFont;
@@ -75,10 +79,8 @@ main {
         h3 {
             font-family: TitleFont;
             text-align: center;
-        }
-
-        h2, h3 {
-            text-shadow: 1px 1px #434242;
+            border-bottom: 3px solid var(--Purple);
+            text-shadow: none;
         }
 
         #Links {
@@ -94,7 +96,7 @@ main {
                 text-align: center;      
                 padding-top: 5px;
                 padding-bottom: 5px;
-                text-shadow: 1px 1px #434242;
+                color: white;
             }
             
             a:first-child {
@@ -124,27 +126,6 @@ main {
     }
 }
 
-
-@media screen and (max-width: 800px) {
-
-    main {
-        #InfoSide {
-            width: 100vw;
-            position: static;
-
-            h2, h3 {
-                text-shadow: none;
-            }
-
-            #Links {
-                text-shadow: none;
-            }
-        }
-    
-        #Image {
-            display: none;
-        }
-    }
-   
+h2, h3 {
+    color: white;
 }
-
