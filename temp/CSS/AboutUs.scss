@@ -1,0 +1,73 @@
+@import "Defaults.scss";
+
+main {
+    margin-top: 20px;
+
+    .The3CollumContent {
+
+        section {
+            .Collum {
+                display: flex;
+                justify-content: start;
+                align-items: center;
+                flex-direction: column;
+
+                ion-icon {
+                    text-align: center;
+                    display: block;
+                    background-color: var(--Yellow);
+                    color: var(--Black);
+                    border-radius: 25px;
+                    padding: 5px;
+                    font-size: 25px;
+                    margin-top: 10px;
+                }
+
+                p {
+                    font-style: italic;
+                }
+            }
+
+            svg {
+                height: auto;
+                width: 20px;
+            }
+        }
+    }
+}
+
+#MiddleContent {
+    width: 60%;
+    margin: 0% auto;
+    text-align: center;
+    
+}
+
+
+#ContactButton {
+    text-align: center;
+    border-radius: 25px;
+    text-decoration: none;
+    padding: 5px 10px;
+    box-shadow: 0px 4px 4px --LightShadow;
+    margin-bottom: 20px;
+    display: block;
+    width: 60%;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 500px) {
+    main {
+        .The3CollumContent {
+            section {
+                svg {
+                    display: none;
+                }
+                .Collum {
+                    min-height: 200px;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}

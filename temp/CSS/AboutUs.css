@@ -1,0 +1,489 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+:root {
+  --Black: #0D0D0D;
+  --Yellow: #FBF504;
+  --LightShadow: rgba(0, 0, 0, .25);
+  --DarkShadow: rgba(0, 0, 0, .4);
+  --White: #FFFFFF;
+}
+
+html {
+  font-size: 16px;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  color: var(--Black);
+  font-family: "Montserrat", sans-serif;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 4.209rem;
+}
+
+h2 {
+  font-size: 3.157rem;
+}
+
+h3 {
+  font-size: 2.369rem;
+}
+
+h4 {
+  font-size: 1.777rem;
+}
+
+h5 {
+  font-size: 1.333rem;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--Black);
+  border-radius: 25px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.MiniRoadHolder {
+  text-align: center;
+  width: 100%;
+}
+.MiniRoadHolder svg {
+  width: 100%;
+  height: 25px;
+}
+
+.CircularImage {
+  width: 100%;
+  text-align: center;
+}
+.CircularImage img {
+  border-radius: 100%;
+  width: 150px;
+  height: 150px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.LinkHolder {
+  text-align: center;
+}
+
+.InformationButton, .InformationButtonBlock, .InformationButtonFullWidth {
+  background-color: var(--Yellow);
+  color: var(--Black);
+  font-weight: bold;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 25px;
+  padding: 5px 10px;
+  text-decoration: none;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.InformationButtonBlock {
+  display: block;
+}
+
+.InformationButtonFullWidth {
+  display: block;
+  width: 100%;
+  margin: 0px;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+nav {
+  z-index: 10000;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  height: 8vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  box-shadow: 0px 2px 4px var(--LightShadow);
+  background-color: white;
+}
+nav a {
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: var(--Black);
+  margin: 0 auto;
+}
+nav #Contact {
+  background-color: var(--Yellow);
+  padding: 3px 10px;
+  box-shadow: 0px 4px 4px var(--LightShadow);
+  border-radius: 25px;
+}
+nav #SocialHolder {
+  margin-left: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+nav #SocialHolder a {
+  border-radius: 25px;
+}
+nav #SocialHolder a ion-icon {
+  background-color: var(--Yellow);
+  font-size: 26px;
+}
+nav #SocialHolder a ion-icon:first-child {
+  margin-right: 10px;
+}
+nav #DownArrow {
+  display: none;
+}
+
+.Button {
+  display: block;
+  text-decoration: none;
+  background-color: var(--Yellow);
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  border-radius: 25px;
+}
+
+.BasicContent section img {
+  border-radius: 100%;
+}
+
+#HeroHolder90, #HeroHolder93 {
+  width: 100%;
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 100%;
+  overflow-y: hidden;
+  margin-top: 7vh;
+}
+#HeroHolder90 #Title, #HeroHolder93 #Title {
+  margin-top: 5%;
+  margin-left: 5%;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  z-index: 4;
+  overflow-y: hidden;
+  grid-column: 1;
+  grid-row: 1;
+}
+#HeroHolder90 #Title .UnderTitle p, #HeroHolder93 #Title .UnderTitle p {
+  z-index: 4;
+  font-size: 0.8rem;
+}
+#HeroHolder90 #Title .UnderTitle p a, #HeroHolder93 #Title .UnderTitle p a {
+  font-style: italic;
+}
+#HeroHolder90 #HeroImageHolder, #HeroHolder93 #HeroImageHolder {
+  grid-column: 1;
+  grid-row: 1;
+}
+#HeroHolder90 #HeroImageHolder img, #HeroHolder93 #HeroImageHolder img {
+  width: 100%;
+  height: 100%;
+}
+
+#HeroHolder93 {
+  height: 93vh;
+}
+
+#SubContent5 {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-weight: bold;
+}
+
+#Appointments {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+#Appointments p {
+  font-weight: bold;
+}
+
+.The3CollumContent {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.The3CollumContent section {
+  display: flex;
+  width: 92%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+}
+.The3CollumContent section .Collum {
+  width: 30%;
+  text-align: center;
+  box-shadow: 0px 4px 4px var(--LightShadow);
+}
+.The3CollumContent section svg {
+  width: 1vw;
+  height: 100%;
+}
+
+#ContactButton {
+  text-align: center;
+  font-weight: bold;
+  width: 60%;
+  background-color: var(--Yellow);
+  border-radius: 25px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 4px 4px var(--LightShadow);
+}
+
+footer {
+  position: relative;
+  background-color: var(--Black);
+}
+footer #SocialLinkHolder {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}
+footer #SocialLinkHolder #L_FacebookFooter ion-icon, footer #SocialLinkHolder #L_InstaFooter ion-icon {
+  color: var(--Yellow);
+  z-index: 3;
+  font-size: 30px;
+}
+footer #FooterHolder {
+  width: 96%;
+  padding: 2% 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+footer #FooterHolder section {
+  color: var(--White);
+  display: flex;
+  flex-direction: column;
+}
+footer #FooterHolder section * {
+  color: var(--White);
+}
+footer #FooterHolder section a {
+  color: var(--Black);
+}
+footer #FooterHolder section p a {
+  color: var(--White);
+}
+footer #FooterHolder section .FooterTitle {
+  font-weight: bold;
+}
+footer #FooterHolder #Links p {
+  font-weight: bold;
+}
+footer #FooterHolder #Links a {
+  color: var(--White);
+}
+
+@media screen and (max-width: 900px) {
+  nav * {
+    display: none;
+  }
+  #DownArrow {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  nav #DownArrow {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 24px;
+  }
+  nav #SocialHolder {
+    display: none;
+  }
+  nav.Showing {
+    animation-duration: 200ms;
+    height: 100vh;
+    flex-direction: column;
+    animation-name: ShowMenuMobile;
+    animation-duration: 200ms;
+    animation-fill-mode: forwards;
+    justify-content: center;
+    align-items: center;
+  }
+  nav.Showing a {
+    display: block;
+    margin-bottom: auto;
+    margin-top: auto;
+    font-size: 2rem;
+  }
+  nav.Showing #SocialHolder {
+    margin-left: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25px;
+    max-height: 200px;
+  }
+  nav.Showing #SocialHolder a {
+    width: 25px;
+    height: 25px;
+    border-radius: 25px;
+  }
+  nav.Showing #SocialHolder a ion-icon {
+    background-color: var(--Yellow);
+    font-size: 26px;
+    width: 25px;
+    height: 25px;
+  }
+  nav.Showing #SocialHolder a ion-icon:first-child {
+    margin-right: 10px;
+  }
+  nav.Showing #Contact {
+    width: 80%;
+    text-align: center;
+  }
+  nav.Hiding {
+    animation-name: HideMenu;
+    animation-duration: 200ms;
+    animation-fill-mode: forwards;
+  }
+  footer {
+    padding-bottom: 50px;
+  }
+  footer #SocialLinkHolder {
+    width: 100%;
+    text-align: center;
+  }
+  footer #FooterHolder {
+    flex-direction: column-reverse;
+  }
+  footer #FooterHolder section {
+    padding: 20px 0px;
+    text-align: center;
+  }
+}
+@media screen and (max-width: 500px) {
+  :root {
+    font-size: 13px;
+  }
+  .The3CollumContent {
+    flex-direction: row;
+  }
+  .The3CollumContent section {
+    flex-direction: column;
+  }
+  .The3CollumContent section .Collum {
+    width: 90%;
+  }
+  #Appointments {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #Appointments p {
+    padding-top: 20px;
+  }
+  #Appointments p:first-child {
+    padding-top: 0px;
+  }
+}
+@keyframes ShowMenuMobile {
+  0% {
+    height: 0vh;
+  }
+  100% {
+    height: 100vh;
+  }
+}
+@keyframes HideMenu {
+  0% {
+    height: 100vh;
+  }
+  100% {
+    height: 0vh;
+  }
+}
+main {
+  margin-top: 20px;
+}
+main .The3CollumContent section .Collum {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+main .The3CollumContent section .Collum ion-icon {
+  text-align: center;
+  display: block;
+  background-color: var(--Yellow);
+  color: var(--Black);
+  border-radius: 25px;
+  padding: 5px;
+  font-size: 25px;
+  margin-top: 10px;
+}
+main .The3CollumContent section .Collum p {
+  font-style: italic;
+}
+main .The3CollumContent section svg {
+  height: auto;
+  width: 20px;
+}
+
+#MiddleContent {
+  width: 60%;
+  margin: 0% auto;
+  text-align: center;
+}
+
+#ContactButton {
+  text-align: center;
+  border-radius: 25px;
+  text-decoration: none;
+  padding: 5px 10px;
+  box-shadow: 0px 4px 4px --LightShadow;
+  margin-bottom: 20px;
+  display: block;
+  width: 60%;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 500px) {
+  main .The3CollumContent section svg {
+    display: none;
+  }
+  main .The3CollumContent section .Collum {
+    min-height: 200px;
+    justify-content: center;
+  }
+}/*# sourceMappingURL=AboutUs.css.map */

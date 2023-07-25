@@ -1,0 +1,188 @@
+@import "Defaults.scss";
+
+#HeroHolder {
+    width: 100vw;
+    position: relative;
+    min-height: 90vh;
+    max-height: 90vh;
+
+    width: 100%;
+    margin-top: 7vh;
+    overflow-y: hidden;
+
+    #Title {
+        margin-top: 5%;
+        margin-left: 5%;
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        z-index: 4;
+        overflow-y: hidden;
+
+        .UnderTitle {
+            p {
+                font-size: .8rem;
+
+                a {
+                    font-style: italic;
+                }
+            }
+        }
+    }
+
+    #CarImage {
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        width: 100%;
+        text-align: right;
+        #CarLogo {
+            margin-right: auto;
+            width: 60%;
+            max-width: 700px;
+            max-height: 400px;
+        }
+
+    }
+}
+
+#CarHolder {
+    position: sticky;
+    top: 20vh;
+    
+    z-index: 3;
+}
+
+
+
+main {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 10% 60% 30%;
+    overflow: hidden;
+    
+    #Content {
+        width: 100%;
+        grid-column: 2;
+        text-align: center;    
+        padding-bottom: 20px;
+        
+        h2 {
+            text-align: center;
+        }
+
+        .UnderContent {
+            margin-top: 30px;
+
+            #WhoAmIImage {
+                margin-top: 20px;
+            }
+
+            .FAQQuestions {
+                padding-top: 20px;
+                text-align: left;
+            }
+
+            #NextAndPrevButton {
+                display: flex;
+
+            }
+
+            .SideContent {
+                display: flex;
+                justify-content: left;
+                text-align: left;
+                margin-top: 10px;
+            
+                
+                .CircularImage {
+                    text-align: left;
+                    max-width: 150px;
+                }
+                .SideText {
+                    margin-left: 10px;
+                    padding-left: 10px;
+                }
+
+                .SideContentText {
+                    margin-left: 6px;
+
+                    .LinkHolder {
+                        float: right;
+                    }
+                }
+            }
+        }
+    }
+    #Road {
+        img {
+            padding: 0;
+            margin: 0;
+            display: block;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    
+    main {
+        grid-template-columns: 10% 80% 10%;
+    }
+
+    #Road, #CarHolder {
+        display: none;
+    }
+}
+
+
+
+@media screen and (max-width: 500px) {
+
+    #Title {
+        text-align: center;
+    }
+
+ 
+
+    #HeroHolder {
+        #CarImage {
+            position: absolute;
+            bottom: 0px;
+            right: 0px;
+            width: 100%;
+            text-align: right;
+            #CarLogo {
+                margin-right: auto;
+                width: 100%;
+            }
+    
+        }
+    }
+
+    main #Content{
+        .SideContent {
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+
+            h5 {
+                text-align: center;
+            }
+
+            .SideText {
+                text-align: center;
+            }
+            .UnderContent {
+                .SideContentText {
+                    .LinkHolder {
+                        float: none;
+                        margin-right: auto;
+                        text-align: center;
+
+                    }
+                }
+            }
+        }
+    }
+}

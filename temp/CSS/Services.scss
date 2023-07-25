@@ -1,0 +1,54 @@
+@import "Defaults.scss";
+
+main {
+        
+    section {
+        text-align: center;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+h2 {
+    text-align: center;
+}
+
+
+ion-icon {
+    font-size: 27px;
+}
+
+.LessonContent {
+    padding-top: 20px;
+}
+
+
+#ContactButton {
+    text-align: center;
+    border-radius: 25px;
+    text-decoration: none;
+    padding: 0px 10px;
+    box-shadow: 0px 4px 4px --LightShadow;
+    margin-bottom: 20px;
+    display: block;
+    width: 90%;
+}
+
+
+@media screen and (max-width: 500px) {
+    h2 {
+        font-size: 40px;
+    }
+}
+
+
+
+@media screen and (max-width: 500px) {
+    main {
+        section {
+            width: 80%;
+        }
+    }
+}

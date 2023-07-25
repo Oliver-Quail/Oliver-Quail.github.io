@@ -1,0 +1,27 @@
+@import "Defaults.scss";
+
+main {
+    margin: 0 10%;
+
+    article {
+        margin: 20px 0px;
+
+        section {
+            h2 {
+                text-transform: capitalize;
+                text-align: center;
+                
+            }
+        }
+
+    }
+}
+
+
+
+@media screen and (max-width: 500px) {
+    main {
+        margin: 0 10%;
+        text-align: center;
+    }
+}
