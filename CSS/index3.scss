@@ -155,7 +155,7 @@ nav {
     width: 100%;
     padding: 10px 0px;
 
-    
+
   
     a, #OliverQuail {
         text-transform: uppercase;
@@ -204,6 +204,8 @@ article {
         margin-left: 40px;
         transform: rotateX(90deg);
     }
+
+
     .ArticleTitle.Active {
         animation-name: RoatateText;
         animation-duration: 400ms;
@@ -649,6 +651,12 @@ footer {
 
 
 @media only screen and (max-width: 600px) {
+
+
+    * {
+        scroll-behavior: initial;
+    }
+
     #TextHolder {
         #Roles {
             font-size: 2.4rem;

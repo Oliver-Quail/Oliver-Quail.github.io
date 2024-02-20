@@ -60,7 +60,6 @@
 }
 #ParallaxBackground {
   background: url("../Assets/5th.webp");
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   width: 100%;
@@ -245,7 +244,6 @@ span {
 @media screen and (max-width: 600px) {
   #ParallaxBackground {
     background: transparent;
-    height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
     width: 100%;

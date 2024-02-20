@@ -22,6 +22,10 @@ window.onload = function() {
         }
     }, 75);
 
+    window.addEventListener("hashchange", () => {
+        
+    });
+
     var MenuButton = document.getElementById("MenuButton");
     var Menu = document.getElementById("MenuBar");
     var MenuShown = 0;
@@ -63,7 +67,6 @@ window.onload = function() {
     const ExperienceObserver = new IntersectionObserver(function(entries, observer) {
         entries.forEach(entry => {
             if(entry.isIntersecting) {
-                console.log(entry.target);
                 entry.target.classList.add("Active");
                 observer.unobserve(entry.target);
             }
@@ -74,7 +77,6 @@ window.onload = function() {
     const TextObserver = new IntersectionObserver(function(entries, observer) {
         entries.forEach(entry => {
             if(entry.isIntersecting) {
-                console.log(entry.target);
                 entry.target.classList.add("Active");
                 observer.unobserve(entry.target);
             }
@@ -95,6 +97,40 @@ window.onload = function() {
         ExperienceObserver.observe(ArticleTitles[Title]);
     });
 
+    var links = document.getElementsByTagName("a");
+    for(let index = 0; index < links.length; index++) {
+        links[index].addEventListener("click", (e) => {
+            e.preventDefault();
+            MenuShown = 0;
+            Menu.classList.add("HiddingMenu");
+            Menu.addEventListener("animationend", function(){
+                Menu.classList.remove("HiddingMenu");
+                Menu.classList.remove("ShownMenu");
+            });
+            if(window.innerWidth < 600) {
+                window.location.href = links[index].href;
+                for(let index = 0; index < ExperienceTitles.length; index++) {
+                    ExperienceTitles[index].classList.add("Active");
+                }
+                for(let index = 0; index < ExperienceText.length; index++) {
+                    ExperienceText[index].classList.add("Active");
+                }
+                for(let index = 0; index < ArticleTitles.length; index++) {
+                    ArticleTitles[index].classList.add("Active");
+                }
+                window.scrollTo(window.scrollX, window.scrollY -25);
+                setTimeout(()=> {
+                    window.scrollTo(window.scrollX, window.scrollY -25);
+                }, 100);
+            }
+            else {
+                window.location.href = links[index].href;
+            }
+           
+            Menu.classList.remove("ShowMenu"); 
+            
+        });
+    }
 }
 
 function CreateFluxList(TitlesHolder, ContentHolder) {
@@ -128,6 +164,8 @@ function CreateFluxList(TitlesHolder, ContentHolder) {
         });
         
     });
+
+
 
 }
 

@@ -118,16 +118,11 @@ article h1 {
   transform: rotateX(90deg);
 }
 article .ArticleTitle.Active {
-  -webkit-animation-name: RoatateText;
-          animation-name: RoatateText;
-  -webkit-animation-duration: 400ms;
-          animation-duration: 400ms;
-  -webkit-animation-timing-function: linear;
-          animation-timing-function: linear;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-  -webkit-animation-direction: normal;
-          animation-direction: normal;
+  animation-name: RoatateText;
+  animation-duration: 400ms;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
 }
 article .UnderTitle {
   color: var(--MainWhite);
@@ -171,8 +166,7 @@ article .UnderTitle {
   width: 3px;
   height: auto;
   border-top: 48px solid #f093fb;
-  -webkit-animation: Blinking 100ms ease 0ms infinite alternate;
-          animation: Blinking 100ms ease 0ms infinite alternate;
+  animation: Blinking 100ms ease 0ms infinite alternate;
   color: transparent;
 }
 #TextHolder #GradientOff {
@@ -209,7 +203,7 @@ article .UnderTitle {
   overflow-x: visible;
   transform: rotateX(90deg);
   transition: transform 400ms;
-  text-shadow: hsl(210deg, 11%, 40%) 1px 1px;
+  text-shadow: hsl(210, 11%, 40%) 1px 1px;
 }
 #Experience .Template3 section h2.Active {
   transform: rotateX(0deg);
@@ -300,7 +294,6 @@ article .UnderTitle {
   font-family: TitleFont;
   padding: 10px;
   font-size: 1rem;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin-left: auto;
@@ -331,7 +324,6 @@ article .UnderTitle {
 
 #Skills {
   background-color: var(--MainBlack);
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -347,7 +339,6 @@ article .UnderTitle {
 #Skills #SkillDisplay #SkillsList p {
   color: var(--MainWhite);
   font-family: TitleFont;
-  height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
   border-left: 3px solid var(--MainWhite);
@@ -411,7 +402,7 @@ article .UnderTitle {
   overflow-x: visible;
   transform: rotateX(90deg);
   transition: transform 400ms;
-  text-shadow: hsl(210deg, 11%, 40%) 1px 1px;
+  text-shadow: hsl(210, 11%, 40%) 1px 1px;
 }
 #FAQ .Template3 section h2.Active {
   transform: rotateX(0deg);
@@ -545,15 +536,6 @@ footer p {
   border-bottom: 2px solid var(--MiddleColour);
 }
 
-@-webkit-keyframes Blinking {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
 @keyframes Blinking {
   0% {
     opacity: 0;
@@ -606,6 +588,9 @@ footer p {
   }
 }
 @media only screen and (max-width: 600px) {
+  * {
+    scroll-behavior: initial;
+  }
   #TextHolder #Roles {
     font-size: 2.4rem;
     margin-left: 10px;
@@ -637,16 +622,11 @@ footer p {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    -webkit-animation-name: ShowMenuMobile;
-            animation-name: ShowMenuMobile;
-    -webkit-animation-duration: 600ms;
-            animation-duration: 600ms;
-    -webkit-animation-direction: normal;
-            animation-direction: normal;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
+    animation-name: ShowMenuMobile;
+    animation-duration: 600ms;
+    animation-direction: normal;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
   }
   nav.ShowMenu #LogoMenu {
     margin-bottom: auto;
@@ -655,16 +635,11 @@ footer p {
     margin-bottom: auto;
   }
   nav.ShownMenu a {
-    -webkit-animation-name: RoatateText;
-            animation-name: RoatateText;
-    -webkit-animation-duration: 400ms;
-            animation-duration: 400ms;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    -webkit-animation-direction: normal;
-            animation-direction: normal;
+    animation-name: RoatateText;
+    animation-duration: 400ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
     display: block;
     font-size: 3rem;
     text-align: left;
@@ -674,16 +649,11 @@ footer p {
     text-align: right;
   }
   nav.HiddingMenu {
-    -webkit-animation-name: HideMenuMobile;
-            animation-name: HideMenuMobile;
-    -webkit-animation-duration: 400ms;
-            animation-duration: 400ms;
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-    -webkit-animation-direction: normal;
-            animation-direction: normal;
+    animation-name: HideMenuMobile;
+    animation-duration: 400ms;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
   }
   nav.HiddingMenu a {
     display: none;
@@ -799,17 +769,6 @@ footer p {
     margin-top: 20px;
   }
 }
-@-webkit-keyframes ShowMenuMobile {
-  0% {
-    height: 20px;
-  }
-  50% {
-    height: 50%;
-  }
-  100% {
-    height: 100%;
-  }
-}
 @keyframes ShowMenuMobile {
   0% {
     height: 20px;
@@ -819,21 +778,6 @@ footer p {
   }
   100% {
     height: 100%;
-  }
-}
-@-webkit-keyframes HideMenuMobile {
-  0% {
-    height: 100%;
-  }
-  50% {
-    height: 50%;
-  }
-  90% {
-    height: 10%;
-  }
-  100% {
-    height: -webkit-fit-content;
-    height: fit-content;
   }
 }
 @keyframes HideMenuMobile {
@@ -847,17 +791,8 @@ footer p {
     height: 10%;
   }
   100% {
-    height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-  }
-}
-@-webkit-keyframes RoatateText {
-  0% {
-    transform: rotateX(90deg);
-  }
-  100% {
-    transform: rotateX(0deg);
   }
 }
 @keyframes RoatateText {
